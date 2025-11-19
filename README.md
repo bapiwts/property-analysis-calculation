@@ -63,6 +63,14 @@ disposition_fee=1,
 **Formula:** `closingCostsAmount = purchase_price * (closing_costs / 100)`
 **Calculation:** $10,000,000 × 0.03 = $300,000
 
+### Acquisition Fee Amount = purchase_price × acquisition_fee%
+
+### Disposition Fee Amount = exit_value × disposition_fee%
+
+### Construction Mgmt Fee Amount = construction_budget × construction_management_fee%
+
+### Asset Mgmt Fee Amount = (annual rule based on client logic)
+
 ---
 
 ## Rent Roll Tab (Under the rent roll tab have Rant Roll Table,Rent Details Table,Unpaid Leasing Costs (ULC) Table, Future Tenant Assumptions Table  )
@@ -271,31 +279,33 @@ disposition_fee=1,
 - Year 8: $151,200 + $10,500 = $161,700
 - Year 9: $151,200 + $12,000 = $163,200
 
-### Final Details Table
+### Rent Details Table
 
-| Suite | Tenant        | End Year | Year 1  | Year 2  | Year 3  | Year 4  | Year 5  | Year 6  | Year 7  | Year 8  | Year 9  | Year 10 |
-| ----- | ------------- | -------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
-| 101   | Tenant A      | 2034     | 480,000 | 494,400 | 509,232 | 524,509 | 540,244 | 556,451 | 573,145 | 590,340 | 608,050 | 626,292 |
-| 102   | Tenant B      | 2032     | 360,000 | 362,000 | 364,000 | 366,000 | 368,000 | 370,000 | 372,000 | 374,000 | 376,000 | 378,000 |
-| 103   | Future Tenant | 2036     | 216,000 | 222,480 | 229,154 | 236,029 | 243,110 | 250,403 | 257,915 | 265,652 | 273,622 | 281,831 |
-| 104   | Tenant C      | 2031     | 150,000 | 152,000 | 155,000 | 157,000 | 160,000 | 160,000 | 160,000 | 160,000 | 160,000 | 160,000 |
-| 105   | Tenant D      | 2034     | 201,600 | 211,680 | 222,264 | 233,377 | 245,046 | 257,298 | 270,163 | 283,671 | 297,855 | 312,748 |
-| 106   | Tenant E      | 2034     | 151,200 | 152,700 | 154,200 | 155,700 | 157,200 | 158,700 | 160,200 | 161,700 | 163,200 | N/A     |
+| Suite | Tenant        | End Year | Year 1  | Year 2  | Year 3  | Year 4  | Year 5  | Year 6  | Year 7  | Year 8  | Year 9  | Year 10+ |
+| ----- | ------------- | -------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | -------- |
+| 101   | Tenant A      | 2034     | 480,000 | 494,400 | 509,232 | 524,509 | 540,244 | 556,451 | 573,145 | N/A     | N/A     | N/A      |
+| 102   | Tenant B      | 2032     | 360,000 | 362,000 | 364,000 | 366,000 | 368,000 | 370,000 | N/A     | N/A     | N/A     | N/A      |
+| 103   | Future Tenant | 2036     | 216,000 | 222,480 | 229,154 | 236,029 | 243,110 | 250,403 | 257,915 | N/A     | N/A     | N/A      |
+| 104   | Tenant C      | 2031     | 150,000 | 152,000 | 155,000 | 157,000 | 160,000 | 160,000 | 160,000 | N/A     | N/A     | N/A      |
+| 105   | Tenant D      | 2034     | 201,600 | 211,680 | 222,264 | 233,377 | 245,046 | N/A     | N/A     | N/A     | N/A     | N/A      |
+| 106   | Tenant E      | 2034     | 151,200 | 152,700 | 154,200 | 155,700 | 157,200 | 158,700 | 160,200 | 161,700 | 163,200 | N/A      |
 
 ---
 
 ## Unpaid Leasing Costs (ULC) Tab
 
-| Suite | Tenant   | Tenant Improvements (TI) Amount | Leasing Commission (LC) Amount | Concessions |
-| ----- | -------- | ------------------------------- | ------------------------------ | ----------- |
-| 101   | Tenant A | $500,000                        | $150,000                       | $50,000     |
-| 102   | Tenant B | $350,000                        | $100,000                       | $40,000     |
-| 103   | Vacant   | $0                              | $0                             | $0          |
-| 104   | Tenant C | $400,000                        | $125,000                       | $60,000     |
-| 105   | Tenant D | $320,000                        | $120,000                       | $45,000     |
-| 106   | Tenant E | $280,000                        | $110,000                       | $35,000     |
+### Unpaid Leasing Costs Table
 
-### ULC Totals
+| Suite | Tenant        | Tenant Improvements (TI) Amount | Leasing Commission (LC) Amount | Concessions |
+| ----- | ------------- | ------------------------------- | ------------------------------ | ----------- |
+| 101   | Tenant A      | $500,000                        | $150,000                       | $50,000     |
+| 102   | Tenant B      | $350,000                        | $100,000                       | $40,000     |
+| 103   | Future Tenant | $0                              | $0                             | $0          |
+| 104   | Tenant C      | $400,000                        | $125,000                       | $60,000     |
+| 105   | Tenant D      | $320,000                        | $120,000                       | $45,000     |
+| 106   | Tenant E      | $280,000                        | $110,000                       | $35,000     |
+
+### ULC Calculations
 
 - **Total Tenant Improvements:** $500,000 + $350,000 + $400,000 + $320,000 + $280,000 = $1,850,000
 - **Total Leasing Commissions:** $150,000 + $100,000 + $125,000 + $120,000 + $110,000 = $605,000
@@ -306,20 +316,25 @@ disposition_fee=1,
 
 ## Future Tenant Assumptions Tab
 
-| Suite | Tenant   |         | New Tenant Assumptions |           |         | Renewal Tenant Assumptions |           | Market Rent Toggle | Market Rent at Aug 2025 |          |          | Market Rent Growth % |          |           | Reimbursement Type |          |     | Modified Gross |      |       |          |     | Base Year Stop |      |       |             |        | Base Year Stop Amount |         |          | % Pro Rata OpEx | Renewal Prob | Lease Term | Downtime |
-| ----- | -------- | ------- | ---------------------- | --------- | ------- | -------------------------- | --------- | ------------------ | ----------------------- | -------- | -------- | -------------------- | -------- | --------- | ------------------ | -------- | --- | -------------- | ---- | ----- | -------- | --- | -------------- | ---- | ----- | ----------- | ------ | --------------------- | ------- | -------- | --------------- | ------------ | ---------- | -------- |
-|       |          | TI($)   | LC(%)                  | Free Rent | TI($)   | LC(%)                      | Free Rent | Trended/Untrended  | ($)                     | Month 12 | Month 24 | Month 36             | Month 48 | Month 60+ |                    | Prop Tax | Ins | CAM            | Mgmt | Utils | Prop Tax | Ins | CAM            | Mgmt | Utils | Prop Tax($) | Ins($) | CAM($)                | Mgmt($) | Utils($) | (%)             | (%)          | (months)   | (months) |
-| 101   | Tenant A | 500,000 | 6                      | 2         | 250,000 | 3                          | 1         | Untrended          | 24.48                   | 24.48    | 24.48    | 24.48                | 24.48    | 24.48     | Full Service Gross | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 30.8%           | 70%          | 84         | 6        |
-| 102   | Tenant B | 350,000 | 6                      | 2         | 175,000 | 3                          | 1         | Trended            | 24.48                   | 25.21    | 25.97    | 26.75                | 27.55    | 28.37     | Modified           | Yes      | Yes | Yes            | No   | No    | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 23.1%           | 60%          | 72         | 6        |
-| 103   | Vacant   | 400,000 | 6                      | 3         | -       | -                          | -         | Untrended          | 26.52                   | 26.52    | 26.52    | 26.52                | 26.52    | 26.52     | NNN                | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 15.4%           | -            | 60         | 9        |
-| 104   | Tenant C | 400,000 | 6                      | 2         | 200,000 | 3                          | 1         | Trended            | 30.60                   | 31.52    | 32.46    | 33.43                | 34.43    | 35.46     | Base Year          | Yes      | Yes | Yes            | Yes  | Yes   | Yes      | Yes | Yes            | Yes  | Yes   | 1,500       | 2,700  | 990                   | 2,500   | 1,200    | 7.7%            | 50%          | 84         | 6        |
-| 105   | Tenant D | 320,000 | 6                      | 2         | 160,000 | 3                          | 1         | Trended            | 25.62                   | 26.39    | 27.18    | 28.00                | 28.84    | 29.71     | NNN                | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 12.3%           | 65%          | 60         | 6        |
-| 106   | Tenant E | 280,000 | 6                      | 2         | 140,000 | 3                          | 1         | Trended            | 22.03                   | 22.69    | 23.37    | 24.07                | 24.79    | 25.53     | Modified           | Yes      | Yes | Yes            | No   | No    | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 10.8%           | 55%          | 108        | 6        |
+| Suite | Tenant        |         | New Tenant Assumptions |           |         | Renewal Tenant Assumptions |           | Market Rent at Aug 2025 |          |          | Market Rent Growth % |          |           | Reimbursement Type |          |     | Modified Gross |      |       |          |     | Base Year Stop |      |       |             |        | Base Year Stop Amount |         |          | % Pro Rata OpEx | Renewal Prob | Lease Term | Downtime |
+| ----- | ------------- | ------- | ---------------------- | --------- | ------- | -------------------------- | --------- | ----------------------- | -------- | -------- | -------------------- | -------- | --------- | ------------------ | -------- | --- | -------------- | ---- | ----- | -------- | --- | -------------- | ---- | ----- | ----------- | ------ | --------------------- | ------- | -------- | --------------- | ------------ | ---------- | -------- |
+|       |               | TI($)   | LC(%)                  | Free Rent | TI($)   | LC(%)                      | Free Rent | ($)                     | Month 12 | Month 24 | Month 36             | Month 48 | Month 60+ |                    | Prop Tax | Ins | CAM            | Mgmt | Utils | Prop Tax | Ins | CAM            | Mgmt | Utils | Prop Tax($) | Ins($) | CAM($)                | Mgmt($) | Utils($) | (%)             | (%)          | (months)   | (months) |
+| 101   | Tenant A      | 500,000 | 6                      | 2         | 250,000 | 3                          | 1         | 24.48                   | 24.48    | 24.48    | 24.48                | 24.48    | 24.48     | Full Service Gross | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 30.8%           | 70%          | 84         | 6        |
+| 102   | Tenant B      | 350,000 | 6                      | 2         | 175,000 | 3                          | 1         | 24.48                   | 25.21    | 25.97    | 26.75                | 27.55    | 28.37     | Modified           | Yes      | Yes | Yes            | No   | No    | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 23.1%           | 60%          | 72         | 6        |
+| 103   | Future Tenant | 400,000 | 6                      | 3         | -       | -                          | -         | 26.52                   | 26.52    | 26.52    | 26.52                | 26.52    | 26.52     | NNN                | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 15.4%           | -            | 60         | 9        |
+| 104   | Tenant C      | 400,000 | 6                      | 2         | 200,000 | 3                          | 1         | 30.60                   | 31.52    | 32.46    | 33.43                | 34.43    | 35.46     | Base Year          | Yes      | Yes | Yes            | Yes  | Yes   | Yes      | Yes | Yes            | Yes  | Yes   | 1,500       | 2,700  | 990                   | 2,500   | 1,200    | 7.7%            | 50%          | 84         | 6        |
+| 105   | Tenant D      | 320,000 | 6                      | 2         | 160,000 | 3                          | 1         | 25.62                   | 26.39    | 27.18    | 28.00                | 28.84    | 29.71     | NNN                | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 12.3%           | 65%          | 60         | 6        |
+| 106   | Tenant E      | 280,000 | 6                      | 2         | 140,000 | 3                          | 1         | 22.03                   | 22.69    | 23.37    | 24.07                | 24.79    | 25.53     | Modified           | Yes      | Yes | Yes            | No   | No    | -        | -   | -              | -    | -     | -           | -      | -                     | -       | -        | 10.8%           | 55%          | 108        | 6        |
 
-### Market Rent Toggle Logic
+### Note for Future Tenant Assumptions
 
-**Trended:** Market rent grows with specified growth rate over time (compounded annually at 3%)
-**Untrended:** Market rent remains constant at current market rate (no growth applied)
+```plan
+Market Rent Growth % → User provides globally
+
+Example: 3.0% annual
+
+You do not calculate these — they must be entered by the user in setting screens.
+```
 
 ### Market Rent (As-of Date) Calculations
 
@@ -356,32 +371,6 @@ Market Rent (As-of Aug 2025):
 - Suite 105: 60 months
 - Suite 106: 108 months
 
-### Market Rent Growth Calculations
-
-#### Suite 101 - Market Rent: $24.48/SF (UNTRENDED)
-
-- Month 12: $24.48 (no growth)
-- Month 24: $24.48 (no growth)
-- Month 36: $24.48 (no growth)
-- Month 48: $24.48 (no growth)
-- Month 60+: $24.48 (no growth)
-
-#### Suite 102 - Market Rent: $24.48/SF (TRENDED)
-
-- Month 12: $24.48 × 1.03 = $25.21
-- Month 24: $24.48 × (1.03)² = $25.97
-- Month 36: $24.48 × (1.03)³ = $26.75
-- Month 48: $24.48 × (1.03)⁴ = $27.55
-- Month 60+: $24.48 × (1.03)⁵ = $28.37
-
-#### Suite 103 - Market Rent: $26.52/SF (UNTRENDED)
-
-- Month 12: $26.52 (no growth)
-- Month 24: $26.52 (no growth)
-- Month 36: $26.52 (no growth)
-- Month 48: $26.52 (no growth)
-- Month 60+: $26.52 (no growth)
-
 ### % Pro Rata OpEx
 
 **Formula:** `% Pro Rata OpEx = Tenant SF ÷ building_square_footage`
@@ -402,7 +391,13 @@ Market Rent (As-of Aug 2025):
 **Checkbox:** [ ] Gross Up for Reimbursement
 **Input Field:** Gross Up Occupancy % (e.g., 95% or 100%)
 
-**Description:** If checked, operating expenses are "grossed up" to the entered occupancy percentage to ensure fairness among tenants when building is not fully occupied.
+**Description:** If checked, operating expenses are "grossed up" to the entered occupancy percentage to ensure fairness among tenants when the building is not fully occupied. Gross-Up applies only when enabled and only for applicable categories (e.g., CAM, Utilities).
+
+**Formula:**
+
+```plan
+GrossUpFactor = GrossUp% ÷ ActualOccupancy%
+```
 
 **Example:**
 
@@ -410,77 +405,134 @@ Market Rent (As-of Aug 2025):
 - Gross Up %: 95%
 - Gross-up Factor = 95% ÷ 85% = 1.118
 
+### Operating Expenses Categories
+
+- Taxes
+- Insurance
+- Utilities
+- Management
+- CAM (Common Area Maintenance)
+
 ### Operating Expenses Table
 
-| Name                  | Category            | How Input           | Amount Type | Amount Value | Frequency | Fixed (%) | Recoverable (%) | Apply To Tenants | Start Date     | Custom Date | Inflation Type | Custom Inflation (%) |
-| --------------------- | ------------------- | ------------------- | ----------- | ------------ | --------- | --------- | --------------- | ---------------- | -------------- | ----------- | -------------- | -------------------- |
-| Property Taxes        | taxes               | Amount              | fixed       | 225,000      | annually  | 0         | 100             | Yes              | Analysis Begin |             | cpi            |                      |
-| Building Insurance    | insurance           | Amount              | fixed       | 97,500       | annually  | 0         | 100             | Yes              | Analysis Begin |             | expense        |                      |
-| Electricity & Water   | utilities           | $/SF                | fixed       | 2.5          | monthly   | 20        | 80              | Yes              | Analysis Begin |             | cpi            |                      |
-| Property Mgmt Fees    | management          | % of Base Rent / SF | fixed       | 5.0          | monthly   | 0         | 100             | Yes              | Analysis Begin |             | custom         | 2.5                  |
-| Repairs & Maintenance | repairs_maintenance | Amount              | custom      | 100,000      | detail    | 10        | 90              | Yes              | Custom Date    | 2025-09-01  | custom         | 3.0                  |
-| Security              | security            | Amount              | fixed       | 80,000       | annually  | 25        | 75              | Yes              | Analysis Begin |             | expense        |                      |
-| Marketing             | marketing           | Amount              | custom      | 60,000       | detail    | 100       | 0               | No               | Analysis Begin |             | cpi            |                      |
-| Legal                 | legal               | Amount              | custom      | 45,000       | detail    | 50        | 50              | Yes              | Custom Date    | 2025-09-01  | custom         | 1.5                  |
-| Landscaping           | landscaping         | Amount              | fixed       | 70,000       | annually  | 0         | 100             | Yes              | Analysis Begin |             | cpi            |                      |
-| Cleaning              | cleaning            | Amount              | fixed       | 85,000       | annually  | 100       | 0               | No               | Analysis Begin |             | expense        |                      |
+| Name                  | Category   | How Input           | Amount Type | Amount Value | Frequency | Fixed (%) | Recoverable (%) | Apply To Tenants | Start Date     | Custom Date | Inflation Type | Custom Inflation (%) |
+| --------------------- | ---------- | ------------------- | ----------- | ------------ | --------- | --------- | --------------- | ---------------- | -------------- | ----------- | -------------- | -------------------- |
+| Property Taxes        | taxes      | Amount              | fixed       | 225,000      | annually  | 0         | 100             | Yes              | Analysis Begin | —           | cpi            | —                    |
+| Building Insurance    | insurance  | Amount              | fixed       | 97,500       | annually  | 0         | 100             | Yes              | Analysis Begin | —           | expense        | —                    |
+| Electricity & Water   | cam        | $/SF                | fixed       | 2.5          | monthly   | 20        | 80              | Yes              | Analysis Begin | —           | cpi            | —                    |
+| Property Mgmt Fees    | management | % of Base Rent / SF | fixed       | 5.0          | monthly   | 0         | 100             | Yes              | Analysis Begin | —           | custom         | 2.5                  |
+| Repairs & Maintenance | cam        | Amount              | custom      | 100,000      | detail    | 10        | 90              | Yes              | Custom Date    | 2025-09-01  | custom         | 3.0                  |
+| Security              | cam        | Amount              | fixed       | 80,000       | annually  | 25        | 75              | Yes              | Analysis Begin | —           | expense        | —                    |
+| Marketing             | management | Amount              | custom      | 60,000       | detail    | 100       | 0               | No               | Analysis Begin | —           | cpi            | —                    |
+| Legal                 | management | Amount              | custom      | 45,000       | detail    | 50        | 50              | Yes              | Custom Date    | 2025-09-01  | custom         | 1.5                  |
+| Landscaping           | cam        | Amount              | fixed       | 70,000       | annually  | 0         | 100             | Yes              | Analysis Begin | —           | cpi            | —                    |
+| Cleaning              | cam        | Amount              | fixed       | 85,000       | annually  | 100       | 0               | No               | Analysis Begin | —           | expense        | —                    |
 
-### Annual Operating Expense Calculations
+### Calculation Formulas by Input Type
 
-### 2.1 Calculation Formulas by Input Type
+#### Amount
 
-**Amount:** Direct value
-`Annual Amount = Amount Value × Frequency Multiplier`
+Direct value
 
-**$/SF:** Per square foot calculation
-`Annual Amount = per_sf_amount × building_square_footage × 12 (if monthly)`
+```plan
+Annual Amount = Amount Value × Frequency Multiplier
+```
 
-**% of Base Rent / SF:** Percentage of base rent
-`Annual Amount = (percentage / 100) × total_base_rent`
+#### $/SF
 
-### 2.2 Individual Expense Calculations
+Per square foot calculation
+
+```plan
+Annual Amount = Amount Value × Building Square Footage × Frequency Multiplier
+```
+
+#### % of Base Rent / SF
+
+Percentage of base rent
+
+```plan
+Annual Amount = (Percentage / 100) × Total Base Rent
+```
+
+#### % of Market / SF
+
+Percentage of Market per SF
+
+```plan
+Annual Amount = (Percentage / 100) × Market Rent per SF (as-of date) × Square Footage × Frequency Multiplier
+```
+
+### Individual Expense Calculations
 
 **Building Data:**
 
 - Building Square Footage: 65,000 SF
 - Total Base Rent: $1,342,800
+- Actual Occupancy: 85%
+- Gross Up Target: 95%
+- Gross Up Factor: 1.118
 
 #### Property Taxes
 
 - **Formula:** Direct amount
 - **Calculation:** $225,000 annually
+- **Gross Up:** Not applicable (Taxes category)
 
 #### Building Insurance
 
 - **Formula:** Direct amount
 - **Calculation:** $97,500 annually
+- **Gross Up:** Not applicable (Insurance category)
 
 #### Electricity & Water
 
-- **Formula:** `per_sf_amount × building_square_footage × 12`
-- **Calculation:** $2.5 × 65,000 × 12 = $1,950,000 ÷ 12 = $162,500 annually
+- **Formula:** `Amount Value × Building Square Footage × 12`
+- **Calculation:** $2.5 × 65,000 × 12 = $1,950,000 annually
+- **Gross Up:** Applicable (CAM category) → $1,950,000 × 1.118 = $2,180,100
 
 #### Property Management Fees
 
-- **Formula:** `(percentage / 100) × total_base_rent`
+- **Formula:** `(Percentage / 100) × Total Base Rent`
 - **Calculation:** (5.0 / 100) × $1,342,800 = $67,140 annually
+- **Gross Up:** Not applicable (Management category)
+
+#### Repairs & Maintenance
+
+- **Formula:** Custom schedule (see below)
+- **Calculation:** $100,000 annually (per custom schedule)
+- **Gross Up:** Applicable (CAM category) → $100,000 × 1.118 = $111,800
 
 #### Security
 
 - **Formula:** Direct amount
 - **Calculation:** $80,000 annually
+- **Gross Up:** Applicable (CAM category) → $80,000 × 1.118 = $89,440
+
+#### Marketing
+
+- **Formula:** Custom schedule (see below)
+- **Calculation:** $60,000 annually (per custom schedule)
+- **Gross Up:** Not applicable (Management category, Apply To Tenants = No)
+
+#### Legal
+
+- **Formula:** Custom schedule (see below)
+- **Calculation:** $45,000 annually (per custom schedule)
+- **Gross Up:** Not applicable (Management category)
 
 #### Landscaping
 
 - **Formula:** Direct amount
 - **Calculation:** $70,000 annually
+- **Gross Up:** Applicable (CAM category) → $70,000 × 1.118 = $78,260
 
 #### Cleaning
 
 - **Formula:** Direct amount
 - **Calculation:** $85,000 annually
+- **Gross Up:** Not applicable (Apply To Tenants = No)
 
-### 2.3 Custom Schedule Examples
+### Custom Schedule Examples
 
 #### Repairs & Maintenance (Custom Schedule)
 
@@ -536,69 +588,92 @@ Market Rent (As-of Aug 2025):
 | Dec       | 38,000     |
 | **Total** | **60,000** |
 
-### 2.4 Total Operating Expenses Summary
+### Total Operating Expenses Summary
 
-| Expense                      | Annual Amount ($) |
-| ---------------------------- | ----------------- |
-| Property Taxes               | 225,000           |
-| Building Insurance           | 97,500            |
-| Electricity & Water          | 162,500           |
-| Property Management Fees     | 67,140            |
-| Repairs & Maintenance        | 100,000           |
-| Security                     | 80,000            |
-| Marketing                    | 60,000            |
-| Legal                        | 45,000            |
-| Landscaping                  | 70,000            |
-| Cleaning                     | 85,000            |
-| **Total Operating Expenses** | **992,140**       |
+#### With Gross Up
 
-**Operating Expenses Per SF:** $992,140 ÷ 65,000 = **$15.26 per SF**
+| Expense                  | Annual Amount ($) | Gross Up Applied? | Gross Up Factor | Final Annual Amount ($) |
+| ------------------------ | ----------------- | ----------------- | --------------- | ----------------------- |
+| Property Taxes           | 225,000           | No                | —               | 225,000                 |
+| Building Insurance       | 97,500            | No                | —               | 97,500                  |
+| Electricity & Water      | 1,950,000         | Yes               | 1.118           | 2,180,100               |
+| Property Management Fees | 67,140            | No                | —               | 67,140                  |
+| Repairs & Maintenance    | 100,000           | Yes               | 1.118           | 111,800                 |
+| Security                 | 80,000            | Yes               | 1.118           | 89,440                  |
+| Marketing                | 60,000            | No                | —               | 60,000                  |
+| Legal                    | 45,000            | No                | —               | 45,000                  |
+| Landscaping              | 70,000            | Yes               | 1.118           | 78,260                  |
+| Cleaning                 | 85,000            | No*               | —               | 85,000                  |
 
-#### Total Operating Expenses
+\* *Cleaning is CAM but has "Apply To Tenants = No", so no gross up is applied*
 
-**Formula:** `Sum of all operating expenses`
-**Calculation:** $225,000 + $97,500 + $162,500 + $67,140 + $100,000 + $80,000 + $60,000 + $45,000 + $70,000 + $85,000 = **$992,140**
+**Total Operating Expenses (With Gross Up):**
+$225,000 + $97,500 + $2,180,100 + $67,140 + $111,800 + $89,440 + $60,000 + $45,000 + $78,260 + $85,000 = **$3,039,240**
 
-#### Operating Expenses Per SF
+**Operating Expenses Per SF (With Gross Up):**
+$3,039,240 ÷ 65,000 = **$46.76 per SF**
 
-**Formula:** `Total Operating Expenses ÷ building_square_footage`
-**Calculation:** $992,140 ÷ 65,000 = **$15.26 per SF**
+#### Without Gross Up
+
+| Expense                  | Annual Amount ($) |
+| ------------------------ | ----------------- |
+| Property Taxes           | 225,000           |
+| Building Insurance       | 97,500            |
+| Electricity & Water      | 1,950,000         |
+| Property Management Fees | 67,140            |
+| Repairs & Maintenance    | 100,000           |
+| Security                 | 80,000            |
+| Marketing                | 60,000            |
+| Legal                    | 45,000            |
+| Landscaping              | 70,000            |
+| Cleaning                 | 85,000            |
+
+**Total Operating Expenses (No Gross Up):**
+$225,000 + $97,500 + $1,950,000 + $67,140 + $100,000 + $80,000 + $60,000 + $45,000 + $70,000 + $85,000 = **$2,779,640**
+
+**Operating Expenses Per SF (No Gross Up):**
+$2,779,640 ÷ 65,000 = **$42.76 per SF**
+
+## Notes for Operating Expenses
+
+### Inflation Rates
+
+**CPI Inflation %** → User provides globally
+*Example: 3.0%*
+
+**Expense Inflation %** → User provides globally
+*Example: 2.5%*
+
+**Custom Inflation %** → User provides per row
+*Example: 1.5% or 3.0%*
+
+> **Note:** These inflation rates are not calculated by the system—they must be entered by the user in the settings screens.
+
+### Gross Up Application Rules
+
+Gross Up is applied only when:
+
+1. The "Gross Up for Reimbursement" checkbox is enabled
+2. The expense category is CAM or Utilities (if configured)
+3. "Apply To Tenants" is set to "Yes"
+
+Expenses with "Apply To Tenants = No" are not grossed up, even if they are in the CAM category.
+
+---
 
 ## Expense Groups
 
-## Expense Groups Structure
+### Expense Groups Structure
 
-### Group 1: Core Operating Expenses
+#### Group 1: Core Operating Expenses
 
 **Expenses:**
 
 - Property Taxes (100% recoverable)
-- Building Insurance (100% recoverable)  
+- Building Insurance (100% recoverable)
 - Property Management Fees (100% recoverable)
 
-### Group 2: Maintenance & Utilities
-
-**Expenses:**
-
-- Electricity & Water (80% recoverable)
-- Repairs & Maintenance (90% recoverable)
-- Security (75% recoverable)
-
-### Group 3: Common Area & Facilities
-
-**Expenses:**
-
-- Landscaping (100% recoverable)
-- Legal (50% recoverable)
-- Cleaning (0% recoverable)
-
-### Group 4: Non-Recoverable Expenses
-
-**Expenses:**
-
-- Marketing (0% recoverable)
-
-### **Group 1: Core Operating Expenses**
+**Example:**
 
 ```json
 {
@@ -626,7 +701,15 @@ Market Rent (As-of Aug 2025):
 }
 ```
 
-### **Group 2: Maintenance & Utilities**
+#### Group 2: Maintenance & Utilities
+
+**Expenses:**
+
+- Electricity & Water (80% recoverable)
+- Repairs & Maintenance (90% recoverable)
+- Security (75% recoverable)
+
+**Example:**
 
 ```json
 {
@@ -654,7 +737,15 @@ Market Rent (As-of Aug 2025):
 }
 ```
 
-### **Group 3: Common Area & Facilities**
+#### Group 3: Common Area & Facilities
+
+**Expenses:**
+
+- Landscaping (100% recoverable)
+- Legal (50% recoverable)
+- Cleaning (0% recoverable)
+
+**Example:**
 
 ```json
 {
@@ -682,7 +773,13 @@ Market Rent (As-of Aug 2025):
 }
 ```
 
-### **Group 4: Non-Recoverable Expenses**
+#### Group 4: Non-Recoverable Expenses
+
+**Expenses:**
+
+- Marketing (0% recoverable)
+
+**Example:**
 
 ```json
 {
@@ -698,9 +795,23 @@ Market Rent (As-of Aug 2025):
 }
 ```
 
+---
+
 ## Expense Reimbursement Tab
 
-### Reimbursement Types
+## Reimbursement Logic Overview
+
+### Selection Rules
+
+**User can select EITHER:**
+
+- **Reimbursement Type** (Full Service Gross, Modified Gross, Base Year Stop, NNN)
+  - If selected: Individual expense checkboxes determine what's included
+  - OR
+- **Expense Group** (Core Operating, Maintenance & Utilities, etc.)
+  - If selected: All expenses in that group are automatically included
+
+**CANNOT select both simultaneously** - it's either Type OR Group
 
 **Full Service Gross (FSG):** All expenses included in rent, no additional reimbursements
 **Modified Gross (MG):** Selected expenses reimbursed above base rent
@@ -713,13 +824,17 @@ Market Rent (As-of Aug 2025):
 **Non-Cumulative:** Annual cap resets each year, unused portions don't carry forward
 **Cumulative:** Unused cap portions from previous years can be applied to future increases
 
-### Tenant Data & Pro Rata Calculations
+### Tenants Pro Rata Calculations
 
 **Formula:** `Pro Rata Share = Tenant SF ÷ Total Building SF`
 
 **Building Data:**
 
+- Purchase Price: $10,000,000
 - Total Building SF: 65,000
+- Total Base Rent: $1,342,800
+- Actual Occupancy: 85% (55,000 SF occupied)
+- Vacant: 10,000 SF (Suite 103)
 
 **Calculation:**
 
@@ -732,225 +847,316 @@ Market Rent (As-of Aug 2025):
 
 ### Expense Reimbursement Table
 
-| Suite | Tenant   | Detail | Reimbursement Type | Expense Groups          |          |     | Modified Gross |      |       |          |     | Base Year Stop |      |       |              |           | Base Year Stop Amount |          |           | Pro Rata | Recovery    | CAM Cap | CAM Annual |       |       | Reimbursement Years 1-5       |       |       |
-| ----- | -------- | ------ | ------------------ | ----------------------- | -------- | --- | -------------- | ---- | ----- | -------- | --- | -------------- | ---- | ----- | ------------ | --------- | --------------------- | -------- | --------- | -------- | ----------- | ------- | ---------- | ----- | ----- | ----------------------------- | ----- | ----- |
-|       |          | (Y/N)  |                    |                         | Prop Tax | Ins | CAM            | Mgmt | Utils | Prop Tax | Ins | CAM            | Mgmt | Utils | Prop Tax(\$) | Ins  (\$) | CAM(\$)               | Mgmt(\$) | Utils(\$) | OpEx(%)  | %(of Share) | Type    | Cap(%)     | Yr1   | Yr2   | Yr3                           | Yr4   | Yr5   |
-| 101   | Tenant A | Yes    | Full Service Gross | -                       | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -            | -         | -                     | -        | -         | 30.8%    | 100%        | None    | -          |       |       | All expenses included in rent |       |       |
-| 102   | Tenant B | Yes    | Modified Gross     | Core Operating          | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | 51,975       | 22,523    | -                     | 15,503   | -         | 23.1%    | 80%         | None    | -          |       |       | Group-based reimbursement     |       |       |
-| 103   | Vacant   | No     | -                  | -                       | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -            | -         | -                     | -        | -         | 15.4%    | -           | -       | -          | -     | -     | -                             | -     | -     |
-| 104   | Tenant C | Yes    | Base Year Stop     | -                       | No       | No  | No             | No   | No    | Yes      | Yes | Yes            | Yes  | Yes   | 2,500        | 3,900     | 1,360                 | 520      | 1,250     | 7.7%     | 95%         | Cum     | 4%         | 15.00 | 15.60 | 16.22                         | 16.87 | 17.55 |
-| 105   | Tenant D | Yes    | NNN                | Maintenance & Utilities | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -            | -         | 15,998                | 11,070   | 7,380     | 12.3%    | 100%        | Non-Cum | 3%         |       |       | Group-based reimbursement     |       |       |
-| 106   | Tenant E | Yes    | Modified Gross     | -                       | Yes      | Yes | Yes            | No   | No    | -        | -   | -              | -    | -     | -            | -         | -                     | -        | -         | 10.8%    | 75%         | None    | -          |       |       | Built into rent               |       |       |
+| Suite | Tenant        | Detail | Reimbursement Type | Expense Groups          |          |     | Modified Gross |      |       |          |     | Base Year Stop |      |       |              |           | Base Year Stop Amount |          |           | Pro Rata | Recovery    | CAM Cap | CAM Annual |       |       | Reimbursement Years 1-5       |       |       |
+| ----- | ------------- | ------ | ------------------ | ----------------------- | -------- | --- | -------------- | ---- | ----- | -------- | --- | -------------- | ---- | ----- | ------------ | --------- | --------------------- | -------- | --------- | -------- | ----------- | ------- | ---------- | ----- | ----- | ----------------------------- | ----- | ----- |
+|       |               | (Y/N)  |                    |                         | Prop Tax | Ins | CAM            | Mgmt | Utils | Prop Tax | Ins | CAM            | Mgmt | Utils | Prop Tax(\$) | Ins  (\$) | CAM(\$)               | Mgmt(\$) | Utils(\$) | OpEx(%)  | %(of Share) | Type    | Cap(%)     | Yr1   | Yr2   | Yr3                           | Yr4   | Yr5   |
+| 101   | Tenant A      | Yes    | Full Service Gross | -                       | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -            | -         | -                     | -        | -         | 30.8%    | 100%        | None    | -          |       |       | All expenses included in rent |       |       |
+| 102   | Tenant B      | Yes    | None               | Core Operating          | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | 51,975       | 22,523    | -                     | 15,503   | -         | 23.1%    | 80%         | None    | -          |       |       | Group-based reimbursement     |       |       |
+| 103   | Future Tenant | No     | -                  | -                       | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -            | -         | -                     | -        | -         | 15.4%    | -           | -       | -          | -     | -     | -                             | -     | -     |
+| 104   | Tenant C      | Yes    | Base Year Stop     | -                       | No       | No  | No             | No   | No    | Yes      | Yes | Yes            | Yes  | Yes   | 2,500        | 3,900     | 1,360                 | 520      | 1,250     | 7.7%     | 95%         | Cum     | 4%         | 15.00 | 15.60 | 16.22                         | 16.87 | 17.55 |
+| 105   | Tenant D      | Yes    | None               | Maintenance & Utilities | -        | -   | -              | -    | -     | -        | -   | -              | -    | -     | -            | -         | 15,998                | 11,070   | 7,380     | 12.3%    | 100%        | Non-Cum | 3%         |       |       | Group-based reimbursement     |       |       |
+| 106   | Tenant E      | Yes    | Modified Gross     | -                       | Yes      | Yes | Yes            | No   | No    | -        | -   | -              | -    | -     | -            | -         | -                     | -        | -         | 10.8%    | 75%         | None    | -          |       |       | Built into rent               |       |       |
 
-### Base Year Stop Amounts (Suite 104 - Tenant C)
+### Tenant Reimbursement Calculations (NO GROSS-UP)
 
-| Expense Category | Base Year Stop Amount ($) |
-| ---------------- | ------------------------- |
-| Property Tax     | 2,500                     |
-| Insurance        | 3,900                     |
-| CAM              | 1,360                     |
-| Management       | 520                       |
-| Utilities        | 1,250                     |
-| **Total Year 1** | **9,530**                 |
+#### Suite 101 - Tenant A (20,000 SF)
 
-### Tenant Reimbursement Calculations
+**Pro Rata:** 20,000 ÷ 65,000 = **30.77%**
+**Reimbursement Type:** Full Service Gross (FSG)
+**Recovery Rate:** N/A (all included in rent)
 
-#### Suite 101 - Tenant A (Full Service Gross)
+**Calculation:**
 
-**Reimbursement Type:** FSG
-**Calculation:** All OpEx included in rent
+```plan
+All operating expenses included in base rent
+No additional reimbursements
+```
+
 **Annual Reimbursement:** $0
 
-#### Suite 102 - Tenant B (Modified Gross, Core Operating Group)
+**Notes:**
 
-**Pro Rata:** 23.1%
+- Tenant pays higher base rent to cover all expenses
+- Landlord bears expense risk/volatility
+- No pass-through of expense increases
+
+### Suite 102 - Tenant B (15,000 SF)
+
+**Pro Rata:** 15,000 ÷ 65,000 = **23.08%**
+**Expense Group:** Core Operating Expenses
 **Recovery Rate:** 80% (of pro-rata share)
-**Group Expenses:** Property Taxes, Building Insurance, Property Management
+
+**Selected Expenses:**
+
+- Property Taxes: $225,000
+- Building Insurance: $97,500
+- Property Management: $67,140
+
 **Calculations:**
 
-- Property Taxes: $225,000 × 23.1% × 80% = $41,580
-- Building Insurance: $97,500 × 23.1% × 80% = $18,018
-- Property Management: $67,140 × 23.1% × 80% = $12,415
-- **Total Annual Reimbursement:** $72,013
+```plan
+Property Taxes:     $225,000 × 23.08% × 100% × 80% = $41,580
+Building Insurance: $97,500  × 23.08% × 100% × 80% = $18,018
+Property Management: $67,140 × 23.08% × 100% × 80% = $12,398
+```
 
-#### Suite 103 - Vacant(Can't Apply)
+**Annual Reimbursement:** **$71,996**
 
-**Status:** No tenant
+**Breakdown by Category:**
+
+- Taxes: $41,580
+- Insurance: $18,018
+- Management: $12,398
+
+### Suite 103 - Future Tenant (10,000 SF) - VACANT
+
+**Pro Rata:** 10,000 ÷ 65,000 = **15.38%**
+**Status:** Vacant (Detail = "No")
+
+**Calculation:**
+
+```plan
+No tenant = No reimbursement calculations
+```
+
 **Annual Reimbursement:** $0
 
-#### Suite 104 - Tenant C (Base Year Stop + Cumulative Cap)
+**Landlord's Lost Recovery (Example if this were NNN):**
 
-**Pro Rata:** 7.7%
-**Recovery Rate:** 95%
+```plan
+If NNN with 100% recovery:
+Lost Recovery = $2,779,640 × 15.38% = $427,439 annually
+```
+
+**Impact:**
+
+- Reduces building occupancy to 85%
+- May trigger gross-up for other tenants
+- Landlord absorbs all OpEx for this space
+
+---
+
+### Suite 104 - Tenant C (5,000 SF)
+
+**Pro Rata:** 5,000 ÷ 65,000 = **7.69%**
+**Reimbursement Type:** Base Year Stop
+**Recovery Rate:** 95% (of increases above base year)
 **CAM Cap:** 4% Cumulative
-**Base Year Stop:** Tenant pays increases above base year amounts
+**Base Year Stops:** As provided in table
 
-**Year 1 Reimbursement:** $9,530 (base year stop amounts as shown in table)
+**Year 1 Reimbursement = Base Year Stop Amounts:**
 
-**Future Years:** Escalate per inflation with 4% cumulative cap applied to increases above base year
+| Category     | Base Year Stop | Tenant Pays (Year 1) |
+| ------------ | -------------- | -------------------- |
+| Property Tax | $2,500         | $2,500               |
+| Insurance    | $3,900         | $3,900               |
+| CAM          | $1,360         | $1,360               |
+| Management   | $520           | $520                 |
+| Utilities    | $1,250         | $1,250               |
+| **TOTAL**    | **$9,530**     | **$9,530**           |
 
-#### Suite 105 - Tenant D (NNN, Maintenance & Utilities Group)
+**Year 1 Annual Reimbursement:** **$9,530**
 
-**Pro Rata:** 12.3%
-**Recovery Rate:** 100%
-**Group Expenses:** Electricity & Water, Repairs & Maintenance, Security
+**Future Years Formula:**
+
+```plan
+For each expense category:
+1. Calculate Current Year Expense × Pro Rata × Recovery %
+2. Compare to Base Year Stop Amount
+3. Increase = Current - Base Year Stop
+4. Apply 4% Cumulative Cap to increase
+5. Tenant Pays = Base Year Stop + Capped Increase
+```
+
+**Example Year 2 (assuming 3% inflation):**
+
+```plan
+Property Tax Current: $225,000 × 1.03 = $231,750
+Tenant Share: $231,750 × 7.69% × 95% = $16,925
+Increase from Base: $16,925 - $2,500 = $14,425
+Capped at 4%: $2,500 × 1.04 = $2,600
+Tenant Pays: $2,600
+```
+
+### Suite 105 - Tenant D (8,000 SF)
+
+**Pro Rata:** 8,000 ÷ 65,000 = **12.31%**
+**Expense Group:** Maintenance & Utilities
+**Recovery Rate:** 100% (of pro-rata share)
+**CAM Cap:** 3% Non-Cumulative
+
+**Selected Expenses:**
+
+- Electricity & Water: $1,950,000 (80% recoverable)
+- Repairs & Maintenance: $100,000 (90% recoverable)
+- Security: $80,000 (75% recoverable)
 
 **Calculations:**
 
-- Electricity & Water: $162,500 × 12.3% × 80% = $15,998
-- Repairs & Maintenance: $100,000 × 12.3% × 90% = $11,070
-- Security: $80,000 × 12.3% × 75% = $7,380
-- **Total Annual Reimbursement:** $34,448
+```plan
+Electricity & Water: $1,950,000 × 12.31% × 80% × 100% = $192,156
+Repairs & Maintenance: $100,000 × 12.31% × 90% × 100% = $11,079
+Security: $80,000 × 12.31% × 75% × 100% = $7,386
+```
 
-#### Suite 106 - Tenant E (Modified Gross, Custom Selection)
+**Total Annual Reimbursement:** **$210,621**
 
-**Pro Rata:** 10.8%
-**Recovery Rate:** 75%
-**Selected Expenses:** Property Taxes, Building Insurance, Electricity & Water
+**Breakdown by Category:**
+
+- CAM (Utilities): $192,156
+- CAM (Repairs): $11,079
+- CAM (Security): $7,386
+
+**Note:** 3% Non-Cumulative cap applies to year-over-year increases only
+
+### Suite 106 - Tenant E (7,000 SF)
+
+**Pro Rata:** 7,000 ÷ 65,000 = **10.77%**
+**Reimbursement Type:** Modified Gross (Custom Selection)
+**Recovery Rate:** 75% (of pro-rata share)
+
+**Selected Expenses:**
+
+- Property Taxes: Yes → $225,000 (100% recoverable)
+- Building Insurance: Yes → $97,500 (100% recoverable)
+- CAM (Electricity & Water): Yes → $1,950,000 (80% recoverable)
+- Management: No
+- Utilities: No (covered above in CAM)
 
 **Calculations:**
 
-- Property Taxes: $225,000 × 10.8% × 75% = $18,225
-- Building Insurance: $97,500 × 10.8% × 75% = $7,911
-- Electricity & Water: $162,500 × 10.8% × 75% = $13,162
-- **Total Annual Reimbursement:** $39,298
+```plan
+Property Taxes: $225,000 × 10.77% × 100% × 75% = $18,174
+Building Insurance: $97,500 × 10.77% × 100% × 75% = $7,876
+Electricity & Water: $1,950,000 × 10.77% × 80% × 75% = $126,081
+```
 
-### Year 1 Final Reimbursement Summary
+**Total Annual Reimbursement:** **$152,131**
 
-| Suite     | Tenant   | Type                 | Annual Reimbursement ($) |
-| --------- | -------- | -------------------- | ------------------------ |
-| 101       | Tenant A | FSG                  | 0                        |
-| 102       | Tenant B | MG (Core Operating)  | 72,013                   |
-| 103       | Vacant   | -                    | 0                        |
-| 104       | Tenant C | Base Year Stop (Cum) | 9,530                    |
-| 105       | Tenant D | NNN (Maint & Utils)  | 34,448                   |
-| 106       | Tenant E | MG (Custom)          | 39,298                   |
-| **Total** |          |                      | **155,289**              |
+**Breakdown by Category:**
 
-## Gross-Up Impact Analysis
+- Taxes: $18,174
+- Insurance: $7,876
+- CAM (Utilities): $126,081
 
-### Gross-Up Settings
+## Year 1 Reimbursement Summary (NO GROSS-UP)
 
-- **Current Occupancy:** 85%
-- **Gross-Up Target:** 95%
-- **Gross-Up Factor:** 95% ÷ 85% = 1.118
+| Suite     | Tenant        | SF     | Pro Rata | Type/Group              | Recovery | Annual Reimbursement |
+| --------- | ------------- | ------ | -------- | ----------------------- | -------- | -------------------- |
+| 101       | Tenant A      | 20,000 | 30.77%   | FSG                     | N/A      | $0                   |
+| 102       | Tenant B      | 15,000 | 23.08%   | Core Operating Group    | 80%      | $71,996              |
+| 103       | Future Tenant | 10,000 | 15.38%   | VACANT                  | —        | $0                   |
+| 104       | Tenant C      | 5,000  | 7.69%    | Base Year Stop          | 95%      | $9,530               |
+| 105       | Tenant D      | 8,000  | 12.31%   | Maint & Utilities Group | 100%     | $210,621             |
+| 106       | Tenant E      | 7,000  | 10.77%   | Modified Gross (Custom) | 75%      | $152,131             |
+| **TOTAL** |               | 65,000 | 100%     |                         |          | **$444,278**         |
 
-### Expenses Subject to Gross-Up
+## Reimbursement Summary (WITH GROSS-UP at 95%)
 
-**Variable Expenses (occupancy-sensitive):**
+### Suite 105 - Tenant D (Recalculated with Gross-Up)
 
-- Electricity & Water: $162,500 → $181,525
-- Cleaning: $85,000 → $95,030
-- Security: $80,000 → $89,440
-- Repairs & Maintenance: $100,000 → $111,800
+**Expenses with Gross-Up Applied:**
 
-**Fixed Expenses (not grossed up):**
+- Electricity & Water: $2,180,100 (grossed up from $1,950,000)
+- Repairs & Maintenance: $111,800 (grossed up from $100,000)
+- Security: $89,440 (grossed up from $80,000)
 
-- Property Taxes: $225,000 (unchanged)
-- Building Insurance: $97,500 (unchanged)
-- Property Management: $67,140 (unchanged)
-- Marketing: $60,000 (unchanged)
-- Legal: $45,000 (unchanged)
-- Landscaping: $70,000 (unchanged)
+**Calculations:**
 
-### Total Operating Expenses Comparison
+```plan
+Electricity & Water: $2,180,100 × 12.31% × 80% × 100% = $214,791
+Repairs & Maintenance: $111,800 × 12.31% × 90% × 100% = $12,390
+Security: $89,440 × 12.31% × 75% × 100% = $8,259
+```
 
-| Scenario            | Total OpEx ($) | OpEx Per SF ($) |
-| ------------------- | -------------- | --------------- |
-| No Gross-Up         | 992,140        | 15.26           |
-| With Gross-Up (95%) | 1,057,205      | 16.26           |
-| **Difference**      | **+65,065**    | **+1.00**       |
+**Total Annual Reimbursement (Grossed Up):** **$235,440**
+**Increase from No Gross-Up:** $235,440 - $210,621 = **$24,819**
 
-### 6.4 Tenant Reimbursement Impact
+### Suite 106 - Tenant E (Recalculated with Gross-Up)
 
-| Suite     | Tenant   | Type                | No Gross-Up ($) | With Gross-Up ($) | Difference ($) |
-| --------- | -------- | ------------------- | --------------- | ----------------- | -------------- |
-| 101       | Tenant A | FSG                 | 0               | 0                 | 0              |
-| 102       | Tenant B | MG (Core Operating) | 72,013          | 72,013            | 0              |
-| 103       | Vacant   | -                   | 0               | 0                 | 0              |
-| 104       | Tenant C | Base Year Stop      | 9,530           | 9,530             | 0              |
-| 105       | Tenant D | NNN (Maint & Utils) | 34,448          | 38,510            | +4,062         |
-| 106       | Tenant E | MG (Custom)         | 39,298          | 43,911            | +4,613         |
-| **Total** |          |                     | **155,289**     | **163,964**       | **+8,675**     |
+**Expenses with Gross-Up Applied:**
 
-### Suite 105 Gross-Up Calculation Detail
+- Property Taxes: $225,000 (no gross-up)
+- Building Insurance: $97,500 (no gross-up)
+- Electricity & Water: $2,180,100 (grossed up)
 
-**Original Calculations:**
+**Calculations:**
 
-- Utilities: $162,500 × 12.3% × 80% = $15,998
-- Repairs: $100,000 × 12.3% × 90% = $11,070
-- Security: $80,000 × 12.3% × 75% = $7,380
-- **Total:** $34,448
+```plan
+Property Taxes: $225,000 × 10.77% × 100% × 75% = $18,174
+Building Insurance: $97,500 × 10.77% × 100% × 75% = $7,876
+Electricity & Water: $2,180,100 × 10.77% × 80% × 75% = $140,927
+```
 
-**With Gross-Up:**
+**Total Annual Reimbursement (Grossed Up):** **$166,977**
+**Increase from No Gross-Up:** $166,977 - $152,131 = **$14,846**
 
-- Utilities: $181,525 × 12.3% × 80% = $17,879
-- Repairs: $111,800 × 12.3% × 90% = $12,389
-- Security: $89,440 × 12.3% × 75% = $8,242
-- **Total:** $38,510
-- **Increase:** $4,062
+## Year 1 Final Summary (WITH GROSS-UP)
+
+| Suite     | Tenant        | No Gross-Up  | With Gross-Up | Difference   |
+| --------- | ------------- | ------------ | ------------- | ------------ |
+| 101       | Tenant A      | $0           | $0            | $0           |
+| 102       | Tenant B      | $71,996      | $71,996       | $0           |
+| 103       | Future Tenant | $0           | $0            | $0           |
+| 104       | Tenant C      | $9,530       | $9,530        | $0           |
+| 105       | Tenant D      | $210,621     | $235,440      | +$24,819     |
+| 106       | Tenant E      | $152,131     | $166,977      | +$14,846     |
+| **TOTAL** |               | **$444,278** | **$483,943**  | **+$39,665** |
 
 ## NOI & Cap Rate Calculations
 
-### Year 1 Calculations (No Gross-Up)
+### Year 1 - No Gross-Up
 
-**Net Operating Income (NOI):**
-`NOI = Total Base Rent - Total Operating Expenses`
-`NOI = $1,342,800 - $992,140 = $350,660`
+**Net Operating Income:**
 
-**Cap Rate:**
-`Cap Rate = NOI ÷ Purchase Price`
-`Cap Rate = $350,660 ÷ $10,000,000 = 3.51%`
+```text
+NOI = Total Base Rent + Tenant Reimbursements - Total Operating Expenses
+NOI = $1,342,800 + $444,278 - $2,779,640
+NOI = -$992,562 (NEGATIVE)
+```
 
-### Year 1 Calculations (With Gross-Up)
+**Cap Rate:** N/A (negative NOI)
 
-**Net Operating Income (NOI) with Gross-Up:**
-`NOI = Total Base Rent - Total Operating Expenses (Grossed Up)`
-`NOI = $1,342,800 - $1,057,205 = $285,595`
+### Year 1 - With Gross-Up (95%)
 
-**Cap Rate with Gross-Up:**
-`Cap Rate = NOI ÷ Purchase Price`
-`Cap Rate = $285,595 ÷ $10,000,000 = 2.86%`
+**Net Operating Income:**
 
-### 10-Year NOI & Cap Rate Projection (No Gross-Up)
+```text
+NOI = Total Base Rent + Tenant Reimbursements - Total Operating Expenses
+NOI = $1,342,800 + $483,943 - $3,039,240
+NOI = -$1,212,497 (NEGATIVE)
+```
 
-| Year | Base Rent ($) | Operating Expenses ($) | NOI ($) | Cap Rate (%) |
-| ---- | ------------- | ---------------------- | ------- | ------------ |
-| 1    | 1,342,800     | 992,140                | 350,660 | 3.51%        |
-| 2    | 1,383,084     | 1,021,904              | 361,180 | 3.61%        |
-| 3    | 1,424,577     | 1,052,561              | 372,016 | 3.72%        |
-| 4    | 1,467,314     | 1,084,138              | 383,176 | 3.83%        |
-| 5    | 1,511,333     | 1,116,662              | 394,671 | 3.95%        |
-| 6    | 1,556,673     | 1,150,162              | 406,511 | 4.07%        |
-| 7    | 1,603,373     | 1,184,667              | 418,706 | 4.19%        |
-| 8    | 1,651,475     | 1,220,207              | 431,268 | 4.31%        |
-| 9    | 1,701,019     | 1,256,813              | 444,206 | 4.44%        |
-| 10   | 1,752,049     | 1,294,517              | 457,532 | 4.58%        |
+**Cap Rate:** N/A (negative NOI)
 
-### 10-Year NOI & Cap Rate Projection (With Gross-Up at 95%)
+## Key Findings & Issues
 
-| Year | Base Rent ($) | Operating Expenses ($) | NOI ($) | Cap Rate (%) |
-| ---- | ------------- | ---------------------- | ------- | ------------ |
-| 1    | 1,342,800     | 1,057,205              | 285,595 | 2.86%        |
-| 2    | 1,383,084     | 1,088,920              | 294,164 | 2.94%        |
-| 3    | 1,424,577     | 1,121,628              | 302,949 | 3.03%        |
-| 4    | 1,467,314     | 1,155,357              | 311,957 | 3.12%        |
-| 5    | 1,511,333     | 1,190,138              | 321,195 | 3.21%        |
-| 6    | 1,556,673     | 1,226,002              | 330,671 | 3.31%        |
-| 7    | 1,603,373     | 1,262,982              | 340,391 | 3.40%        |
-| 8    | 1,651,475     | 1,301,111              | 350,364 | 3.50%        |
-| 9    | 1,701,019     | 1,340,424              | 360,595 | 3.61%        |
-| 10   | 1,752,049     | 1,380,957              | 371,092 | 3.71%        |
+### Critical Problem
 
-### NOI Impact Summary
+**This property has NEGATIVE NOI** because:
 
-| Scenario            | Year 1 NOI ($) | Year 10 NOI ($) | Impact                            |
-| ------------------- | -------------- | --------------- | --------------------------------- |
-| No Gross-Up         | 350,660        | 457,532         | Base Case                         |
-| With Gross-Up (95%) | 285,595        | 371,092         | -$65,065 Year 1, -$86,440 Year 10 |
-| **Difference**      | **-65,065**    | **-86,440**     | **Lower NOI due to higher OpEx**  |
+1. Operating expenses ($2.78M - $3.04M) are extremely high
+2. Base rent ($1.34M) is far too low
+3. Even with reimbursements, income doesn't cover expenses
 
-## Expense Reimbursement Assumptions
+### Electricity & Water Issue
+
+- $1,950,000 annually = $30/SF
+- This is **extraordinarily high** for commercial real estate
+- Typical range: $2-5/SF
+- **Possible error in original data?**
+
+### Required Base Rent for Breakeven (No Gross-Up)
+
+```text
+Required Income = OpEx - Reimbursements
+Required Income = $2,779,640 - $444,278 = $2,335,362
+
+Current Base Rent: $1,342,800
+Shortfall: $992,562 annually
+```
+
+## Expense Reimbursement Assumptions Tab
 
 ### Operating Expense Assumptions
 
