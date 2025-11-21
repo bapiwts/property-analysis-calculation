@@ -32,7 +32,21 @@
 | Construction Mgmt Fee (%) | 2%                 |
 | Disposition Fee (%)       | 1%                 |
 
-## 🔵 STEP 2 — RENT ROLL TABLE
+### Property Overview Calculations
+
+| Field                    | Value                   |
+| ------------------------ | ----------------------- |
+| Upfront Working Capital  | ₹750,000                |
+| Purchase Price / SF      | ₹958.33 / SF            |
+| Year 1 Cap Rate          | (Calculated after OpEx) |
+| Adjusted Year 2 Cap Rate | (Calculated after OpEx) |
+| Total Spaces             | 300                     |
+| Parking Spaces           | 300                     |
+| Net Leasable Area        | 120,000 SF              |
+
+## 🔵 STEP 2 — RENT ROLL
+
+### Rentroll Table
 
 | Suite | Tenant   | Leased/Spec | Tenant SF | % of Total SF | Lease Start | Initial Lease (mo) | Lease End   | Option 1 (mo) | Option 2 (mo) | Contract End | Term (years) | Remaining Term (years) | In-Place Rent (₹/mo) | Annual Rent (₹) | Annual Rent/SF (₹) | Monthly Rent/SF (₹) | Increase Method | Increase |
 | ----- | -------- | ----------- | --------- | ------------- | ----------- | ------------------ | ----------- | ------------- | ------------- | ------------ | ------------ | ---------------------- | -------------------- | --------------- | ------------------ | ------------------- | --------------- | -------- |
@@ -41,7 +55,22 @@
 | 103   | TCS      | Leased      | 25,000    | 20.8%         | Sep-01-2020 | 120                | Aug-31-2030 | 60            | 0             | Aug-31-2035  | 10.0         | 5.08                   | 2,000,000            | 24,000,000      | 960                | 80                  | Detail          | —        |
 | 104   | Vodafone | Leased      | 25,000    | 20.8%         | Jan-01-2024 | 60                 | Dec-31-2028 | 0             | 0             | Dec-31-2028  | 5.0          | 3.42                   | 1,750,000            | 21,000,000      | 840                | 70                  | Flat            | 0%       |
 
-## 🔵 STEP 3 — RENT DETAIL TABLE
+### Rentroll Calculations
+
+| Field                 | Value        |
+| --------------------- | ------------ |
+| Net Rentable Area     | 120,000 SF   |
+| Unallocated Area (SF) | 0 SF         |
+| Total Square Footage  | 120,000 SF   |
+| % of Total            | 100%         |
+| Total Annual / SF     | ₹905 / SF    |
+| Total Annual Amount   | ₹108,600,000 |
+| Total Monthly Amount  | ₹9,050,000   |
+| Total TI              | ₹24,000,000  |
+| Total LC              | ₹1,572,000   |
+| Total Concessions     | ₹8,150,000   |
+
+## 🔵 STEP 3 — RENT DETAIL
 
 ### We apply
 
@@ -53,6 +82,8 @@
 ### Assumption
 
 - Year 1 = 2026, because Analysis Date = Aug 29, 2025
+
+### Rent Details Table
 
 | Suite | Tenant   | End Year | Year 1        | Year 2     | Year 3     | Year 4     | Year 5     | Year 6     | Year 7     | Year 8 | Year 9 | Year 10+ |
 | ----- | -------- | -------- | ------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ------ | ------ | -------- |
