@@ -2,7 +2,7 @@
 
 ## Data Flow Summary
 
-***Property Info → Rent Roll(Tenants) → Rent Details → Unpaid Leasing Costs(ULC) → Future Tenant Assumptions(FTA) → Operating Expenses → Expense Groups → Expense Reimbursement → Expense Reimbursement Assumptions → Expense Reimbursement Operating Expense Comparison Table(Applied Assumptions and Without Applied Assumptions) → Construction Budget → Debt***
+***Property Info → Rent Roll(Tenants) → Rent Details → Unpaid Leasing Costs(ULC) → Future Tenant Assumptions(FTA) → Operating Expenses → Expense Groups → Expense Reimbursement → Expense Reimbursement Assumptions → Expense Reimbursement Operating Expense Comparison Table(Applied Assumptions and Without Applied Assumptions) → Construction Budget → Debt(Acquisition Loan,Mezzanine Loan,Refinance Loan) →  Waterfall(Annual CF,Monthly CF) → Sensitivities***
 
 ---
 
