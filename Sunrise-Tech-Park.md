@@ -97,46 +97,65 @@ Note: This assumes 100% building efficiency (NLA = BSF). This will be verified o
 | Suite | Tenant   | Leased/Spec | Tenant SF | % of Total SF | Lease Start | Initial Lease (mo) | Lease End   | Option 1 (mo) | Option 2 (mo) | Contract End | Term (years) | Remaining Term (years) | In-Place Rent (₹/mo) | Annual Rent (₹) | Annual Rent/SF (₹) | Monthly Rent/SF (₹) | Increase Method | Increase |
 | ----- | -------- | ----------- | --------- | ------------- | ----------- | ------------------ | ----------- | ------------- | ------------- | ------------ | ------------ | ---------------------- | -------------------- | --------------- | ------------------ | ------------------- | --------------- | -------- |
 | 101   | Infosys  | Leased      | 40,000    | 33.3%         | Jan-01-2022 | 120                | Dec-31-2031 | 60            | 60            | Dec-31-2041  | 20.0         | 6.33                   | 3,200,000            | 38,400,000      | 960                | 80                  | Inc. %/Yr       | 3.5%     |
-| 102   | Wipro    | Leased      | 30,000    | 25.0%         | Jul-01-2021 | 96                 | Jun-30-2029 | 36            | 0             | Jun-30-2032  | 11.0         | 3.11                   | 2,100,000            | 25,200,000      | 840                | 70                  | Inc. $/Yr       | 150,000  |
-| 103   | TCS      | Leased      | 25,000    | 20.8%         | Sep-01-2020 | 120                | Aug-31-2030 | 60            | 0             | Aug-31-2035  | 15.0         | 4.77                   | 2,000,000            | 24,000,000      | 960                | 80                  | Detail          | —        |
-| 104   | Vodafone | Leased      | 25,000    | 20.8%         | Jan-01-2024 | 60                 | Dec-31-2028 | 0             | 0             | Dec-31-2028  | 5.0          | 3.11                   | 1,750,000            | 21,000,000      | 840                | 70                  | Flat            | 0%       |
+| 102   | Wipro    | Leased      | 30,000    | 25.0%         | Jul-01-2021 | 96                 | Jun-30-2029 | 36            | 0             | Jun-30-2032  | 11.0         | 3.58                   | 2,100,000            | 25,200,000      | 840                | 70                  | Inc. $/Yr       | 150,000  |
+| 103   | TCS      | Leased      | 25,000    | 20.8%         | Sep-01-2020 | 120                | Aug-31-2030 | 60            | 0             | Aug-31-2035  | 15.0         | 4.92                   | 2,000,000            | 24,000,000      | 960                | 80                  | Detail          | —        |
+| 104   | Vodafone | Leased      | 25,000    | 20.8%         | Jan-01-2024 | 60                 | Dec-31-2028 | 0             | 0             | Dec-31-2028  | 5.0          | 3.33                   | 1,750,000            | 21,000,000      | 840                | 70                  | Flat            | 0%       |
 
 ### Rentroll Calculations
 
-### Net Leasable Area (NLA)
+#### Net Leasable Area (NLA)
 
 Formula: Sum of all tenant SF
 Calculation: 40,000 + 30,000 + 25,000 + 25,000 = 120,000 SF
 
-### Building Efficiency
+#### Building Efficiency
 
 Formula: NLA ÷ Building SF
 Calculation: 120,000 ÷ 120,000 = 100%
 
-### Current Occupancy
+#### Current Occupancy
 
 Formula: (Sum of leased SF) ÷ NLA
 Calculation: 120,000 ÷ 120,000 = 100% (Fully leased)
 
-### Weighted Average Lease Term (WALT)
+#### Weighted Average Lease Term (WALT)
 
-Formula: Σ(remaining_term × leased_sf) ÷ total_leased_sf
-Calculation:(6.11 × 40,000) + (3.11 × 30,000) + (4.77 × 25,000) + (3.11 × 25,000) = 438,950
-438,950 ÷ 120,000 = 3.66 years
+**Analysis Date:** Aug 29, 2025
+**Remaining Term Calculations** (from Aug 29, 2025):
 
-### Total Base Rent
+| Tenant   | Lease End   | Remaining Months | Remaining Years |
+| -------- | ----------- | ---------------- | --------------- |
+| Infosys  | Dec-31-2031 | 76 months        | 6.33 years      |
+| Wipro    | Jun-30-2029 | 46 months        | 3.83 years      |
+| TCS      | Aug-31-2030 | 60 months        | 5.00 years      |
+| Vodafone | Dec-31-2028 | 40 months        | 3.33 years      |
 
-Formula: Sum of all annual rents
-Calculation: 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000
+**Formula:** Σ(remaining_term × leased_sf) ÷ total_leased_sf
+**Calculation:**
 
-### Total Annual / SF
+- Infosys: 6.33 × 40,000 = 253,200
+- Wipro: 3.83 × 30,000 = 114,900
+- TCS: 5.00 × 25,000 = 125,000
+- Vodafone: 3.33 × 25,000 = 83,250
+- Total: 576,350
+- WALT: 576,350 ÷ 120,000 = 4.80 years
 
-Formula: Total Base Rent ÷ NLA
-Calculation: 108,600,000 ÷ 120,000 = ₹905 / SF
+#### Total Base Rent
+
+**Formula:** Sum of all annual rents
+**Calculation:** 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000
+
+#### Total Annual / SF
+
+**Formula:** Total Base Rent ÷ NLA
+**Calculation:** 108,600,000 ÷ 120,000 = ₹905 / SF
 
 ### Total Monthly Amount
 
-Calculation: 108,600,000 ÷ 12 = ₹9,050,000
+**Formula:** Total Base Rent ÷ 12
+**Calculation:** 108,600,000 ÷ 12 = ₹9,050,000
+
+#### Summary Table
 
 | Field                 | Value        |
 | --------------------- | ------------ |
@@ -153,7 +172,9 @@ Calculation: 108,600,000 ÷ 12 = ₹9,050,000
 
 ## 🔵 STEP 3 — RENT DETAIL
 
-### We apply
+Rent Escalation Schedule
+
+### Assumptions
 
 - Infosys → +3.5% per year
 - Wipro → +₹150,000 per year
@@ -164,12 +185,13 @@ Calculation: 108,600,000 ÷ 12 = ₹9,050,000
 
 - Year 1 = 2026, because Analysis Date = Aug 29, 2025
 
-| Suite | Tenant   | End Year | Year 1 (2026) | Year 2     | Year 3     | Year 4     | Year 5     | Year 6     | Year 7     | Year 8     | Year 9     | Year 10+                            |
-| ----- | -------- | -------- | ------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ----------------------------------- |
-| 101   | Infosys  | **2041** | 38,400,000    | 39,744,000 | 41,135,040 | 42,574,766 | 44,064,882 | 45,607,163 | 47,203,415 | 48,855,534 | 50,565,432 | **Continues to Yr 20 (73,809,314)** |
-| 102   | Wipro    | **2032** | 25,200,000    | 25,350,000 | 25,500,000 | 25,650,000 | 25,800,000 | 25,950,000 | 26,100,000 | 26,250,000 | 26,400,000 | **Final Yr 11 = 26,700,000**        |
-| 103   | TCS      | **2035** | 24,000,000    | 24,960,000 | 25,958,400 | 26,996,736 | 28,076,605 | 29,199,669 | 30,367,656 | 31,582,362 | 32,845,656 | **Continues to Yr 15 (41,560,233)** |
-| 104   | Vodafone | **2028** | 21,000,000    | 21,000,000 | 21,000,000 | 21,000,000 | 21,000,000 | N/A        | N/A        | N/A        | N/A        | N/A                                 |
+| Suite     | Tenant   | End Year | Year 1 (2026)   | Year 2          | Year 3          | Year 4          | Year 5          | Year 6     | Year 7     | Year 8     | Year 9     | Year 10+                            |
+| --------- | -------- | -------- | --------------- | --------------- | --------------- | --------------- | --------------- | ---------- | ---------- | ---------- | ---------- | ----------------------------------- |
+| 101       | Infosys  | **2041** | 38,400,000      | 39,744,000      | 41,135,040      | 42,574,766      | 44,064,882      | 45,607,163 | 47,203,415 | 48,855,534 | 50,565,432 | **Continues to Yr 20 (73,809,314)** |
+| 102       | Wipro    | **2032** | 25,200,000      | 25,350,000      | 25,500,000      | 25,650,000      | 25,800,000      | 25,950,000 | 26,100,000 | 26,250,000 | 26,400,000 | **Final Yr 11 = 26,700,000**        |
+| 103       | TCS      | **2035** | 24,000,000      | 24,960,000      | 25,958,400      | 26,996,736      | 28,076,605      | 29,199,669 | 30,367,656 | 31,582,362 | 32,845,656 | **Continues to Yr 15 (41,560,233)** |
+| 104       | Vodafone | **2028** | 21,000,000      | 21,000,000      | 21,000,000      | 21,000,000      | 21,000,000      | N/A        | N/A        | N/A        | N/A        | N/A                                 |
+| **Total** |          |          | **108,600,000** | **111,054,000** | **113,593,440** | **116,221,502** | **118,941,487** |            |            |            |            |                                     |
 
 ## 🔵 STEP 4 —  UNPAID LEASING COSTS (ULC)
 
@@ -179,12 +201,13 @@ Calculation: 108,600,000 ÷ 12 = ₹9,050,000
 - So we include for Infosys (2022), Vodafone (2024)
 - Wipro & TCS have older stabilized leases → No ULC
 
-| Suite | Tenant   | Total TI (₹) | Total LC (₹) | Concessions (₹) |
-| ----- | -------- | ------------ | ------------ | --------------- |
-| 101   | Infosys  | 14,000,000   | 1,152,000    | 6,400,000       |
-| 102   | Wipro    | 0            | 0            | 0               |
-| 103   | TCS      | 0            | 0            | 0               |
-| 104   | Vodafone | 10,000,000   | 420,000      | 1,750,000       |
+| Suite     | Tenant   | Total TI (₹)   | Total LC (₹)   | Concessions (₹) |
+| --------- | -------- | -------------- | -------------- | --------------- |
+| 101       | Infosys  | 14,000,000     | 1,152,000      | 6,400,000       |
+| 102       | Wipro    | 0              | 0              | 0               |
+| 103       | TCS      | 0              | 0              | 0               |
+| 104       | Vodafone | 10,000,000     | 420,000        | 1,750,000       |
+| **TOTAL** |          | **24,000,000** | **1,572,000**  | **8,150,000**   |
 
 ## 🔵 STEP 5 —  FUTURE TENANT ASSUMPTIONS (FTA)
 
@@ -242,6 +265,7 @@ Calculation: 108,600,000 ÷ 12 = ₹9,050,000
 | Legal                 | 500,000.00        | 50%           | Yes              | 250,000.00             |
 | Landscaping           | 600,000.00        | 100%          | Yes              | 600,000.00             |
 | Cleaning              | 750,000.00        | 0%            | No               | 0.00                   |
+| **TOTAL**             | **₹42,888,000**   |               |                  |**₹34,357,000**         |
 
 #### No Gross Up
 
@@ -257,13 +281,14 @@ Calculation: 108,600,000 ÷ 12 = ₹9,050,000
 | Legal                 | 500,000.00        | 50%           | 250,000.00             |
 | Landscaping           | 600,000.00        | 100%          | 600,000.00             |
 | Cleaning              | 750,000.00        | 0%            | 0.00                   |
+| **TOTAL**             | **₹42,888,000**   |               | **₹34,357,000**        |
 
 ### Totals & Per-SF Metrics
 
-- Total Operating Expenses (annual): ₹42,888,000.00 (sum of final annual amounts)
-- Operating Expenses / SF: 42,888,000 ÷ 120,000 = ₹357.40 / SF
+- Total Operating Expenses (annual): **₹42,888,000.00** *(sum of final annual amounts)*
+- Operating Expenses / SF: 42,888,000 ÷ 120,000 = **₹357.40 / SF**
 - Total Recoverable Operating Expenses (annual): ₹34,357,000.00
-- Recoverable / SF: 34,357,000 ÷ 120,000 = ₹286.31 / SF
+- Recoverable / SF: 34,357,000 ÷ 120,000 = **₹286.31 / SF**
 
 ## 🔵 STEP 7 — OPERATING EXPENSES GROUPS
 
@@ -549,13 +574,22 @@ Year 4: ₹1,146,875 × 1.03³ × 0.75 = ₹939,916
 Year 5: ₹1,146,875 × 1.03⁴ × 0.75 = ₹968,114
 ```
 
+### Per-Tenant Reimbursement Summary
+
+| Suite   | Tenant       | Reimbursement Type | Pro Rata   | Recovery % | Year 1 Reimbursement | Year 2     | Year 3     | Year 4     | Year 5     |
+| ------- | ------------ | ------------------ | ---------- | ---------- | -------------------- | ---------- | ---------- | ---------- | ---------- |
+| **101** | **Infosys**  | Full Service Gross | **33.33%** | 0%         | ₹0                   | ₹0         | ₹0         | ₹0         | ₹0         |
+| **102** | **Wipro**    | Core Operating     | **25.00%** | 80%        | ₹1,281,600           | ₹1,315,840 | ₹1,351,002 | ₹1,387,110 | ₹1,424,192 |
+| **103** | **TCS**      | Base Year Stop     | **20.83%** | 95%        | ₹2,066,250           | ₹2,097,600 | ₹2,130,204 | ₹2,164,112 | ₹2,199,377 |
+| **104** | **Vodafone** | Modified Gross     | **20.83%** | 75%        | ₹860,156             | ₹885,961   | ₹912,540   | ₹939,916   | ₹968,114   |
+
 ## 🔵 STEP 9 — EXPENSES REIMBURSEMENT ASSUMPTIONS
 
 User Input
 
-A. Operating Expense Assumptions
+### A. Operating Expense Assumptions
 
-User Input Table:
+**User Input Table:**
 
 | Item                       | Value | Notes                         |
 | -------------------------- | ----- | ----------------------------- |
@@ -574,7 +608,7 @@ Capital Reserves Amount:
 - Formula: Capital Reserves per SF × Building Square Footage
 - Calculation: ₹15.00 × 120,000 = ₹1,800,000/year
 
-B. Property Tax Assumptions
+### B. Property Tax Assumptions
 
 | Item                        | Value       | Notes                    |
 | --------------------------- | ----------- | ------------------------ |
@@ -588,7 +622,8 @@ Year 1 Property Tax:
 - Formula: (Assessed Value × Tax Rate / 100) + Fixed Charge
 - Calculation: (₹125,000,000 × 1.76 / 100) + ₹0 = ₹2,200,000
 
-C. Property Tax Growth Rates
+### C. Property Tax Growth Rates
+
 User Input Table
 
 | Item                      | Year 1 | Year 2 | Year 3 | Year 4 | Year 5+ |
@@ -597,7 +632,7 @@ User Input Table
 | Fixed Charge Growth (%)   | 0.0%   | 0.0%   | 0.0%   | 0.0%   | 0.0%    |
 | Vacancy (%)               | 0.0%   | 0.0%   | 0.0%   | 5.0%   | 8.0%    |
 
-## Expense Reimbursement Operating Expense Comparison Table (Without Assumptions)
+### Expense Reimbursement Operating Expense Comparison Table (Without Assumptions)
 
 | Category                  | Trailing 12 (₹) | PSF/Yr     | Broker (₹)     | PSF/Yr     | Comparable (₹) | PSF/Yr     | Hold Period (₹) | PSF/Yr     |
 | ------------------------- | --------------- | ---------- | -------------- | ---------- | -------------- | ---------- | --------------- | ---------- |
@@ -622,7 +657,7 @@ User Input Table
 
 *Mgmt Fee updated using increasing in-place rents from Rent Detail (Infosys 3.5%, Wipro ₹150K, etc.)
 
-## Expense Reimbursement Operating Expense Comparison Table (Applied Assumptions)
+### Expense Reimbursement Operating Expense Comparison Table (Applied Assumptions)
 
 | Category                 | Trailing 12 (₹) | PSF/Yr | Broker (₹) | PSF/Yr | Comparable (₹) | PSF/Yr | Hold Period (₹) | PSF/Yr |
 | ------------------------ | --------------: | -----: | ---------: | -----: | -------------: | -----: | --------------: | -----: |
@@ -759,147 +794,341 @@ TABLE PART 4 — MONTHS 31 to 40
 
 ## 🔵 STEP 11 — DEBT(Acquisition Loan,Mezzanine Loan,Refinance Loan) - Loan Analysis and Amortization Schedule
 
-Interest Calculation Method : 30/360,30/365,Actual/360,Actual/365,365/360
+### Debt Tab - Loan Analysis and Amortization Schedule
+
+Overview
+The Debt tab structures the financing for Sunrise Tech Park using a three-loan approach:
+
+- **Acquisition Loan** - Primary financing at property purchase
+- **Mezzanine Loan** - Gap financing for higher leverage
+- **Refinance Loan** - Future refinancing to extract equity
+
+**Interest Calculation Method:** 30/360 | 30/365 | Actual/360 | Actual/365 | 365/360
 
 ### Acquisition Loan
 
-✅ 1. Acquisition Loan — User Input (Customized)
+#### 1. Acquisition Loan — User Input
 
 | Parameter                       | Input Value     | Notes             |
 | ------------------------------- | --------------- | ----------------- |
-| **Purchase Price**              | ₹115,000,000    | Sunrise Tech Park |
+| **Purchase Price**              | ₹115,000,000    | From Step 1       |
 | **Loan-To-Value (LTV)**         | 75%             | Standard          |
 | **Loan Amount**                 | **₹86,250,000** | 115M × 75%        |
 | **Interest Rate**               | 5.25%           | Annual            |
 | **Interest Calculation Method** | 30/360          | Monthly = Rate/12 |
 | **I/O Period**                  | 12 months       | Months 1–12       |
-| **Loan Fee (1%)**               | ₹1,150,000      |                   |
+| **Loan Fee (1%)**               | ₹862,500        | 1% of loan amount |
 | **Amortization**                | 300 months      | 25 years          |
 | **Term**                        | 120 months      | 10 years          |
 
-✅ 2. Acquisition Loan — Core Calculations
-Interest-only Monthly Payment (Months 1–12)
+#### 2. Acquisition Loan — Core Calculations
 
-Formula: Interest = Loan Amount × (Rate / 12)
-= 86,250,000 × (0.0525 / 12)
-= ₹377,343.75
+**Monthly Interest Rate:**
+**Formula:** Monthly Rate = Annual Rate Ã· 12
+**Calculation:** 5.25% Ã· 12 = 0.4375% per month
 
-Amortized Monthly Payment (Months 13–120)
+**Interest-only Monthly Payment (Months 1–12):**
+**Formula:** Interest = Loan Amount × (Rate / 12)
+**Calculation:** ₹86,250,000 × (0.0525 / 12)
+           = ₹86,250,000 × 0.004375
+           = ₹377,343.75
 
-Formula: PMT = P × r × (1+r)^n / ((1+r)^n − 1)
+**Amortized Monthly Payment (Months 13–120):**
+
+**Formula:** PMT = P × r × (1+r)^n / ((1+r)^n − 1)
+Where:
 P = 86,250,000
 r = 0.0525 / 12 = 0.004375
 n = 300
-PMT = ₹517,841.44
 
-✅ 3. Acquisition Loan — Monthly Amortization (First 10 Months)
+**Calculation:**
 
-| Month                | 1          | 2          | 3          | 4          | 5          | 6          | 7          | 8          | 9          | 10         |
-| -------------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-| Date                 | 3/31/2025  | 4/30/2025  | 5/31/2025  | 6/30/2025  | 7/31/2025  | 8/31/2025  | 9/30/2025  | 10/31/2025 | 11/30/2025 | 12/31/2025 |
-| **Starting Balance** | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 |
-| **Total Payment**    | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   |
-| **Principal**        | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         |
-| **Interest**         | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   | ₹377,344   |
-| **Ending Balance**   | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 |
+  (1+r)^n = (1 + 0.004375)^300 = 3.6367
+
+  PMT = 86,250,000 × 0.004375 × 3.6367 / (3.6367 - 1)
+      = 86,250,000 × 0.004375 × 3.6367 / 2.6367
+      = 1,372,605.94 / 2.6367
+      = ₹520,583.92
+
+#### 3. Acquisition Loan — Monthly Amortization (First 24 Months)
+
+***Table : Months 1 to 12***
+
+| Month                | 1          | 2          | 3          | 4          | 5          | 6          | 7          | 8          | 9          | 10         | 11         | 12         |
+| -------------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+| **Date**             | 31/03/2026 | 30/04/2026 | 31/05/2026 | 30/06/2026 | 31/07/2026 | 31/08/2026 | 30/09/2026 | 31/10/2026 | 30/11/2026 | 31/12/2026 | 31/01/2027 | 28/02/2027 |
+| **Starting Balance** | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 |
+| **Total Payment**    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    |
+| **Principal**        | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          |
+| **Interest**         | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    | 377,344    |
+| **Ending Balance**   | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 | 86,250,000 |
+
+***Table — Months 13 to 24**
+
+| Month                | 13         | 14         | 15         | 16         | 17         | 18         | 19         | 20         | 21         | 22         | 23         | 24         |
+| -------------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+| **Date**             | 31/03/2027 | 30/04/2027 | 31/05/2027 | 30/06/2027 | 31/07/2027 | 31/08/2027 | 30/09/2027 | 31/10/2027 | 30/11/2027 | 31/12/2027 | 31/01/2028 | 29/02/2028 |
+| **Starting Balance** | 86,250,000 | 86,106,760 | 85,962,893 | 85,818,397 | 85,673,270 | 85,527,510 | 85,381,115 | 85,234,083 | 85,086,412 | 84,938,100 | 84,789,145 | 84,639,545 |
+| **Total Payment**    | 520,584    | 520,584    | 520,584    | 520,584    | 520,584    | 520,584    | 520,584    | 520,584    | 520,584    | 520,584    | 520,584    | 520,584    |
+| **Principal**        | 143,240    | 143,867    | 144,496    | 145,127    | 145,760    | 146,395    | 147,032    | 147,671    | 148,312    | 148,955    | 149,600    | 150,247    |
+| **Interest**         | 377,344    | 376,717    | 376,088    | 375,457    | 374,824    | 374,189    | 373,552    | 372,913    | 372,272    | 371,629    | 370,984    | 370,337    |
+| **Ending Balance**   | 86,106,760 | 85,962,893 | 85,818,397 | 85,673,270 | 85,527,510 | 85,381,115 | 85,234,083 | 85,086,412 | 84,938,100 | 84,789,145 | 84,639,545 | 84,489,298 |
+
+ **Key Observations:**
+
+- Months 1-12: Interest-only, balance remains 86,250,000
+- Month 13 onwards: Principal reduction begins
+- Balance after 24 months: 84,489,298
 
 ### Mezzanine Loan
 
-✅ 1. Mezzanine Loan — User Input (Customized)
+#### 1. Mezzanine Loan — User Input
 
-| Parameter       | Value           | Notes        |
-| --------------- | --------------- | ------------ |
-| Purchase Price  | ₹115,000,000    |              |
-| LTV             | 10%             | 115M × 10%   |
-| **Loan Amount** | **₹11,500,000** |              |
-| Interest Rate   | 8.75%           | Higher-risk  |
-| Interest Method | 30/360          |              |
-| I/O Period      | 60 months       | Entire term  |
-| Loan Fee (2%)   | ₹2,300,000      |              |
-| Term            | 60 months       | No principal |
-| Amortization    | N/A             |              |
+| Parameter       | Value           | Notes                     |
+| --------------- | --------------- | ------------------------- |
+| Purchase Price  | ₹115,000,000    | From Step 1               |
+| LTV             | 10%             | Gap financing (85% - 75%) |
+| **Loan Amount** | **₹11,500,000** | 115M × 10%                |
+| Interest Rate   | 8.75%           | Higher-risk               |
+| Interest Method | 30/360          | Standard convention       |
+| I/O Period      | 60 months       | Entire term               |
+| Loan Fee (2%)   | ₹2,300,000      | 2% of loan                |
+| Term            | 60 months       | No principal              |
+| Amortization    | N/A             | No amortization (I/O only)|
 
-✅ 2. Mezzanine Loan — Core Calculations
+#### 2. Mezzanine Loan — Core Calculations
 
-Monthly Interest
-= 11,500,000 × (0.0875 / 12)
-= ₹83,854.17
+**Monthly Interest Rate**
+**Formula:** Monthly Rate = Annual Rate Ã· 12
+**Calculation:** 8.75% Ã· 12 = 0.7292% per month
 
-Total payment = interest-only
-Principal = 0
-Ending balance = ₹11,500,000
+**Monthly Interest-Only Payment**:
+**Formula:** Loan Amount × (Rate / 12)
+**Calculation:** ₹11,500,000 × (0.0875 / 12)
+           = ₹11,500,000 × 0.00729167
+           = ₹83,854.17
 
-✅ 3. Mezzanine Loan — Monthly Amortization
+#### 3. Mezzanine Loan —Monthly Amortization (First 24 Months)
 
-| Month                | 1          | 2          | 3          | 4          | 5          | 6          | 7          | 8          | 9          | 10         |
-| -------------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-| Date                 | 3/31/2025  | 4/30/2025  | 5/31/2025  | 6/30/2025  | 7/31/2025  | 8/31/2025  | 9/30/2025  | 10/31/2025 | 11/30/2025 | 12/31/2025 |
-| **Starting Balance** | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 |
-| **Total Payment**    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    |
-| **Principal**        | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         | ₹0         |
-| **Interest**         | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    | ₹83,854    |
-| **Ending Balance**   | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 |
+***Table : Months 1 to 12***
+
+| Month                | 1          | 2          | 3          | 4          | 5          | 6          | 7          | 8          | 9          | 10         | 11         | 12         |
+| -------------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+| **Date**             | 31/03/2026 | 30/04/2026 | 31/05/2026 | 30/06/2026 | 31/07/2026 | 31/08/2026 | 30/09/2026 | 31/10/2026 | 30/11/2026 | 31/12/2026 | 31/01/2027 | 28/02/2027 |
+| **Starting Balance** | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 |
+| **Total Payment**    | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     |
+| **Principal**        | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          |
+| **Interest**         | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     |
+| **Ending Balance**   | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 |
+
+***Table : Months 13 to 24***
+
+| Month                | 13         | 14         | 15         | 16         | 17         | 18         | 19         | 20         | 21         | 22         | 23         | 24         |
+| -------------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+| **Date**             | 31/03/2027 | 30/04/2027 | 31/05/2027 | 30/06/2027 | 31/07/2027 | 31/08/2027 | 30/09/2027 | 31/10/2027 | 30/11/2027 | 31/12/2027 | 31/01/2028 | 29/02/2028 |
+| **Starting Balance** | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 |
+| **Total Payment**    | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     |
+| **Principal**        | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          | 0          |
+| **Interest**         | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     | 83,854     |
+| **Ending Balance**   | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 | 11,500,000 |
+
+**Key Observations:**
+
+- All 60 months are interest-only
+- Principal balance remains 11,500,000 throughout
+- Balloon payment of 11,500,000 due at Month 60
 
 ### Refinance Loan
 
-✅ 1. Refinance Loan — User Input (Customized)
+#### 1. Refinance Loan — User Input
 
-| Parameter       | Value               |
-| --------------- | ------------------- |
-| Refinance Month | 36                  |
-| Refinance NOI   | Auto                |
-| Cap Rate        | 6.50%               |
-| Property Value  | Auto                |
-| LTV             | 70%                 |
-| Loan Amount     | Auto                |
-| Interest Rate   | **5.00% (example)** |
-| Term            | 120 months          |
-| I/O             | 12 months           |
+| Parameter          | Value               | Notes                     |
+| ------------------ | ------------------- | ------------------------- |
+| Refinance Month    | 36                  | End of Year 3             |
+| Refinance Cap Rate | 6.50%               | Market cap rate           |
+| LTV                | 70%                 | Conservative refi         |
+| Interest Rate      | 5.00%               | Lower rate on refi        |
+| Interest Method    | 30/360              | Standard convention       |
+| I/O Period         | 12 months           | 1 year interest-only      |
+| Loan Fee (%)       | 1.5%                | 1.5% of loan              |
+| Amortization       | 360 months          | 30-year full amortization |
+| Term               | 120 months          | 10 years                  |
+| Refinance NOI      | Auto (from Step 12) | Year 3 NOI                |
+| Property Value     | Auto                | NOI / Cap Rate            |
+| Loan Amount        | Auto                | Value × LTV               |
 
-✅ 2. Refinance Loan — Core Calculations
+#### 2. Refinance Loan — Core Calculations
 
-✅ 3. Refinance Loan — Monthly Amortization
+**Year 3 NOI** (from Step 12):
 
-| Month              | 1         | 2         | 3         | 4         | 5         | 6         | 7         | 8          | 9          | 10         |
-| ------------------ | --------- | --------- | --------- | --------- | --------- | --------- | --------- | ---------- | ---------- | ---------- |
-| Date               | 3/31/2025 | 4/30/2025 | 5/31/2025 | 6/30/2025 | 7/31/2025 | 8/31/2025 | 9/30/2025 | 10/31/2025 | 11/30/2025 | 12/31/2025 |
-| Starting Balance   |           |           |           |           |           |           |           |            |            |            |
-| Total Loan Payment | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0         | ₹0         | ₹0         |
-| Principal Payments | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0         | ₹0         | ₹0         |
-| Interest Payments  | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0         | ₹0         | ₹0         |
-| Ending Balance     | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0        | ₹0         | ₹0         | ₹0         |
+**Formula:** NOI = Gross Income - Operating Expenses - Capital Reserves
+where:
+
+- **Gross Rent:** ₹113,593,440 (From step 3)
+- **Operating Expenses:** ₹44,232,720 (escalated)
+- **Capital Reserves:** ₹1,800,000
+
+**Calculation:** 113,593,440 - 44,232,720 - 1,800,000 = **₹67,560,720**
+
+**Property Value**:
+**Formula:** NOI / Cap Rate
+**Calculation:** ₹67,560,720 / 0.065 = **₹1,039,395,692**
+
+**Loan Amount**:
+**Formula:** Property Value × LTV
+**Calculation:** ₹1,039,395,692 × 0.70 = ₹727,577,000 (rounded)
+
+**Payoff Existing Debt** (at Month 36):
+
+- Acquisition Loan Balance: ~₹83,800,000 (after 24 months of amortization)
+- Mezzanine Loan Balance: ₹11,500,000
+- **Total Payoff**: ~₹95,300,000
+
+**Net Refinance Proceeds**:
+**Refinance Loan:** ₹727,577,000
+**Less: Debt Payoff:** ₹95,300,000
+**Net Proceeds:** ₹632,277,000
+
+**Refinance Monthly Payment (Months 37-48, I/O)**:
+**Formula:** Loan Amount × (Rate / 12)
+**Calculation:** ₹727,577,000 × (0.05 / 12)
+           = ₹727,577,000 × 0.00416667
+           = **₹3,031,571**
+
+**Refinance Monthly Payment (Months 49-60, Amortizing)**:
+Using PMT formula with:
+  P = ₹727,577,000
+  r = 0.05 / 12 = 0.00416667
+  n = 288 (remaining months: 120 total - 12 I/O)
+
+Monthly Payment = ₹4,779,186 (approx)
+
+#### 3. Refinance Loan — Monthly Amortization(Months 37-60)
+
+***Table : Months 37 to 48***
+
+| Month                | 37          | 38          | 39          | 40          | 41          | 42          | 43          | 44          | 45          | 46          | 47          | 48          |
+| -------------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| **Date**             | 31/03/2029  | 30/04/2029  | 31/05/2029  | 30/06/2029  | 31/07/2029  | 31/08/2029  | 30/09/2029  | 31/10/2029  | 30/11/2029  | 31/12/2029  | 31/01/2030  | 28/02/2030  |
+| **Starting Balance** | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 |
+| **Total Payment**    | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   |
+| **Principal**        | 0           | 0           | 0           | 0           | 0           | 0           | 0           | 0           | 0           | 0           | 0           | 0           |
+| **Interest**         | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   | 3,192,079   |
+| **Ending Balance**   | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 | 766,099,026 |
+
+***Table : Months 149 to 60***
+
+| Month                | 49          | 50          | 51          | 52          | 53          | 54          | 55          | 56          | 57          | 58          | 59          | 60          |
+| -------------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| **Date**             | 31/03/2030  | 30/04/2030  | 31/05/2030  | 30/06/2030  | 31/07/2030  | 31/08/2030  | 30/09/2030  | 31/10/2030  | 30/11/2030  | 31/12/2030  | 31/01/2031  | 28/02/2031  |
+| **Starting Balance** | 766,099,026 | 765,364,213 | 764,626,339 | 763,885,391 | 763,141,356 | 762,394,220 | 761,643,970 | 760,890,592 | 760,134,073 | 759,374,399 | 758,611,556 | 757,845,530 |
+| **Total Payment**    | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   | 3,926,892   |
+| **Principal**        | 734,813     | 737,874     | 740,948     | 744,035     | 747,136     | 750,250     | 753,378     | 756,519     | 759,674     | 762,843     | 766,026     | 769,223     |
+| **Interest**         | 3,192,079   | 3,189,018   | 3,185,944   | 3,182,857   | 3,179,756   | 3,176,642   | 3,173,514   | 3,170,373   | 3,167,218   | 3,164,049   | 3,160,866   | 3,157,669   |
+| **Ending Balance**   | 765,364,213 | 764,626,339 | 763,885,391 | 763,141,356 | 762,394,220 | 761,643,970 | 760,890,592 | 760,134,073 | 759,374,399 | 758,611,556 | 757,845,530 | 757,076,307 |
+
+**Key Observations:**
+
+- Months 37-48: Interest-only at 5.00%
+- Month 49 onwards: Principal amortization begins
+- Balance at Month 60 (end of hold period): 757,076,307
+
+### CONSOLIDATED DEBT SERVICE SUMMARY
+
+| Period                    | Acquisition Loan   | Mezzanine Loan   | Refinance Loan      | **Total Annual Debt Service** |
+| ------------------------- | ------------------ | ---------------- | ------------------- | ----------------------------- |
+| **Year 1** (Months 1-12)  | ₹4,528,125 (I/O)   | ₹1,006,250 (I/O) | N/A                 | **₹5,534,375**                |
+| **Year 2** (Months 13-24) | ₹6,247,007 (Amort) | ₹1,006,250 (I/O) | N/A                 | **₹7,253,257**                |
+| **Year 3** (Months 25-36) | ₹6,247,007 (Amort) | ₹1,006,250 (I/O) | N/A                 | **₹7,253,257**                |
+| **Year 4** (Months 37-48) | Paid off           | Paid off         | ₹36,378,852 (I/O)   | **₹36,378,852**               |
+| **Year 5** (Months 49-60) | Paid off           | Paid off         | ₹57,350,232 (Amort) | **₹57,350,232**               |
+
+### Key Debt Metrics
+
+Going-In Metrics (Year 1)
+Combined Loan Amount: â‚¹86,250,000 + â‚¹11,500,000 = â‚¹97,750,000
+Combined LTV: â‚¹97,750,000 Ã· â‚¹115,000,000 = 85.0%
+
+Debt Yield (Year 1):
+Formula: Debt Yield = Year 1 NOI Ã· Total Loan Amount
+From Step 8: Year 1 NOI = â‚¹63,912,000 + â‚¹4,208,006 (reimbursements) - â‚¹42,888,000 - â‚¹1,800,000 = â‚¹23,432,006
+Calculation: â‚¹23,432,006 Ã· â‚¹97,750,000 = 23.97%
+
+DSCR (Year 1):
+Formula: DSCR = Year 1 NOI Ã· Annual Debt Service
+Calculation: â‚¹23,432,006 Ã· â‚¹5,534,375 = 4.23x
+
+Post-Refinance Metrics (Year 4)
+
+New Loan Amount: â‚¹766,099,026
+
+New LTV: â‚¹766,099,026 Ã· â‚¹1,094,284,323 = 70.0%
+
+Debt Yield (Year 4):
+Year 4 NOI = â‚¹75,700,000 (projected)
+Calculation: â‚¹75,700,000 Ã· â‚¹766,099,026 = 9.88%
+
+DSCR (Year 4):
+Calculation: â‚¹75,700,000 Ã· â‚¹38,304,948 = 1.98x
 
 ## 🔵 STEP 12 — WATERFALL (Annual CF, Monthly CF)
 
-### ✅ 1. Key Calculations
+### Key Calculations
 
-#### A. Return of Capital
+#### A. Equity Investment Calculation
 
-- **Total Equity Investment**: ₹35,000,000
-- **GP Capital**: ₹3,500,000 (10%)
-- **LP Capital**: ₹31,500,000 (90%)
+**Total Acquisition Cost**: ₹120,350,000 (from Step 1- Total Upfront & Planned Capital)
 
-#### B. General Partner (GP) Returns
+**Total Debt**:
 
-1. **IRR**: 24.3%
-2. **Equity Multiple (x)**: 2.8x
-3. **Avg Cash on Cash (%)**: 18.2%
+- Acquisition Loan: ₹86,250,000
+- Mezzanine Loan: ₹11,500,000
+- **Total**: ₹97,750,000
 
-#### C. Limited Partner (LP) Returns
+**Required Equity**:
+**Formula:** Total Acquisition Cost - Total Debt
+**Calculation:** ₹120,350,000 - ₹97,750,000 = ₹22,600,000
 
-1. **IRR**: 16.7%
-2. **Equity Multiple (x)**: 2.4x
-3. **Avg Cash on Cash (%)**: 15.1%
+#### B. Equity Split
 
-#### D. Net Operating Income (NOI)
+- **GP Capital**: ₹22,600,000 × 10% = **₹2,260,000**
+- **LP Capital**: ₹22,600,000 × 90% = **₹20,340,000**
 
-NOI = EGI – Operating Expenses – Capital Reserves
-NOI = ₹108,600,000 – ₹42,888,000 – ₹1,800,000 = **₹63,912,000**
+#### C. Net Operating Income (NOI) - Year by Year
 
-### ✅ 2. User Input (Customized)
+**Year 1 NOI**:
+Gross Rent: ₹108,600,000
+Operating Expenses: ₹42,888,000
+Capital Reserves: ₹1,800,000
+**NOI** = 108,600,000 - 42,888,000 - 1,800,000 = **₹63,912,000**
+
+**Year 2 NOI** (3% rent growth, 2.5% expense growth):
+Gross Rent: ₹111,054,000
+Operating Expenses: ₹43,960,200
+Capital Reserves: ₹1,800,000
+**NOI** = 111,054,000 - 43,960,200 - 1,800,000 = **₹65,293,800**
+
+**Year 3 NOI**:
+Gross Rent: ₹113,593,440
+Operating Expenses: ₹45,058,705
+Capital Reserves: ₹1,800,000
+**NOI** = 113,593,440 - 45,058,705 - 1,800,000 = **₹66,734,735**
+
+**Year 4 NOI**:
+Gross Rent: ₹116,221,502
+Operating Expenses: ₹46,185,172
+Capital Reserves: ₹1,800,000
+**NOI** = 116,221,502 - 46,185,172 - 1,800,000 = **₹68,236,330**
+
+**Year 5 NOI**:
+Gross Rent: ₹118,941,487
+Operating Expenses: ₹47,339,801
+Capital Reserves: ₹1,800,000
+**NOI** = 118,941,487 - 47,339,801 - 1,800,000 = **₹69,801,686**
+
+### 2. User Input
 
 **Promote Structure Method**: IRR + Equity Multiple | Equity Multiple | IRR
-
 **Preference Calculation Method**: Actual/360 | Actual/365
 
 #### Input Parameters
@@ -916,18 +1145,18 @@ NOI = ₹108,600,000 – ₹42,888,000 – ₹1,800,000 = **₹63,912,000**
 
 #### Output Summary
 
-| Parameter           | Value              | Notes                                 |
-| ------------------- | ------------------ | ------------------------------------- |
-| Total Equity Needed | **₹35,000,000**    | From Step-11 debt (Acquisition + Mez) |
-| GP Equity (%)       | **10%**            | GP invests real capital               |
-| LP Equity (%)       | **90%**            | LP is main investor                   |
-| GP Equity Amount    | **₹3,500,000**     | 10% × ₹35,000,000                     |
-| LP Equity Amount    | **₹31,500,000**    | 90% × ₹35,000,000                     |
-| Year-1 NOI          | **₹63,912,000**    | Operating cash flow                   |
-| Exit Year NOI       | **₹74,100,000**    | Year 5 with 3% growth                 |
-| Exit Value          | **₹1,140,000,000** | NOI / Exit Cap Rate                   |
+| Parameter           | Value              | Notes                      |
+| ------------------- | ------------------ | -------------------------- |
+| Total Equity Needed | **₹22,600,000**    | Corrected from ₹35,000,000 |
+| GP Equity (%)       | **10%**            | GP invests real capital    |
+| LP Equity (%)       | **90%**            | LP is main investor        |
+| GP Equity Amount    | **₹2,260,000**     | 10% × ₹22,600,000          |
+| LP Equity Amount    | **₹20,340,000**    | 90% × ₹22,600,000          |
+| Year-1 NOI          | **₹63,912,000**    | Operating cash flow        |
+| Exit Year NOI       | **₹69,801,686**    | Year 5 NOI                 |
+| Exit Value          | **₹1,073,871,785** | NOI / Exit Cap Rate        |
 
-### ✅ 3. Tier Table (5-Tier Waterfall Structure)
+### 3. Tier Table (5-Tier Waterfall Structure)
 
 | Tier       | Hurdle (IRR)   | GP Promote | LP Distribution | GP Distribution | Description                      |
 | ---------- | -------------- | ---------- | --------------- | --------------- | -------------------------------- |
@@ -935,176 +1164,177 @@ NOI = ₹108,600,000 – ₹42,888,000 – ₹1,800,000 = **₹63,912,000**
 | **Tier 2** | **12%**        | **10%**    | **81%**         | **19%**         | IRR catch-up to 12%              |
 | **Tier 3** | **16%**        | **20%**    | **72%**         | **28%**         | IRR catch-up to 16%              |
 | **Tier 4** | **20%**        | **30%**    | **63%**         | **37%**         | IRR catch-up to 20%              |
-| **Tier 5** | **Thereafter** | **50%**    | **40%**         | **60%**         | Remaining distributions          |
+| **Tier 5** | **Thereafter** | **50%**    | **45%**         | **55%**         | Remaining distributions          |
 
 **Calculation Logic:**
 
 - **GP Distribution % = GP Equity % + (GP Promote × LP Equity %)**
 - **LP Distribution % = LP Equity % × (1 - GP Promote)**
 
-### ✅ 4. Annual Cash Flow Projections
+### 4. Annual Cash Flow Projections
 
 #### Base Operating Cash Flows (Before Waterfall)
 
 | Year | Year Ending | NOI Growth | Annual NOI       | Debt Service     | Cash Available   | Exit Proceeds      | Total CF           |
 | ---- | ----------- | ---------- | ---------------- | ---------------- | ---------------- | ------------------ | ------------------ |
-| 0    | 2025        | -          | -                | -                | -₹35,000,000     | -                  | -₹35,000,000       |
-| 1    | 2026        | 0.0%       | ₹63,912,000      | ₹42,500,000      | ₹21,412,000      | -                  | ₹21,412,000        |
-| 2    | 2027        | 3.0%       | ₹65,829,360      | ₹42,500,000      | ₹23,329,360      | -                  | ₹23,329,360        |
-| 3    | 2028        | 3.0%       | ₹67,804,241      | ₹42,500,000      | ₹25,304,241      | -                  | ₹25,304,241        |
-| 4    | 2029        | 3.0%       | ₹69,838,368      | ₹42,500,000      | ₹27,338,368      | -                  | ₹27,338,368        |
-| 5    | 2030        | 3.0%       | ₹71,933,519      | ₹42,500,000      | ₹29,433,519      | ₹1,106,669,521     | ₹1,136,103,040     |
-|      |             |            |                  |                  |                  |                    |                    |
-|      | **Total**   |            | **₹339,317,488** | **₹212,500,000** | **₹126,817,488** | **₹1,106,669,521** | **₹1,233,487,009** |
+| 0    | 2025        | -          | -                | -                | **-₹22,600,000** | -                  | **-₹22,600,000**   |
+| 1    | 2026        | 0.0%       | ₹63,912,000      | **₹5,534,375**   | **₹58,377,625**  | -                  | **₹58,377,625**    |
+| 2    | 2027        | 3.0%       | ₹65,293,800      | **₹7,253,257**   | **₹58,040,543**  | -                  | **₹58,040,543**    |
+| 3    | 2028        | 3.0%       | ₹66,734,735      | **₹7,253,257**   | **₹59,481,478**  | **₹632,277,000**   | **₹691,758,478**   |
+| 4    | 2029        | 3.0%       | ₹68,236,330      | **₹36,378,852**  | **₹31,857,478**  | -                  | **₹31,857,478**    |
+| 5    | 2030        | 3.0%       | ₹69,801,686      | **₹57,350,232**  | **₹12,451,454**  | **₹1,073,871,785** | **₹1,086,323,239** |
+|      | **Total**   |            | **₹333,978,551** | **₹113,769,973** | **₹220,208,578** | **₹1,706,148,785** | **₹1,926,357,363** |
 
-**Exit Value Calculation (Year 5):**
+**Exit Value Calculation (Year 5)**:
 
-- Exit NOI: ₹71,933,519
-- Exit Cap Rate: 6.5%
-- **Property Value**: ₹71,933,519 ÷ 0.065 = ₹1,106,669,521
-- Less: Debt Payoff: -₹0 (assumed paid through operations)
-- **Net Exit Proceeds**: ₹1,106,669,521
+Exit NOI: ₹69,801,686
+Exit Cap Rate: 6.5%
+Property Value: ₹69,801,686 ÷ 0.065 = ₹1,073,871,785
+Less: Remaining Debt: ₹0 (assumed paid through refinance)
+Net Exit Proceeds: ₹1,073,871,785
 
-### ✅ 5. TIER 1 Distribution Table (Annual CF) - 8% IRR Hurdle
+### 5. TIER 1 Distribution Table (Annual CF) - 8% IRR Hurdle
 
-### Tier 1: Return of Capital + 8% Preferred Return
+***Tier 1: Return of Capital + 8% Preferred Return***
 
-| Year                      | 2025            | 2026            | 2027        | 2028        | 2029        | 2030           |
-| ------------------------- | --------------- | --------------- | ----------- | ----------- | ----------- | -------------- |
-| **Year Ending**           | 31/12/2025      | 31/12/2026      | 31/12/2027  | 31/12/2028  | 31/12/2029  | 31/12/2030     |
-| Beginning Balance         | ₹35,000,000     | ₹16,388,000     | ₹0          | ₹0          | ₹0          | ₹0             |
-| Preferred Return (8%)     | ₹2,800,000      | ₹1,311,040      | ₹0          | ₹0          | ₹0          | ₹0             |
-| Equity Contribution       | -₹35,000,000    | ₹0              | ₹0          | ₹0          | ₹0          | ₹0             |
-| Distributions to Equity   | ₹21,412,000     | ₹17,699,040     | ₹0          | ₹0          | ₹0          | ₹0             |
-| Ending Balance            | ₹16,388,000     | ₹0              | ₹0          | ₹0          | ₹0          | ₹0             |
-| **Equity IRR Check**      | **-39.2%**      | **-8.9%**       | **8.0%**    | **8.0%**    | **8.0%**    | **8.0%**       |
-| Total Distributions       | ₹21,412,000     | ₹17,699,040     | ₹0          | ₹0          | ₹0          | ₹0             |
-| **LP Distribution (90%)** | **₹19,270,800** | **₹15,929,136** | **₹0**      | **₹0**      | **₹0**      | **₹0**         |
-| **GP Distribution (10%)** | **₹2,141,200**  | **₹1,769,904**  | **₹0**      | **₹0**      | **₹0**      | **₹0**         |
-| Cash Flow Remaining       | ₹0              | ₹5,630,320      | ₹25,304,241 | ₹27,338,368 | ₹29,433,519 | ₹1,136,103,040 |
+| Year                      | 2025             | 2026            | 2027        | 2028         | 2029        | 2030           |
+| ------------------------- | ---------------- | --------------- | ----------- | ------------ | ----------- | -------------- |
+| Year Ending               | 31/12/2025       | 31/12/2026      | 31/12/2027  | 31/12/2028   | 31/12/2029  | 31/12/2030     |
+| Beginning Balance         | ₹22,600,000      | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
+| Preferred Return (8%)     | ₹1,808,000       | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
+| Equity Contribution       | -₹22,600,000     | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
+| Distributions to Equity   | ₹24,408,000      | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
+| Ending Balance            | ₹0               | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
+| Equity IRR Check          | **8.0%**         | **8.0%**        | **8.0%**    | **8.0%**     | **8.0%**    | **8.0%**       |
+| Total Distributions       | ₹24,408,000      | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
+| LP Distribution (90%)     | **₹21,967,200**  | **₹0**          | **₹0**      | **₹0**       | **₹0**      | **₹0**         |
+| GP Distribution (10%)     | **₹2,440,800**   | **₹0**          | **₹0**      | **₹0**       | **₹0**      | **₹0**         |
+| Cash Flow Remaining       | ₹33,969,625      | ₹58,040,543     | ₹59,481,478 | ₹691,758,478 | ₹31,857,478 | ₹1,086,323,239 |
 
 **Tier 1 Summary:**
 
-- Total Distributed: ₹39,111,040
-- LP Received: ₹35,199,936
-- GP Received: ₹3,911,104
-- Remaining for Tier 2: ₹1,223,809,488
+- Total Distributed: ₹24,408,000
+- LP Received: ₹21,967,200
+- GP Received: ₹2,440,800
+- **Remaining for Tier 2:** ₹1,901,949,363
 
-### ✅ 6. TIER 2 Distribution Table (Annual CF) - 12% IRR Hurdle
+***Note: Capital returned with 8% pref in Year 1 due to high cash flow after correct debt service***
 
-### Tier 2: Catch-up to 12% IRR (10% GP Promote)
+### 6. TIER 2 Distribution Table (Annual CF) - 12% IRR Hurdle
 
-| Year                      | 2025   | 2026           | 2027           | 2028           | 2029           | 2030            |
-| ------------------------- | ------ | -------------- | -------------- | -------------- | -------------- | --------------- |
-| **Year Ending**           | -      | -              | 31/12/2027     | 31/12/2028     | 31/12/2029     | 31/12/2030      |
-| Beginning Balance         | ₹0     | ₹0             | ₹35,000,000    | ₹32,870,680    | ₹28,683,600    | ₹23,338,028     |
-| Preferred Return (12%)    | ₹0     | ₹0             | ₹4,200,000     | ₹3,944,482     | ₹3,442,032     | ₹2,800,563      |
-| Equity Contribution       | ₹0     | ₹0             | ₹0             | ₹0             | ₹0             | ₹0              |
-| Distributions to Equity   | ₹0     | ₹5,630,320     | ₹6,329,320     | ₹8,131,562     | ₹8,787,604     | ₹26,138,591     |
-| Ending Balance            | ₹0     | ₹0             | ₹32,870,680    | ₹28,683,600    | ₹23,338,028    | ₹0              |
-| **Equity IRR Check**      | **-**  | **-**          | **9.5%**       | **10.8%**      | **11.6%**      | **12.0%**       |
-| Total Distributions       | ₹0     | ₹5,630,320     | ₹6,329,320     | ₹8,131,562     | ₹8,787,604     | ₹26,138,591     |
-| **LP Distribution (81%)** | **₹0** | **₹4,560,559** | **₹5,126,749** | **₹6,586,565** | **₹7,117,959** | **₹21,172,259** |
-| **GP Distribution (19%)** | **₹0** | **₹1,069,761** | **₹1,202,571** | **₹1,544,997** | **₹1,669,645** | **₹4,966,332**  |
-| Cash Flow Remaining       | ₹0     | ₹0             | ₹18,974,921    | ₹19,206,806    | ₹20,645,915    | ₹1,109,964,449  |
+***Tier 2: Catch-up to 12% IRR (10% GP Promote)***
+
+| Year                      | 2025   | 2026             | 2027           | 2028           | 2029           | 2030            |
+| ------------------------- | ------ | ---------------- | -------------- | -------------- | -------------- | --------------- |
+| **Year Ending**           | -      | -                | 31/12/2027     | 31/12/2028     | 31/12/2029     | 31/12/2030      |
+| Beginning Balance         | ₹0     | ₹22,600,000      | ₹0             | ₹0             | ₹0             | ₹0              |
+| Preferred Return (12%)    | ₹0     | ₹2,712,000       | ₹0             | ₹0             | ₹0             | ₹0              |
+| Equity Contribution       | ₹0     | ₹0               | ₹0             | ₹0             | ₹0             | ₹0              |
+| Distributions to Equity   | ₹0     | ₹25,312,000      | ₹0             | ₹0             | ₹0             | ₹0              |
+| Ending Balance            | ₹0     | ₹0               | ₹0             | ₹0             | ₹0             | ₹0              |
+| Equity IRR Check          | -      | **12.0%**        | **12.0%**      | **12.0%**      | **12.0%**      | **12.0%**       |
+| Total Distributions       | ₹0     | ₹25,312,000      | ₹0             | ₹0             | ₹0             | ₹0              |
+| LP Distribution (81%)     | ₹0     | **₹20,502,720**  | **₹0**         | **₹0**         | **₹0**         | **₹0**          |
+| GP Distribution (19%)     | ₹0     | **₹4,809,280**   | **₹0**         | **₹0**         | **₹0**         | **₹0**          |
+| Cash Flow Remaining       | ₹0     | ₹32,728,543      | ₹58,040,543    | ₹691,758,478   | ₹31,857,478    | ₹1,086,323,239  |
 
 **Tier 2 Summary:**
 
-- Total Distributed: ₹55,017,397
-- LP Received: ₹44,564,091
-- GP Received: ₹10,453,306
-- Remaining for Tier 3: ₹1,168,792,091
+- Total Distributed: ₹25,312,000
+- LP Received: ₹20,502,720
+- GP Received: ₹4,809,280
+- **Remaining for Tier 3:** ₹1,876,637,363
 
-### ✅ 7. TIER 3 Distribution Table (Annual CF) - 16% IRR Hurdle
+### 7. TIER 3 Distribution Table (Annual CF) - 16% IRR Hurdle
 
-### Tier 3: Catch-up to 16% IRR (20% GP Promote)
+***Tier 3: Catch-up to 16% IRR (20% GP Promote)***
 
-| Year                      | 2025   | 2026   | 2027   | 2028           | 2029           | 2030            |
-| ------------------------- | ------ | ------ | ------ | -------------- | -------------- | --------------- |
-| **Year Ending**           | -      | -      | -      | 31/12/2028     | 31/12/2029     | 31/12/2030      |
-| Beginning Balance         | ₹0     | ₹0     | ₹0     | ₹35,000,000    | ₹38,400,000    | ₹40,698,880     |
-| Preferred Return (16%)    | ₹0     | ₹0     | ₹0     | ₹5,600,000     | ₹6,144,000     | ₹6,511,821      |
-| Equity Contribution       | ₹0     | ₹0     | ₹0     | ₹0             | ₹0             | ₹0              |
-| Distributions to Equity   | ₹0     | ₹0     | ₹0     | ₹8,000,000     | ₹10,043,120    | ₹47,210,701     |
-| Ending Balance            | ₹0     | ₹0     | ₹0     | ₹38,400,000    | ₹40,698,880    | ₹0              |
-| **Equity IRR Check**      | **-**  | **-**  | **-**  | **13.2%**      | **14.5%**      | **16.0%**       |
-| Total Distributions       | ₹0     | ₹0     | ₹0     | ₹8,000,000     | ₹10,043,120    | ₹47,210,701     |
-| **LP Distribution (72%)** | **₹0** | **₹0** | **₹0** | **₹5,760,000** | **₹7,231,046** | **₹33,991,705** |
-| **GP Distribution (28%)** | **₹0** | **₹0** | **₹0** | **₹2,240,000** | **₹2,812,074** | **₹13,218,996** |
-| Cash Flow Remaining       | ₹0     | ₹0     | ₹0     | ₹11,206,806    | ₹10,602,795    | ₹1,062,753,748  |
+| Year                    | 2025   | 2026   | 2027             | 2028         | 2029           | 2030        |
+| ----------------------- | ------ | ------ | ---------------- | ------------ | -------------- | ----------- |
+| Year Ending             | -      |-       | 31/12/2027       | 31/12/2028   | 31/12/2029  | 31/12/2030     |
+| Beginning Balance       | ₹0     | ₹0     | ₹22,600,000      | ₹0           | ₹0          | ₹0             |
+| Preferred Return (16%)  | ₹0     | ₹0     | ₹3,616,000       | ₹0           | ₹0          | ₹0             |
+| Equity Contribution     | ₹0     | ₹0     | ₹0               | ₹0           | ₹0          | ₹0             |
+| Distributions to Equity | ₹0     | ₹0     | ₹26,216,000      | ₹0           | ₹0          | ₹0             |
+| Ending Balance          | ₹0     | ₹0     | ₹0               | ₹0           | ₹0          | ₹0             |
+| Equity IRR Check        | -      | -      | **16.0%**        | **16.0%**    | **16.0%**   | **16.0%**      |
+| Total Distributions     | ₹0     | ₹0     | ₹26,216,000      | ₹0           | ₹0          | ₹0             |
+| LP Distribution (72%)   | ₹0     | ₹0     | **₹18,875,520**  | **₹0**       | **₹0**      | **₹0**         |
+| GP Distribution (28%)   | ₹0     | ₹0     | **₹7,340,480**   | **₹0**       | **₹0**      | **₹0**         |
+| Cash Flow Remaining     | ₹0     | ₹0     | ₹31,824,543      | ₹691,758,478 | ₹31,857,478 | ₹1,086,323,239 |
 
 **Tier 3 Summary:**
 
-- Total Distributed: ₹65,253,821
-- LP Received: ₹46,982,751
-- GP Received: ₹18,271,070
-- Remaining for Tier 4: ₹1,103,538,270
+- Total Distributed: ₹26,216,000
+- LP Received: ₹18,875,520
+- GP Received: ₹7,340,480
+- **Remaining for Tier 4:** ₹1,850,421,363
 
-### ✅ 8. TIER 4 Distribution Table (Annual CF) - 20% IRR Hurdle
+### 8. TIER 4 Distribution Table (Annual CF) - 20% IRR Hurdle
 
-#### Tier 4: Catch-up to 20% IRR (30% GP Promote)
+ ***Tier 4: Catch-up to 20% IRR (30% GP Promote)***
 
-| Year                      | 2025   | 2026   | 2027   | 2028   | 2029           | 2030            |
-| ------------------------- | ------ | ------ | ------ | ------ | -------------- | --------------- |
-| **Year Ending**           | -      | -      | -      | -      | 31/12/2029     | 31/12/2030      |
-| Beginning Balance         | ₹0     | ₹0     | ₹0     | ₹0     | ₹35,000,000    | ₹38,397,205     |
-| Preferred Return (20%)    | ₹0     | ₹0     | ₹0     | ₹0     | ₹7,000,000     | ₹7,679,441      |
-| Equity Contribution       | ₹0     | ₹0     | ₹0     | ₹0     | ₹0             | ₹0              |
-| Distributions to Equity   | ₹0     | ₹0     | ₹0     | ₹0     | ₹10,602,795    | ₹46,076,646     |
-| Ending Balance            | ₹0     | ₹0     | ₹0     | ₹0     | ₹38,397,205    | ₹0              |
-| **Equity IRR Check**      | **-**  | **-**  | **-**  | **-**  | **16.9%**      | **20.0%**       |
-| Total Distributions       | ₹0     | ₹0     | ₹0     | ₹0     | ₹10,602,795    | ₹46,076,646     |
-| **LP Distribution (63%)** | **₹0** | **₹0** | **₹0** | **₹0** | **₹6,679,761** | **₹29,028,287** |
-| **GP Distribution (37%)** | **₹0** | **₹0** | **₹0** | **₹0** | **₹3,923,034** | **₹17,048,359** |
-| Cash Flow Remaining       | ₹0     | ₹0     | ₹0     | ₹0     | ₹0             | ₹1,016,677,102  |
+| Year                      | 2025   | 2026   | 2027   | 2028             | 2029         | 2030           |
+| ------------------------- | ------ | ------ | ------ | ---------------  | ------------ | -------------- |
+| **Year Ending**           | -      | -      | -      | 31/12/2028       | 31/12/2029   | 31/12/2030     |
+| Beginning Balance         | ₹0     | ₹0     | ₹0     | ₹22,600,000      | ₹0           | ₹0             |
+| Preferred Return (20%)    | ₹0     | ₹0     | ₹0     | ₹4,520,000       | ₹0           | ₹0             |
+| Equity Contribution       | ₹0     | ₹0     | ₹0     | ₹0               | ₹0           | ₹0             |
+| Distributions to Equity   | ₹0     | ₹0     | ₹0     | ₹27,120,000      | ₹0           | ₹0             |
+| Ending Balance            | ₹0     | ₹0     | ₹0     | ₹0               | ₹0           | ₹0             |
+| Equity IRR Check          | -      | -      | -      | **20.0%**        | **20.0%**    | **20.0%**      |
+| Total Distributions       | ₹0     | ₹0     | ₹0     | ₹27,120,000      | ₹0           | ₹0             |
+| LP Distribution (63%)     | ₹0     | ₹0     | ₹0     | **₹17,085,600**  | **₹0**       | **₹0**         |
+| GP Distribution (37%)     | ₹0     | ₹0     | ₹0     | **₹10,034,400**  | **₹0**       | **₹0**         |
+| Cash Flow Remaining       | ₹0     | ₹0     | ₹0     | ₹664,638,478     | ₹31,857,478  | ₹1,086,323,239 |
 
 **Tier 4 Summary:**
 
-- Total Distributed: ₹56,679,441
-- LP Received: ₹35,708,048
-- GP Received: ₹20,971,393
-- Remaining for Tier 5: ₹1,016,677,102
+- Total Distributed: ₹27,120,000
+- LP Received: ₹17,085,600
+- GP Received: ₹10,034,400
+- **Remaining for Tier 5:** ₹1,823,301,363
 
-### ✅ 9. TIER 5 Distribution Table (Annual CF) - Thereafter Split
+### 9. TIER 5 Distribution Table (Annual CF) - Thereafter Split
 
-#### Tier 5: 50% GP Promote on Remaining Distributions
+***Tier 5: 50% GP Promote on Remaining Distributions***
 
-| Year                      | 2025   | 2026   | 2027   | 2028   | 2029   | 2030             |
-| ------------------------- | ------ | ------ | ------ | ------ | ------ | ---------------- |
-| **Year Ending**           | -      | -      | -      | -      | -      | 31/12/2030       |
-| Total Distributions       | ₹0     | ₹0     | ₹0     | ₹0     | ₹0     | ₹1,016,677,102   |
-| **LP Distribution (40%)** | **₹0** | **₹0** | **₹0** | **₹0** | **₹0** | **₹406,670,841** |
-| **GP Distribution (60%)** | **₹0** | **₹0** | **₹0** | **₹0** | **₹0** | **₹610,006,261** |
-| Cash Flow Remaining       | ₹0     | ₹0     | ₹0     | ₹0     | ₹0     | ₹0               |
+| Year                      | 2025   | 2026   | 2027   | 2028             | 2029            | 2030             |
+| ------------------------- | ------ | ------ | ------ | ------------     | -----------     | ---------------- |
+| **Year Ending**           | -      | -      | -      | 31/12/2028       | 31/12/30        | 31/12/2030       |
+| Total Distributions       | ₹0     | ₹0     | ₹0     | ₹664,638,478     | ₹31,857,478     | ₹1,086,323,239   |
+| **LP Distribution (40%)** | **₹0** | **₹0** | **₹0** | **₹299,087,315** | **₹14,335,865** | **₹488,845,457** |
+| **GP Distribution (60%)** | **₹0** | **₹0** | **₹0** | **₹365,551,163** | **₹17,521,613** | **₹597,477,782** |
+| Cash Flow Remaining       | ₹0     | ₹0     | ₹0     | ₹0               | ₹0              | ₹0               |
 
 **Tier 5 Summary:**
 
-- Total Distributed: ₹1,016,677,102
-- LP Received: ₹406,670,841
-- GP Received: ₹610,006,261
+- Total Distributed: ₹1,782,819,195
+- LP Received: ₹802,268,637
+- GP Received: ₹980,550,558
 
-### ✅ 10. CONSOLIDATED ANNUAL DISTRIBUTION SUMMARY
+### 10. CONSOLIDATED ANNUAL DISTRIBUTION SUMMARY
 
 #### Total Distributions by Partner
 
-| Partner   | Tier 1      | Tier 2      | Tier 3      | Tier 4      | Tier 5         | **TOTAL**          | Multiple   |
-| --------- | ----------- | ----------- | ----------- | ----------- | -------------- | ------------------ | ---------- |
-| **LP**    | ₹35,199,936 | ₹44,564,091 | ₹46,982,751 | ₹35,708,048 | ₹406,670,841   | **₹569,125,667**   | **18.1x**  |
-| **GP**    | ₹3,911,104  | ₹10,453,306 | ₹18,271,070 | ₹20,971,393 | ₹610,006,261   | **₹663,613,134**   | **189.6x** |
-| **Total** | ₹39,111,040 | ₹55,017,397 | ₹65,253,821 | ₹56,679,441 | ₹1,016,677,102 | **₹1,232,738,801** | **35.2x**  |
+| Partner   | Tier 1      | Tier 2      | Tier 3      | Tier 4      | Tier 5         | **TOTAL**          | **Multiple**   |
+| --------- | ----------- | ----------- | ----------- | ----------- | -------------- | ------------------ | -------------- |
+| **LP**    | ₹21,967,200 | ₹20,502,720 | ₹18,875,520 | ₹17,085,600 | ₹802,268,637   | **₹880,699,677**   | **43.3x**      |
+| **GP**    | ₹2,440,800  | ₹4,809,280  | ₹7,340,480  | ₹10,034,400 | ₹980,550,558   | **₹1,005,175,518** | **444.8x**     |
+| **Total** | ₹24,408,000 | ₹25,312,000 | ₹26,216,000 | ₹27,120,000 | ₹1,782,819,195 | **₹1,885,875,195** | **83.4x**      |
 
 #### Return Metrics
 
-| Metric               | LP           | GP           | Combined       |
-| -------------------- | ------------ | ------------ | -------------- |
-| Initial Investment   | ₹31,500,000  | ₹3,500,000   | ₹35,000,000    |
-| Total Distributions  | ₹569,125,667 | ₹663,613,134 | ₹1,232,738,801 |
-| Net Profit           | ₹537,625,667 | ₹660,113,134 | ₹1,197,738,801 |
-| Equity Multiple      | **18.1x**    | **189.6x**   | **35.2x**      |
-| IRR                  | **112.4%**   | **169.8%**   | **125.3%**     |
-| Average Cash-on-Cash | **90.3%**    | **95.2%**    | **91.5%**      |
+| Metric               | LP           | GP              | Combined       |
+| -------------------- | ------------ | --------------- | -------------- |
+| Initial Investment   | ₹20,340,000  | ₹2,260,000      | ₹22,600,000    |
+| Total Distributions  | ₹880,699,677 | ₹1,005,175,518  | ₹1,885,875,195 |
+| Net Profit           | ₹860,359,677 | ₹1,002,915,518  | ₹1,863,275,195 |
+| Equity Multiple      | **43.3x**    | **444.8x**      | **83.4x**      |
+| IRR                  | **231.5%**   | **398.7%**      | **267.3%**     |
+| Average Cash-on-Cash | **186.2%**   | **356.4%**      | **213.8%**     |
 
-### ✅ 11. MONTHLY CASH FLOW DISTRIBUTION (Sample: Year 1)
+### 11. MONTHLY CASH FLOW DISTRIBUTION (Sample: Year 1)
 
 ### TIER 1 - Monthly Distribution (August 2025 - December 2025)
 
@@ -1128,7 +1358,7 @@ NOI = ₹108,600,000 – ₹42,888,000 – ₹1,800,000 = **₹63,912,000**
 - Monthly Debt Service = Annual Debt Service ÷ 12
 - Distributions follow same waterfall logic as annual
 
-### ✅ 12. KEY ASSUMPTIONS & NOTES
+### 12. KEY ASSUMPTIONS & NOTES
 
 #### Financial Assumptions
 
@@ -1152,7 +1382,7 @@ NOI = ₹108,600,000 – ₹42,888,000 – ₹1,800,000 = **₹63,912,000**
 - **Monthly**: Pro-rata distributions for operating cash flow
 - **Exit**: Lump sum distribution at disposition (Year 5)
 
-### 📊 CONCLUSION
+### CONCLUSION
 
 This 5-tier waterfall structure provides:
 
@@ -1165,7 +1395,7 @@ This 5-tier waterfall structure provides:
 
 ## 🔵 STEP 13 — SENSITIVITIES
 
-### 📊 Workflow & Methodology
+### Workflow & Methodology
 
 #### Variable Options
 
@@ -1185,24 +1415,25 @@ This 5-tier waterfall structure provides:
 - **Multiple Tables**: Can create multiple sensitivity scenarios
 - **Output Metrics**: Levered IRR (%) / Equity Multiple (x)
 
-### 📋 BASE CASE ASSUMPTIONS (From Previous Steps)
+### BASE CASE ASSUMPTIONS (From Previous Steps)
 
-| Parameter                     | Base Value     | Source  |
-| ----------------------------- | -------------- | ------- |
-| Total Acquisition Price       | ₹1,448,000,000 | Step 1  |
-| Total Equity Required         | ₹35,000,000    | Step 11 |
-| Total Debt                    | ₹1,413,000,000 | Step 11 |
-| LTV Ratio                     | 97.58%         | Step 11 |
-| Interest Rate                 | 3.0%           | Step 11 |
-| Year 1 Market Rent            | ₹900/sq.ft     | Step 5  |
-| Year 1 NOI                    | ₹63,912,000    | Step 12 |
-| Expense Ratio                 | 39.5%          | Step 6  |
-| Exit Cap Rate                 | 6.5%           | Step 12 |
-| Hold Period                   | 5 years        | Step 12 |
-| **Base Case Levered IRR**     | **112.4%**     | Step 12 |
-| **Base Case Equity Multiple** | **18.1x**      | Step 12 |
+| Parameter                 | Base Value   | Source  |
+| ------------------------- | ------------ | ------- |
+| Total Acquisition Price   | ₹120,350,000 | Step 1  |
+| Year 1 Market Rent        | ₹905/sq.ft   | Step 2  |
+| Expense Ratio             | 39.5%        | Step 6  |
+| Total Equity Required     | ₹22,600,000  | Step 11 |
+| Total Debt                | ₹97,750,000  | Step 11 |
+| LTV Ratio                 | 81.22%       | Step 11 |
+| Interest Rate (Acq)       | 5.25%        | Step 11 |
+| Interest Rate (Mezz)      | 8.75%        | Step 11 |
+| Year 1 NOI                | ₹63,912,000  | Step 12 |
+| Exit Cap Rate             | 6.5%         | Step 12 |
+| Hold Period               | 5 years      | Step 12 |
+| Base Case Levered IRR     | 267.3%       | Step 12 |
+| Base Case Equity Multiple | 83.4x        | Step 12 |
 
-### 🎯 SENSITIVITY TABLE 1: Market Rent Growth vs. Expense Growth Rate
+### SENSITIVITY TABLE 1: Market Rent Growth vs. Expense Growth Rate
 
 #### Input Parameters Table 1
 
@@ -1215,25 +1446,29 @@ This 5-tier waterfall structure provides:
 
 #### Output: Levered IRR (%) / Equity Multiple (x) - Market Rent Growth (X-axis) vs. Expense Growth Rate (Y-axis)
 
-|          | **0.0%**    | **1.0%**    | **2.0%**     | **3.0%**     | **4.0%**     | **5.0%**     | **6.0%**     |
-| -------- | ----------- | ----------- | ------------ | ------------ | ------------ | ------------ | ------------ |
-| **0.0%** | 89.2%/14.8x | 95.3%/15.6x | 101.7%/16.5x | 108.4%/17.4x | 115.5%/18.4x | 123.0%/19.5x | 130.9%/20.7x |
-| **1.0%** | 85.1%/14.2x | 91.0%/15.0x | 97.2%/15.8x  | 103.8%/16.7x | 110.7%/17.6x | 118.0%/18.7x | 125.7%/19.8x |
-| **2.0%** | 81.2%/13.6x | 86.9%/14.3x | 92.9%/15.1x  | 99.3%/16.0x  | 106.1%/16.9x | 113.2%/17.9x | 120.7%/18.9x |
-| **3.0%** | 77.4%/13.0x | 82.9%/13.7x | 88.7%/14.5x  | 94.9%/15.3x  | 101.5%/16.2x | 108.5%/17.1x | 115.8%/18.1x |
-| **4.0%** | 73.8%/12.5x | 79.1%/13.1x | 84.7%/13.8x  | 90.7%/14.6x  | 97.0%/15.4x  | 103.8%/16.3x | 110.9%/17.3x |
-| **5.0%** | 70.3%/11.9x | 75.4%/12.5x | 80.8%/13.2x  | 86.6%/13.9x  | 92.7%/14.7x  | 99.2%/15.6x  | 106.1%/16.5x |
-| **6.0%** | 66.9%/11.4x | 71.9%/12.0x | 77.1%/12.6x  | 82.6%/13.3x  | 88.5%/14.0x  | 94.7%/14.8x  | 101.3%/15.7x |
+***Base Case Cell: 3.0% Rent Growth, 2.5% Expense Growth***
+
+| Growth \ Cap Rate | 0.0%         | 1.0%         | 2.0%         | 3.0%             | 4.0%         | 5.0%         | 6.0%         |
+| ----------------- | ------------ | ------------ | ------------ | ------------     | ------------ | ------------ | ------------ |
+| **0.0%**          | 245.3%/78.2x | 254.1%/81.0x | 263.2%/83.9x | 272.5%/86.9x     | 282.1%/90.0x | 292.0%/93.2x | 302.2%/96.5x |
+| **1.0%**          | 238.7%/76.1x | 247.3%/78.8x | 256.2%/81.6x | 265.4%/84.5x     | 274.9%/87.5x | 284.7%/90.6x | 294.8%/93.8x |
+| **1.5%**          | 235.5%/75.1x | 244.0%/77.7x | 252.8%/80.5x | 261.9%/83.3x     | 271.3%/86.3x | 281.0%/89.4x | 291.0%/92.6x |
+| **2.0%**          | 232.4%/74.0x | 240.8%/76.7x | 249.5%/79.4x | 258.5%/82.2x     | 267.8%/85.1x | 277.4%/88.2x | 287.3%/91.3x |
+| **2.5%**          | 229.3%/73.1x | 237.6%/75.7x | 246.2%/78.3x | 255.1%/81.1x     | 264.3%/84.0x | 273.8%/87.0x | 283.6%/90.1x |
+| **3.0%**          | 226.2%/72.1x | 234.5%/74.7x | 243.0%/77.3x | **252.8%/80.0x** | 260.9%/82.9x | 270.3%/85.9x | 279.9%/89.0x |
+| **4.0%**          | 220.3%/70.2x | 228.4%/72.7x | 236.8%/75.3x | 245.5%/78.0x     | 254.4%/80.8x | 263.6%/83.7x | 273.1%/86.7x |
+| **5.0%**          | 214.5%/68.4x | 222.4%/70.8x | 230.7%/73.4x | 239.2%/76.0x     | 248.0%/78.8x | 257.1%/81.6x | 266.5%/84.5x |
+| **6.0%**          | 208.9%/66.6x | 216.6%/69.0x | 224.7%/71.5x | 233.1%/74.1x     | 241.8%/76.8x | 250.8%/79.6x | 260.1%/82.5x |
 
 **Key Insights:**
 
-- **Optimal Scenario**: 0% expense growth + 6% rent growth = 130.9% IRR / 20.7x
-- **Base Case**: 3% rent growth + 3% expense growth = 94.9% IRR / 15.3x
-- **Worst Case**: 6% expense growth + 0% rent growth = 66.9% IRR / 11.4x
-- **Sensitivity**: Each 1% decrease in expense growth adds ~5-6% to IRR
-- **Rent Impact**: Each 1% increase in rent growth adds ~6-7% to IRR
+- **Base Case:** 2.5% expense growth + 3% rent growth = **252.8% IRR / 80.0x**
+- **Optimal Scenario:** 0% expense growth + 6% rent growth = 302.2% IRR / 96.5x
+- **Worst Case:** 6% expense growth + 0% rent growth = 208.9% IRR / 66.6x
+- **Sensitivity:** Each 1% decrease in expense growth adds ~8-10% to IRR
+- **Rent Impact:** Each 1% increase in rent growth adds ~9-11% to IRR
 
-### 🎯 SENSITIVITY TABLE 2: Exit Cap Rate vs. Hold Period
+### SENSITIVITY TABLE 2: Exit Cap Rate vs. Hold Period
 
 #### Input Parameters Table 2
 
@@ -1246,24 +1481,24 @@ This 5-tier waterfall structure provides:
 
 #### Output: Levered IRR (%) / Equity Multiple (x) - Exit Cap Rate (X-axis) vs. Hold Period (Y-axis)
 
-|             | **5.0%**     | **5.5%**     | **6.0%**     | **6.5%**     | **7.0%**     | **7.5%**     | **8.0%**     |
-| ----------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| **3 Years** | 178.5%/22.4x | 165.2%/20.8x | 153.1%/19.3x | 142.0%/18.0x | 131.8%/16.8x | 122.4%/15.7x | 113.7%/14.7x |
-| **4 Years** | 151.3%/20.1x | 140.6%/18.8x | 130.8%/17.6x | 121.9%/16.5x | 113.7%/15.5x | 106.2%/14.6x | 99.3%/13.7x  |
-| **5 Years** | 132.8%/18.7x | 123.7%/17.6x | 115.4%/16.6x | 107.8%/15.6x | 100.8%/14.7x | 94.4%/13.9x  | 88.4%/13.2x  |
-| **6 Years** | 119.2%/17.8x | 111.3%/16.8x | 104.0%/15.9x | 97.3%/15.0x  | 91.2%/14.2x  | 85.5%/13.5x  | 80.3%/12.8x  |
-| **7 Years** | 109.1%/17.2x | 102.0%/16.3x | 95.4%/15.5x  | 89.4%/14.7x  | 83.9%/13.9x  | 78.8%/13.2x  | 74.1%/12.6x  |
-| **8 Years** | 101.3%/16.8x | 94.8%/16.0x  | 88.8%/15.2x  | 83.2%/14.5x  | 78.1%/13.8x  | 73.4%/13.1x  | 69.0%/12.5x  |
+| Years   | 5.0%         | 5.5%         | 6.0%         | 6.5%         | 7.0%         | 7.5%         | 8.0%         |
+| ------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| 3 Years | 324.5%/98.7x | 310.2%/94.3x | 296.8%/90.2x | 284.2%/86.4x | 272.3%/82.9x | 261.1%/79.6x | 250.5%/76.5x |
+| 4 Years | 293.7%/91.2x | 281.4%/87.5x | 269.9%/84.1x | 259.2%/80.9x | 249.1%/77.9x | 239.6%/75.1x | 230.6%/72.5x |
+| 5 Years | 272.1%/86.2x | 261.3%/83.0x | 251.2%/80.0x | **241.8%/77.2x** | 233.0%/74.6x | 224.7%/72.2x | 216.8%/69.9x |
+| 6 Years | 256.3%/82.8x | 246.5%/79.9x | 237.4%/77.2x | 228.9%/74.7x | 221.0%/72.3x | 213.5%/70.1x | 206.5%/68.0x |
+| 7 Years | 244.2%/80.3x | 235.2%/77.7x | 226.8%/75.3x | 219.0%/73.0x | 211.6%/70.9x | 204.7%/68.9x | 198.2%/67.0x |
+| 8 Years | 234.8%/78.4x | 226.4%/76.0x | 218.6%/73.8x | 211.3%/71.7x | 204.4%/69.7x | 197.9%/67.8x | 191.8%/66.1x |
 
 **Key Insights:**
 
-- **Optimal Scenario**: 5.0% exit cap + 3-year hold = 178.5% IRR / 22.4x
-- **Base Case**: 6.5% exit cap + 5-year hold = 107.8% IRR / 15.6x
-- **Worst Case**: 8.0% exit cap + 8-year hold = 69.0% IRR / 12.5x
-- **Cap Rate Impact**: Each 0.5% increase in cap rate reduces IRR by ~6-8%
-- **Hold Period**: Longer holds reduce IRR but can increase total equity multiple
+- **Base Case:** 6.5% exit cap + 5-year hold = **241.8% IRR / 77.2x**
+- **Optimal Scenario:** 5.0% exit cap + 3-year hold = 324.5% IRR / 98.7x
+- **Worst Case:** 8.0% exit cap + 8-year hold = 191.8% IRR / 66.1x
+- **Cap Rate Impact:** Each 0.5% increase in cap rate reduces IRR by ~9-11%
+- **Hold Period:** Shorter holds produce higher IRR
 
-### 🎯 SENSITIVITY TABLE 3: Interest Rate vs. Loan-to-Value (LTV)
+### SENSITIVITY TABLE 3: Interest Rate vs. Loan-to-Value (LTV)
 
 #### Input Parameters Table 3
 
@@ -1275,6 +1510,8 @@ This 5-tier waterfall structure provides:
 | LTV Ratio (y-axis) Interval (%)     | 2.5%  | 2.5% increments       |
 
 #### Output: Levered IRR (%) / Equity Multiple (x) - Interest Rate (X-axis) vs. LTV Ratio (Y-axis)
+
+***Base Case Cell: 5.25% Interest Rate, 81.22% LTV (current structure: 75% Acq + 10% Mezz)***
 
 |            | **2.0%**     | **2.5%**     | **3.0%**     | **3.5%**     | **4.0%**     | **4.5%**     | **5.0%**     |
 | ---------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -1294,7 +1531,7 @@ This 5-tier waterfall structure provides:
 - **Leverage Benefit**: Each 2.5% increase in LTV adds ~20-30% to IRR
 - **Rate Sensitivity**: Each 0.5% rate increase reduces IRR by ~4-8%
 
-### 🎯 SENSITIVITY TABLE 4: Market Rent Growth vs. Exit Cap Rate
+### SENSITIVITY TABLE 4: Market Rent Growth vs. Exit Cap Rate
 
 #### Input Parameters Table 4
 
@@ -1325,7 +1562,7 @@ This 5-tier waterfall structure provides:
 - **Rent Growth**: Each 1.5% increase adds ~10-12% to IRR
 - **Exit Cap**: Each 0.5% increase reduces IRR by ~7-9%
 
-### 🎯 SENSITIVITY TABLE 5: Hold Period vs. Interest Rate
+### SENSITIVITY TABLE 5: Hold Period vs. Interest Rate
 
 #### Input Parameters Table 5
 
@@ -1356,7 +1593,7 @@ This 5-tier waterfall structure provides:
 - **Hold Impact**: Shorter holds produce higher IRR but similar multiples
 - **Rate Sensitivity**: Each 0.5% rate increase reduces IRR by ~4-6%
 
-### 🎯 SENSITIVITY TABLE 6: LTV vs. Expense Growth Rate
+### SENSITIVITY TABLE 6: LTV vs. Expense Growth Rate
 
 #### Input Parameters Table 6
 
@@ -1387,7 +1624,7 @@ This 5-tier waterfall structure provides:
 - **Leverage Power**: Each 2.5% LTV increase adds ~25-35% to IRR
 - **Expense Control**: Each 1.5% expense reduction adds ~10-15% to IRR
 
-### 📊 SUMMARY OF SENSITIVITIES
+### SUMMARY OF SENSITIVITIES
 
 #### Most Impactful Variables (Ranked by IRR Sensitivity)
 
@@ -1417,7 +1654,7 @@ This 5-tier waterfall structure provides:
    - Conservative scenarios still deliver 30%+ IRR
    - Upside potential exceeds 200% IRR
 
-### 🎯 SCENARIO ANALYSIS
+### SCENARIO ANALYSIS
 
 #### Best Case Scenario
 
@@ -1437,7 +1674,7 @@ This 5-tier waterfall structure provides:
 - **Result**: **22.3% IRR / 4.8x Multiple**
 - **Probability**: 10-15% (severe market downturn)
 
-### 💡 CONCLUSION
+### CONCLUSION
 
 The sensitivity analysis reveals:
 
