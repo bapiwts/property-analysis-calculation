@@ -40,35 +40,35 @@
 
 ### Land Square Footage
 
-```text
+```plan
 Formula: Land Acres × 43,560
 Calculation: 3.2 × 43,560 = 139,392 SF
 ```
 
 ### Purchase Price / SF
 
-```text
+```plan
 Formula: Purchase Price ÷ Building Square Footage
 Calculation: ₹115,000,000 ÷ 120,000 = ₹958.33 / SF
 ```
 
 ### Total Parking Spaces
 
-```text
+```plan
 Formula: Uncovered Parking Spaces + Covered Parking Spaces
 Calculation: 210 + 90 = 300 spaces
 ```
 
 ### Total Spaces / 1,000 SF
 
-```text
+```plan
 Formula: Total Parking Spaces ÷ (Building Square Footage ÷ 1,000)
 Calculation: 300 ÷ (120,000 ÷ 1,000) = 300 ÷ 120 = 2.50 spaces per 1,000 SF
 ```
 
 ### Total Upfront & Planned Capital
 
-```text
+```plan
 Formula: Purchase Price + (Purchase Price × Closing Costs %) + Upfront Working Capital + Acquisition Fee
 Calculation: ₹115,000,000 + (₹115,000,000 × 0.03) + ₹750,000 + ₹1,150,000
 = ₹115,000,000 + ₹3,450,000 + ₹750,000 + ₹1,150,000
@@ -77,21 +77,21 @@ Calculation: ₹115,000,000 + (₹115,000,000 × 0.03) + ₹750,000 + ₹1,150,0
 
 ### Closing Costs Amount
 
-```text
+```plan
 Formula: Purchase Price × Closing Costs %
 Calculation: ₹115,000,000 × 0.03 = ₹3,450,000
 ```
 
 ### Acquisition Fee Amount
 
-```text
+```plan
 Formula: Purchase Price × Acquisition Fee %
 Calculation: ₹115,000,000 × 0.01 = ₹1,150,000
 ```
 
 ### Net Leasable Area
 
-```text
+```plan
 Your Value: 120,000 SF
 Note: This assumes 100% building efficiency (NLA = BSF). This will be verified once you provide the Rent Roll with individual suite square footages.
 ```
@@ -121,21 +121,21 @@ Note: This assumes 100% building efficiency (NLA = BSF). This will be verified o
 
 #### Net Leasable Area (NLA)
 
-```text
+```plan
 Formula: Sum of all tenant SF
 Calculation: 40,000 + 30,000 + 25,000 + 25,000 = 120,000 SF
 ```
 
 #### Building Efficiency
 
-```text
+```plan
 Formula: NLA ÷ Building SF
 Calculation: 120,000 ÷ 120,000 = 100%
 ```
 
 #### Current Occupancy
 
-```text
+```plan
 Formula: (Sum of leased SF) ÷ NLA
 Calculation: 120,000 ÷ 120,000 = 100% (Fully leased)
 ```
@@ -152,7 +152,7 @@ Calculation: 120,000 ÷ 120,000 = 100% (Fully leased)
 | TCS      | Aug-31-2030 | 60 months        | 5.00 years      |
 | Vodafone | Dec-31-2028 | 40 months        | 3.33 years      |
 
-```text
+```plan
 Formula: Σ(remaining_term × leased_sf) ÷ total_leased_sf
 Calculation:
 - Infosys: 6.33 × 40,000 = 253,200
@@ -166,28 +166,28 @@ WALT: 576,350 ÷ 120,000 = 4.80 years
 
 #### Total Base Rent
 
-```text
+```plan
 Formula: Sum of all annual rents
 Calculation: 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000
 ```
 
 #### Total Annual / SF
 
-```text
+```plan
 Formula: Total Base Rent ÷ NLA
 Calculation: 108,600,000 ÷ 120,000 = ₹905 / SF
 ```
 
 ### Total Monthly Amount
 
-```text
+```plan
 Formula: Total Base Rent ÷ 12
 Calculation: 108,600,000 ÷ 12 = ₹9,050,000
 ```
 
 #### Total EGI(Effective Gross Income)
 
-```text
+```plan
 Formula:
 Calculation:
 ```
