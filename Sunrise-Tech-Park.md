@@ -40,45 +40,61 @@
 
 ### Land Square Footage
 
+```text
 Formula: Land Acres × 43,560
 Calculation: 3.2 × 43,560 = 139,392 SF
+```
 
 ### Purchase Price / SF
 
+```text
 Formula: Purchase Price ÷ Building Square Footage
 Calculation: ₹115,000,000 ÷ 120,000 = ₹958.33 / SF
+```
 
 ### Total Parking Spaces
 
+```text
 Formula: Uncovered Parking Spaces + Covered Parking Spaces
 Calculation: 210 + 90 = 300 spaces
+```
 
 ### Total Spaces / 1,000 SF
 
+```text
 Formula: Total Parking Spaces ÷ (Building Square Footage ÷ 1,000)
 Calculation: 300 ÷ (120,000 ÷ 1,000) = 300 ÷ 120 = 2.50 spaces per 1,000 SF
+```
 
 ### Total Upfront & Planned Capital
 
+```text
 Formula: Purchase Price + (Purchase Price × Closing Costs %) + Upfront Working Capital + Acquisition Fee
 Calculation: ₹115,000,000 + (₹115,000,000 × 0.03) + ₹750,000 + ₹1,150,000
 = ₹115,000,000 + ₹3,450,000 + ₹750,000 + ₹1,150,000
 = ₹120,350,000
+```
 
 ### Closing Costs Amount
 
+```text
 Formula: Purchase Price × Closing Costs %
 Calculation: ₹115,000,000 × 0.03 = ₹3,450,000
+```
 
 ### Acquisition Fee Amount
 
+```text
 Formula: Purchase Price × Acquisition Fee %
 Calculation: ₹115,000,000 × 0.01 = ₹1,150,000
+```
 
 ### Net Leasable Area
 
+```text
 Your Value: 120,000 SF
 Note: This assumes 100% building efficiency (NLA = BSF). This will be verified once you provide the Rent Roll with individual suite square footages.
+```
 
 | Field                    | Value                   |
 | ------------------------ | ----------------------- |
@@ -105,23 +121,29 @@ Note: This assumes 100% building efficiency (NLA = BSF). This will be verified o
 
 #### Net Leasable Area (NLA)
 
+```text
 Formula: Sum of all tenant SF
 Calculation: 40,000 + 30,000 + 25,000 + 25,000 = 120,000 SF
+```
 
 #### Building Efficiency
 
+```text
 Formula: NLA ÷ Building SF
 Calculation: 120,000 ÷ 120,000 = 100%
+```
 
 #### Current Occupancy
 
+```text
 Formula: (Sum of leased SF) ÷ NLA
 Calculation: 120,000 ÷ 120,000 = 100% (Fully leased)
+```
 
 #### Weighted Average Lease Term (WALT)
 
-**Analysis Date:** Aug 29, 2025
-**Remaining Term Calculations** (from Aug 29, 2025):
+- **Analysis Date:** Aug 29, 2025
+- **Remaining Term Calculations** (from Aug 29, 2025):
 
 | Tenant   | Lease End   | Remaining Months | Remaining Years |
 | -------- | ----------- | ---------------- | --------------- |
@@ -130,30 +152,45 @@ Calculation: 120,000 ÷ 120,000 = 100% (Fully leased)
 | TCS      | Aug-31-2030 | 60 months        | 5.00 years      |
 | Vodafone | Dec-31-2028 | 40 months        | 3.33 years      |
 
-**Formula:** Σ(remaining_term × leased_sf) ÷ total_leased_sf
-**Calculation:**
-
+```text
+Formula: Σ(remaining_term × leased_sf) ÷ total_leased_sf
+Calculation:
 - Infosys: 6.33 × 40,000 = 253,200
 - Wipro: 3.83 × 30,000 = 114,900
 - TCS: 5.00 × 25,000 = 125,000
 - Vodafone: 3.33 × 25,000 = 83,250
 - Total: 576,350
-- WALT: 576,350 ÷ 120,000 = 4.80 years
+
+WALT: 576,350 ÷ 120,000 = 4.80 years
+```
 
 #### Total Base Rent
 
-**Formula:** Sum of all annual rents
-**Calculation:** 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000
+```text
+Formula: Sum of all annual rents
+Calculation: 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000
+```
 
 #### Total Annual / SF
 
-**Formula:** Total Base Rent ÷ NLA
-**Calculation:** 108,600,000 ÷ 120,000 = ₹905 / SF
+```text
+Formula: Total Base Rent ÷ NLA
+Calculation: 108,600,000 ÷ 120,000 = ₹905 / SF
+```
 
 ### Total Monthly Amount
 
-**Formula:** Total Base Rent ÷ 12
-**Calculation:** 108,600,000 ÷ 12 = ₹9,050,000
+```text
+Formula: Total Base Rent ÷ 12
+Calculation: 108,600,000 ÷ 12 = ₹9,050,000
+```
+
+#### Total EGI(Effective Gross Income)
+
+```text
+Formula:
+Calculation:
+```
 
 #### Summary Table
 
@@ -228,8 +265,34 @@ Rent Escalation Schedule
 
 ## 🔵 STEP 6 — OPERATING EXPENSES
 
+### Gross Up for Reimbursement
+
+**Checkbox:** [ ] Gross Up for Reimbursement
+**Input Field:** Gross Up Occupancy % (e.g., 95% or 100%)
+**Description:** If checked, operating expenses are "grossed up" to the entered occupancy percentage to ensure fairness among tenants when the building is not fully occupied. Gross-Up applies only when enabled and only for applicable categories (e.g., CAM, Utilities).
+**Formula:**
+
+```plan
+GrossUpFactor = GrossUp% ÷ ActualOccupancy%
+```
+
+**Example:**
+
+- Building occupied : 100%
+- Gross Up %: 95%
+- Gross-up Factor = 95% ÷ 100% = ??
 - Building SF: 120,000
 - Total Base Rent (Annual): From Rent Roll: Infosys + Wipro + TCS + Vodafone = 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000 / year
+
+### Operating Expenses Categories
+
+- taxes
+- insurance
+- utilities
+- management
+- cam (Common Area Maintenance)
+
+### Operating Expenses Table
 
 | Name                  | Category   | How Input           | Amount Type | Amount Value | Frequency | Fixed (%) | Recoverable (%) | Apply To Tenants | Start Date     | Custom Date | Inflation Type | Custom Inflation (%) |
 | --------------------- | ---------- | ------------------- | ----------- | ------------ | --------- | --------- | --------------- | ---------------- | -------------- | ----------- | -------------- | -------------------- |
@@ -247,9 +310,6 @@ Rent Escalation Schedule
 ### Calculation of Annual OpExse Amount Including Recoverable Amounts
 
 #### With Gross-Up
-
-- Building occupied : 100%
-- Gross Up %: 95%
 
 ***With Gross-Up (not applied — same as No Gross-Up because actual occupancy 100% ≥ gross-up 95%)***
 
