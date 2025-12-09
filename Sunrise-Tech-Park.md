@@ -267,22 +267,19 @@ Rent Escalation Schedule
 
 ### Gross Up for Reimbursement
 
-**Checkbox:** [ ] Gross Up for Reimbursement
-**Input Field:** Gross Up Occupancy % (e.g., 95% or 100%)
-**Description:** If checked, operating expenses are "grossed up" to the entered occupancy percentage to ensure fairness among tenants when the building is not fully occupied. Gross-Up applies only when enabled and only for applicable categories (e.g., CAM, Utilities).
-**Formula:**
+- **Checkbox:** [ ] Gross Up for Reimbursement
+- **Input Field:** Gross Up Occupancy % (e.g., 95% or 100%)
+- **Description:** If checked, operating expenses are "grossed up" to the entered occupancy percentage to ensure fairness among tenants when the building is not fully occupied. Gross-Up applies only when enabled and only for applicable categories (e.g., CAM, Utilities).
 
 ```plan
-GrossUpFactor = GrossUp% ÷ ActualOccupancy%
+Formula: GrossUpFactor = GrossUp% ÷ ActualOccupancy%
+Example:
+Building occupied : 100%
+Gross Up %: 95%
+Gross-up Factor = 95% ÷ 100% = ??
+Building SF: 120,000
+Total Base Rent (Annual): From Rent Roll: Infosys + Wipro + TCS + Vodafone = 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000 / year
 ```
-
-**Example:**
-
-- Building occupied : 100%
-- Gross Up %: 95%
-- Gross-up Factor = 95% ÷ 100% = ??
-- Building SF: 120,000
-- Total Base Rent (Annual): From Rent Roll: Infosys + Wipro + TCS + Vodafone = 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000 / year
 
 ### Operating Expenses Categories
 
@@ -577,9 +574,12 @@ Calculation: ₹1,602,000 × 0.80 = **₹1,281,600**
 | Utilities    | ₹200,000              |
 | **Total**    | **₹2,175,000**        |
 
-**Year 1 Calculation**
+**Year 1 Calculation:**
+
+```plan
 Formula: Base Year Total × Recovery %
-Calculation: ₹2,175,000 × 0.95 = **₹2,066,250**
+Calculation: ₹2,175,000 × 0.95 = ₹2,066,250
+```
 
 Years 2-5 with 4% Cumulative CAM Cap
 Methodology: Only CAM escalates at 4% annually; other categories remain at base year amounts.
@@ -645,8 +645,6 @@ Year 5: ₹1,146,875 × 1.03⁴ × 0.75 = ₹968,114
 
 ## 🔵 STEP 9 — EXPENSES REIMBURSEMENT ASSUMPTIONS
 
-User Input
-
 ### A. Operating Expense Assumptions
 
 **User Input Table:**
@@ -660,13 +658,17 @@ User Input
 **Calculations**
 Property Management Fee Amount:
 
-- Formula: (Management Fee % / 100) × Total Base Rent
-- Calculation: (3.0 / 100) × ₹108,600,000 = ₹3,258,000/year
+```plan
+Formula: (Management Fee % / 100) × Total Base Rent
+Calculation: (3.0 / 100) × ₹108,600,000 = ₹3,258,000/year
+```
 
 Capital Reserves Amount:
 
-- Formula: Capital Reserves per SF × Building Square Footage
-- Calculation: ₹15.00 × 120,000 = ₹1,800,000/year
+```plan
+Formula: Capital Reserves per SF × Building Square Footage
+Calculation: ₹15.00 × 120,000 = ₹1,800,000/year
+```
 
 ### B. Property Tax Assumptions
 
@@ -676,15 +678,17 @@ Capital Reserves Amount:
 | Property Tax Rate (%)       | 1.76%       | Annual tax rate          |
 | Fixed Charge Assessment (₹) | 0           | Additional fixed charges |
 
-**Calculations**
-Year 1 Property Tax:
+**Calculations:**
 
-- Formula: (Assessed Value × Tax Rate / 100) + Fixed Charge
-- Calculation: (₹125,000,000 × 1.76 / 100) + ₹0 = ₹2,200,000
+```plan
+Year 1 Property Tax:
+Formula: (Assessed Value × Tax Rate / 100) + Fixed Charge
+Calculation: (₹125,000,000 × 1.76 / 100) + ₹0 = ₹2,200,000
+```
 
 ### C. Property Tax Growth Rates
 
-User Input Table
+**User Input Table:**
 
 | Item                      | Year 1 | Year 2 | Year 3 | Year 4 | Year 5+ |
 | ------------------------- | ------ | ------ | ------ | ------ | ------- |
@@ -715,7 +719,7 @@ User Input Table
 | **Capital Reserves**      | 1,800,000       | 15.00      | 1,800,000      | 15.00      | 1,800,000      | 15.00      | 1,800,000       | 15.00      |
 | **TOTAL EXPENSES**        | **45,688,000**  | **380.73** | **45,688,000** | **380.73** | **45,688,000** | **380.73** | **45,688,000**  | **380.73** |
 
-*Mgmt Fee updated using increasing in-place rents from Rent Detail (Infosys 3.5%, Wipro ₹150K, etc.)
+***Mgmt Fee updated using increasing in-place rents from Rent Detail (Infosys 3.5%, Wipro ₹150K, etc.)***
 
 ### Expense Reimbursement Operating Expense Comparison Table (Applied Assumptions)
 
@@ -742,7 +746,7 @@ User Input Table
 
 ## 🔵 STEP 10 — CONSTRUCTION BUDGET
 
-*Capital Budget**
+**Capital Budget**
 ***The Construction Budget captures all planned capital expenditures over the holding period, including major renovations, tenant improvements, building upgrades, and infrastructure investments that extend beyond normal operating expenses.***
 
 ### Capital Budget Table (Building SF = 120,000)
