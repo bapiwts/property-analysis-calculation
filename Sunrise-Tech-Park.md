@@ -140,6 +140,75 @@ Formula: (Sum of leased SF) ÷ NLA
 Calculation: 120,000 ÷ 120,000 = 100% (Fully leased)
 ```
 
+#### % of Total SF
+
+```plan
+Formula:  % of Total SF = (Tenant SF ÷ NLA) × 100
+Calculation:
+| Tenant   | Tenant SF | % of Total SF |
+| -------- | --------- | ------------- |
+| Infosys  | 40,000    | 33.33%        |
+| Wipro    | 30,000    | 25.00%        |
+| TCS      | 25,000    | 20.83%        |
+| Vodafone | 25,000    | 20.83%        |
+```
+
+#### Lease End
+
+```plan
+Formula : Lease End = Lease Start + (Initial Lease months) − 1 day
+Calculation:
+| Tenant   | Lease Start  | Initial Lease (mo) | Lease End    |
+| -------- | ------------ | ------------------ | ------------ |
+| Infosys  | Jan 01, 2022 | 120                | Dec 31, 2031 |
+| Wipro    | Jul 01, 2021 | 96                 | Jun 30, 2029 |
+| TCS      | Sep 01, 2020 | 120                | Aug 31, 2030 |
+| Vodafone | Jan 01, 2024 | 60                 | Dec 31, 2028 |
+```
+
+#### Contract End
+
+```plan
+Formula: Contract End = Lease Start + (Initial + Option1 + Option2 months) − 1 day
+Calculation:
+| Tenant   | Initial | Opt1 | Opt2 | Total Months | Contract End |
+| -------- | ------- | ---- | ---- | ------------ | ------------ |
+| Infosys  | 120     | 60   | 60   | 240          | Dec 31, 2041 |
+| Wipro    | 96      | 36   | 0    | 132          | Jun 30, 2032 |
+| TCS      | 120     | 60   | 0    | 180          | Aug 31, 2035 |
+| Vodafone | 60      | 0    | 0    | 60           | Dec 31, 2028 |
+```
+
+#### Term (years)
+
+```plan
+Formula: Term (years) = (Initial + Option1 + Option2 months) ÷ 12
+Calculation:
+| Tenant   | Total Months | Term (years) |
+| -------- | ------------ | ------------ |
+| Infosys  | 240          | 20.0         |
+| Wipro    | 132          | 11.0         |
+| TCS      | 180          | 15.0         |
+| Vodafone | 60           | 5.0          |
+```
+
+#### Remaining Term (years)
+
+***Analysis Date: Aug 29, 2025***
+
+```plan
+Formula:
+Remaining Term (months) = Months between analysis date and Lease End
+Remaining Term (years) = Remaining months ÷ 12
+
+| Tenant   | Lease End    | Remaining (mo) | Remaining (yrs) |
+| -------- | ------------ | -------------- | --------------- |
+| Infosys  | Dec 31, 2031 | 76             | 6.33            |
+| Wipro    | Jun 30, 2029 | 46             | 3.83            |
+| TCS      | Aug 31, 2030 | 60             | 5.00            |
+| Vodafone | Dec 31, 2028 | 40             | 3.33            |
+```
+
 #### Weighted Average Lease Term (WALT)
 
 - **Analysis Date:** Aug 29, 2025
