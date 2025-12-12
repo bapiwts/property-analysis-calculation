@@ -957,8 +957,8 @@ The Debt tab structures the financing for Sunrise Tech Park using a three-loan a
 #### 2. Acquisition Loan — Core Calculations
 
 **Monthly Interest Rate:**
-**Formula:** Monthly Rate = Annual Rate Ã· 12
-**Calculation:** 5.25% Ã· 12 = 0.4375% per month
+**Formula:** Monthly Rate = Annual Rate / 12
+**Calculation:** 5.25% / 12 = 0.4375% per month
 
 **Interest-only Monthly Payment (Months 1–12):**
 **Formula:** Interest = Loan Amount × (Rate / 12)
