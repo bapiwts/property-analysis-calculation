@@ -113,7 +113,7 @@ Note: This assumes 100% building efficiency (NLA = BSF). This will be verified o
 | Suite | Tenant   | Leased/Spec | Tenant SF | % of Total SF | Lease Start | Initial Lease (mo) | Lease End   | Option 1 (mo) | Option 2 (mo) | Contract End | Term (years) | Remaining Term (years) | In-Place Rent (₹/mo) | Annual Rent (₹) | Annual Rent/SF (₹) | Monthly Rent/SF (₹) | Increase Method | Increase |
 | ----- | -------- | ----------- | --------- | ------------- | ----------- | ------------------ | ----------- | ------------- | ------------- | ------------ | ------------ | ---------------------- | -------------------- | --------------- | ------------------ | ------------------- | --------------- | -------- |
 | 101   | Infosys  | Leased      | 40,000    | 33.3%         | Jan-01-2022 | 120                | Dec-31-2031 | 60            | 60            | Dec-31-2041  | 20.0         | 6.33                   | 3,200,000            | 38,400,000      | 960                | 80                  | Inc. %/Yr       | 3.5%     |
-| 102   | Wipro    | Leased      | 30,000    | 25.0%         | Jul-01-2021 | 96                 | Jun-30-2029 | 36            | 0             | Jun-30-2032  | 11.0         | 3.58                   | 2,100,000            | 25,200,000      | 840                | 70                  | Inc. $/Yr       | 150,000  |
+| 102   | Wipro    | Leased      | 30,000    | 25.0%         | Jul-01-2021 | 96                 | Jun-30-2029 | 36            | 0             | Jun-30-2032  | 11.0         | 3.83                   | 2,100,000            | 25,200,000      | 840                | 70                  | Inc. $/Yr       | 150,000  |
 | 103   | TCS      | Leased      | 25,000    | 20.8%         | Sep-01-2020 | 120                | Aug-31-2030 | 60            | 0             | Aug-31-2035  | 15.0         | 4.92                   | 2,000,000            | 24,000,000      | 960                | 80                  | Detail          | —        |
 | 104   | Vodafone | Leased      | 25,000    | 20.8%         | Jan-01-2024 | 60                 | Dec-31-2028 | 0             | 0             | Dec-31-2028  | 5.0          | 3.33                   | 1,750,000            | 21,000,000      | 840                | 70                  | Flat            | 0%       |
 
@@ -254,13 +254,6 @@ Formula: Total Base Rent ÷ 12
 Calculation: 108,600,000 ÷ 12 = ₹9,050,000
 ```
 
-#### Total EGI(Effective Gross Income)
-
-```plan
-Formula:
-Calculation:
-```
-
 #### Summary Table
 
 | Field                 | Value        |
@@ -307,13 +300,13 @@ Rent Escalation Schedule
 - So we include for Infosys (2022), Vodafone (2024)
 - Wipro & TCS have older stabilized leases → No ULC
 
-| Suite     | Tenant   | Total TI (₹)   | Total LC (₹)   | Concessions (₹) |
-| --------- | -------- | -------------- | -------------- | --------------- |
-| 101       | Infosys  | 14,000,000     | 1,152,000      | 6,400,000       |
-| 102       | Wipro    | 0              | 0              | 0               |
-| 103       | TCS      | 0              | 0              | 0               |
-| 104       | Vodafone | 10,000,000     | 420,000        | 1,750,000       |
-| **TOTAL** |          | **24,000,000** | **1,572,000**  | **8,150,000**   |
+| Suite     | Tenant   | Total TI (₹)   | Total LC (₹)  | Concessions (₹) |
+| --------- | -------- | -------------- | ------------- | --------------- |
+| 101       | Infosys  | 14,000,000     | 1,152,000     | 6,400,000       |
+| 102       | Wipro    | 0              | 0             | 0               |
+| 103       | TCS      | 0              | 0             | 0               |
+| 104       | Vodafone | 10,000,000     | 420,000       | 1,750,000       |
+| **TOTAL** |          | **24,000,000** | **1,572,000** | **8,150,000**   |
 
 ## 🔵 STEP 5 —  FUTURE TENANT ASSUMPTIONS (FTA)
 
@@ -330,40 +323,44 @@ Rent Escalation Schedule
 | 101   | Infosys  | 350   | 3%                     | 2         | 150   | 2%                         | 1         | 80                      | 82.40    | 84.87    | 87.42                | 90.04    | 92.74     | Modified Gross     | Yes | Yes | Yes            | Yes  | Yes   | Yes | Yes | Yes            | Yes  | Yes   | 1,120,000 | 480,000 | 1,400,000             | 400,000 | 320,000  | 33.30%          | 70%          | 60         | 3        |
 | 102   | Wipro    | 300   | 3%                     | 1         | 120   | 2%                         | 1         | 70                      | 72.10    | 74.26    | 76.49                | 78.79    | 81.15     | Modified Gross     | Yes | Yes | Yes            | Yes  | Yes   | Yes | Yes | Yes            | Yes  | Yes   | 720,000   | 300,000 | 960,000               | 240,000 | 210,000  | 25.00%          | 65%          | 48         | 3        |
 | 103   | TCS      | 320   | 3%                     | 2         | 150   | 2%                         | 1         | 80                      | 82.40    | 84.87    | 87.42                | 90.04    | 92.74     | Modified Gross     | Yes | Yes | Yes            | Yes  | Yes   | Yes | Yes | Yes            | Yes  | Yes   | 650,000   | 275,000 | 825,000               | 225,000 | 200,000  | 20.80%          | 60%          | 60         | 3        |
-| 104   | Vodafone | 280   | 2%                     | 1         | 100   | 2%                         | 0         | 70                      | 72.10    | 74.26    | 76.49                | 78.79    | 81.15     | Modified Gross     | Yes | Yes | Yes            | Yes  | Yes   | Yes | Yes | Yes            | Yes  | Yes   | 550,000   | 225,000 | 750,000               | 200,000 | 150,000  | 20.80%          | 55%          | 60         | 3        |
+| 104   | Vodafone | 280   | 2%                     | 1         | 100   | 2%                         | 0         | 70                      | 72.10    | 74.26    | 76.49                | 78.79    | 81.15     | Modified Gross     | Yes | Yes | Yes            | Yes  | Yes   | Yes | Yes | Yes            | Yes  | Yes   | 550,000   | 225,000 | 750,000               | 200,000 | 150,000  | 20.83%          | 55%          | 60         | 3        |
 
-## 🔵 STEP 6 — OPERATING EXPENSES (Updated as per Client Requirements)
+## 🔵 STEP 6 — OPERATING EXPENSES (Final v2)
 
-This updated STEP 6 reflects all client feedback while maintaining the same table structure, only enhancing logic and calculations.
+This STEP 6 incorporates all client feedback and underwriting best practices while preserving the original table structure and calculated totals.
 
-**Client-required updates include:**
+### Key Enhancements Implemented
 
-- Per-expense-line Gross-Up % (NOT a global Gross-Up)
-- Management Fee based on % of EGI (new option)
+- Per-expense **Gross-Up %** (no global gross-up)
+- **Management Fee calculated as % of Base EGI**
+- Clear separation of **recoverable vs non-recoverable** expenses
+- Explicit **gross-up application rules**
+- Circular dependency between EGI and Management Fee removed
 
-**Update calculation formula:**
+## Gross-Up for Expense Reimbursement
 
-- Correct Gross-Up formula
-- Correct Annual OpEx calculation
-- Clear With/Without Gross-Up examples
-
-### Gross Up for Reimbursement (Old formula)
-
-- **Checkbox:** [ ] Gross Up for Reimbursement
-- **Input Field:** Gross Up Occupancy % (e.g., 95% or 100%)
-- **Description:** If checked, operating expenses are "grossed up" to the entered occupancy percentage to ensure fairness among tenants when the building is not fully occupied. Gross-Up applies only when enabled and only for applicable categories (e.g., CAM, Utilities).
+### Gross-Up Rule
 
 ```plan
-Formula: GrossUpFactor = GrossUp% ÷ ActualOccupancy%
-Example:
-Building occupied : 100%
-Gross Up %: 95%
-Gross-up Factor = 95% ÷ 100% = ??
-Building SF: 120,000
-Total Base Rent (Annual): From Rent Roll: Infosys + Wipro + TCS + Vodafone = 38,400,000 + 25,200,000 + 24,000,000 + 21,000,000 = ₹108,600,000 / year
+Gross-Up is applied only when Actual Occupancy is below the selected Gross-Up %.
+If Actual Occupancy is equal to or greater than the Gross-Up %, no gross-up is applied.
 ```
 
-### Operating Expenses Categories
+### Gross-Up Formula
+
+```plan
+If Actual Occupancy ≥ Gross-Up %:
+    GrossUpFactor = 1.00
+Else:
+    GrossUpFactor = Gross-Up % ÷ Actual Occupancy %
+
+Building SF: 120,000
+Actual Occupancy: 100%
+
+Since Actual Occupancy is 100%, no gross-up adjustment applies to any expense line in the current period.
+```
+
+### Expenses Categories
 
 - taxes
 - insurance
@@ -371,56 +368,66 @@ Total Base Rent (Annual): From Rent Roll: Infosys + Wipro + TCS + Vodafone = 38,
 - management
 - cam (Common Area Maintenance)
 
-### Operating Expenses Table(old)
-
-| Name                  | Category   | How Input           | Amount Type | Amount Value | Frequency | Fixed (%) | Recoverable (%) | Apply To Tenants | Start Date     | Custom Date | Inflation Type | Custom Inflation (%) |
-| --------------------- | ---------- | ------------------- | ----------- | ------------ | --------- | --------- | --------------- | ---------------- | -------------- | ----------- | -------------- | -------------------- |
-| Property Taxes        | taxes      | Amount              | fixed       | 2,200,000    | annually  | 0         | 100             | Yes              | Analysis Begin | —           | cpi            | —                    |
-| Building Insurance    | insurance  | Amount              | fixed       | 950,000      | annually  | 0         | 100             | Yes              | Analysis Begin | —           | expense        | —                    |
-| Electricity & Water   | utilities  | ₹/SF                | fixed       | 22           | monthly   | 20        | 80              | Yes              | Analysis Begin | —           | cpi            | —                    |
-| Property Mgmt Fees    | management | % of Base Rent / SF | fixed       | 3.0          | monthly   | 0         | 100             | Yes              | Analysis Begin | —           | custom         | 2.5                  |
-| Repairs & Maintenance | cam        | Amount              | custom      | 1,200,000    | detail    | 10        | 90              | Yes              | Custom Date    | 2025-09-01  | custom         | 3.0                  |
-| Security              | cam        | Amount              | fixed       | 900,000      | annually  | 25        | 75              | Yes              | Analysis Begin | —           | expense        | —                    |
-| Marketing             | management | Amount              | custom      | 850,000      | detail    | 100       | 0               | No               | Analysis Begin | —           | cpi            | —                    |
-| Legal                 | management | Amount              | custom      | 500,000      | detail    | 50        | 50              | Yes              | Custom Date    | 2025-09-01  | custom         | 1.5                  |
-| Landscaping           | cam        | Amount              | fixed       | 600,000      | annually  | 0         | 100             | Yes              | Analysis Begin | —           | expense        | —                    |
-| Cleaning              | cam        | Amount              | fixed       | 750,000      | annually  | 100       | 0               | No               | Analysis Begin | —           | expense        | —                    |
+### Operating Expenses Table
 
 > **NEW ADDITION:** Each expense now has **its own Gross-Up %** instead of one global percentage.
-> **NEW OPTION:** Management Fee can be **% of Base Rent/SF** *OR* **% of EGI**.
+> **NEW OPTION:** Management Fee should be  **% of EGI** instead of **% of Base Rent/SF**.
 
-| Name                  | Category   | How Input           | Amount Type | Amount Value | Frequency | Fixed (%) | Recoverable (%) | Apply To Tenants | Start Date     | Custom Date | Inflation Type | Custom Inflation (%) | **Gross-Up % (NEW)** |
-| --------------------- | ---------- | ------------------- | ----------- | ------------ | --------- | --------- | --------------- | ---------------- | -------------- | ----------- | -------------- | -------------------- | -------------------- |
-| Property Taxes        | taxes      | Amount              | fixed       | 2,200,000    | annually  | 0         | 100             | Yes              | Analysis Begin | —           | cpi            | —                    | 100%                 |
-| Building Insurance    | insurance  | Amount              | fixed       | 950,000      | annually  | 0         | 100             | Yes              | Analysis Begin | —           | expense        | —                    | 100%                 |
-| Electricity & Water   | utilities  | ₹/SF                | fixed       | 22           | monthly   | 20        | 80              | Yes              | Analysis Begin | —           | cpi            | —                    | 95%                  |
-| Property Mgmt Fees    | management | % EGI (NEW)         | fixed       | 3.0          | monthly   | 0         | 100             | Yes              | Analysis Begin | —           | custom         | 2.5                  | —                    |
-| Repairs & Maintenance | cam        | Amount              | custom      | 1,200,000    | detail    | 10        | 90              | Yes              | Custom Date    | 2025-09-01  | custom         | 3.0                  | 90%                  |
-| Security              | cam        | Amount              | fixed       | 900,000      | annually  | 25        | 75              | Yes              | Analysis Begin | —           | expense        | —                    | 85%                  |
-| Marketing             | management | Amount              | custom      | 850,000      | detail    | 100       | 0               | No               | Analysis Begin | —           | cpi            | —                    | 0%                   |
-| Legal                 | management | Amount              | custom      | 500,000      | detail    | 50        | 50              | Yes              | Custom Date    | 2025-09-01  | custom         | 1.5                  | 50%                  |
-| Landscaping           | cam        | Amount              | fixed       | 600,000      | annually  | 0         | 100             | Yes              | Analysis Begin | —           | expense        | —                    | 95%                  |
-| Cleaning              | cam        | Amount              | fixed       | 750,000      | annually  | 100       | 0               | No               | Analysis Begin | —           | expense        | —                    | 0%                   |
+| Name                  | Category   | How Input | Amount Type | Amount Value | Frequency | Fixed (%) | Recoverable (%) | Apply To Tenants | Start Date     | Custom Date | Inflation Type | Custom Inflation (%) | Gross-Up % |
+| --------------------- | ---------- | --------- | ----------- | ------------ | --------- | --------- | --------------- | ---------------- | -------------- | ----------- | -------------- | -------------------- | ---------- |
+| Property Taxes        | taxes      | Amount    | fixed       | 2,200,000    | annually  | 0         | 100             | Yes              | Analysis Begin | —           | cpi            | —                    | 100%       |
+| Building Insurance    | insurance  | Amount    | fixed       | 950,000      | annually  | 0         | 100             | Yes              | Analysis Begin | —           | expense        | —                    | 100%       |
+| Electricity & Water   | utilities  | ₹/SF      | fixed       | 22           | monthly   | 20        | 80              | Yes              | Analysis Begin | —           | cpi            | —                    | 95%        |
+| Property Mgmt Fees    | management | % EGI     | fixed       | 3.0%         | monthly   | 0         | 100             | Yes              | Analysis Begin | —           | custom         | 2.5                  | —          |
+| Repairs & Maintenance | cam        | Amount    | custom      | 1,200,000    | detail    | 10        | 90              | Yes              | Custom Date    | 2025-09-01  | custom         | 3.0                  | 90%        |
+| Security              | cam        | Amount    | fixed       | 900,000      | annually  | 25        | 75              | Yes              | Analysis Begin | —           | expense        | —                    | 85%        |
+| Marketing             | management | Amount    | custom      | 850,000      | detail    | 100       | 0               | No               | Analysis Begin | —           | cpi            | —                    | 0%         |
+| Legal                 | management | Amount    | custom      | 500,000      | detail    | 50        | 50              | Yes              | Custom Date    | 2025-09-01  | custom         | 1.5                  | 50%        |
+| Landscaping           | cam        | Amount    | fixed       | 600,000      | annually  | 0         | 100             | Yes              | Analysis Begin | —           | expense        | —                    | 95%        |
+| Cleaning              | cam        | Amount    | fixed       | 750,000      | annually  | 100       | 0               | No               | Analysis Begin | —           | expense        | —                    | 0%         |
 
-### Calculation of Annual OpExse Amount Including Recoverable Amounts
+### Management Fee — Base EGI Definition
+
+To avoid circular dependency, Management Fee is calculated on **Base EGI**, defined as EGI **excluding Expense Reimbursements**.
+
+```plan
+Base EGI =
+Contractual Rent
++ Turnover / Absorption Rent
++ Market Leasing Income
++ Other Income
+− Vacancy Loss
+− Credit Loss
+
+
+Base EGI = ₹108,600,000 + ₹0 + ₹0 + ₹0 - ₹0 - ₹0 = ₹108,600,000
+Management Fee = Base EGI × 3.0%
+Management Fee = 108,600,000 × 3.0%
+               = ₹3,258,000
+
+```
+
+> “Final EGI, used for NOI and valuation, is calculated in STEP 8 after adding Expense Reimbursements to Base EGI.”
+
+### Annual Operating Expense Calculations
 
 #### With Gross-Up
 
 ***With Gross-Up (not applied — same as No Gross-Up because actual occupancy 100% ≥ gross-up 95%)***
 
-| Expense               | Annual Amount (₹) | Recoverable % | Apply To Tenants | Recoverable Amount (₹) |
-| --------------------- | ----------------- | ------------- | ---------------- | ---------------------- |
-| Property Taxes        | 2,200,000.00      | 100%          | Yes              | 2,200,000.00           |
-| Building Insurance    | 950,000.00        | 100%          | Yes              | 950,000.00             |
-| Electricity & Water   | 31,680,000.00     | 80%           | Yes              | 25,344,000.00          |
-| Property Mgmt Fees    | 3,258,000.00      | 100%          | Yes              | 3,258,000.00           |
-| Repairs & Maintenance | 1,200,000.00      | 90%           | Yes              | 1,080,000.00           |
-| Security              | 900,000.00        | 75%           | Yes              | 675,000.00             |
-| Marketing             | 850,000.00        | 0%            | No               | 0.00                   |
-| Legal                 | 500,000.00        | 50%           | Yes              | 250,000.00             |
-| Landscaping           | 600,000.00        | 100%          | Yes              | 600,000.00             |
-| Cleaning              | 750,000.00        | 0%            | No               | 0.00                   |
-| **TOTAL**             | **₹42,888,000**   |               |                  |**₹34,357,000**         |
+| Expense               | Annual Amount (₹) | Gross-Up % | Recoverable % | Apply To Tenants | Recoverable Amount (₹) |
+| --------------------- | ----------------- | ---------- | ------------- | ---------------- | ---------------------- |
+| Property Taxes        | 2,200,000.00      | 100%       | 100%          | Yes              | 2,200,000.00           |
+| Building Insurance    | 950,000.00        | 100%       | 100%          | Yes              | 950,000.00             |
+| Electricity & Water   | 31,680,000.00     | 95%        | 80%           | Yes              | 25,344,000.00          |
+| Property Mgmt Fees    | 3,258,000.00      | -          | 100%          | Yes              | 3,258,000.00           |
+| Repairs & Maintenance | 1,200,000.00      | 90%        | 90%           | Yes              | 1,080,000.00           |
+| Security              | 900,000.00        | 85%        | 75%           | Yes              | 675,000.00             |
+| Marketing             | 850,000.00        | 0%         | 0%            | No               | 0.00                   |
+| Legal                 | 500,000.00        | 50%        | 50%           | Yes              | 250,000.00             |
+| Landscaping           | 600,000.00        | 95%        | 100%          | Yes              | 600,000.00             |
+| Cleaning              | 750,000.00        | 0%         | 0%            | No               | 0.00                   |
+| **TOTAL**             | **₹42,888,000**   |            |               |                  | **₹34,357,000**        |
 
 #### No Gross Up
 
@@ -741,6 +748,14 @@ Year 5: ₹1,146,875 × 1.03⁴ × 0.75 = ₹968,114
 | **103** | **TCS**      | Base Year Stop     | **20.83%** | 95%        | ₹2,066,250           | ₹2,097,600 | ₹2,130,204 | ₹2,164,112 | ₹2,199,377 |
 | **104** | **Vodafone** | Modified Gross     | **20.83%** | 75%        | ₹860,156             | ₹885,961   | ₹912,540   | ₹939,916   | ₹968,114   |
 
+### Final EGI
+
+```plan
+Final EGI =
+Base EGI
++ Total Tenant Expense Reimbursements
+```
+
 ## 🔵 STEP 9 — EXPENSES REIMBURSEMENT ASSUMPTIONS
 
 ### A. Operating Expense Assumptions
@@ -1046,17 +1061,17 @@ n = 300
 
 #### 1. Mezzanine Loan — User Input
 
-| Parameter       | Value           | Notes                     |
-| --------------- | --------------- | ------------------------- |
-| Purchase Price  | ₹115,000,000    | From Step 1               |
-| LTV             | 10%             | Gap financing (85% - 75%) |
-| **Loan Amount** | **₹11,500,000** | 115M × 10%                |
-| Interest Rate   | 8.75%           | Higher-risk               |
-| Interest Method | 30/360          | Standard convention       |
-| I/O Period      | 60 months       | Entire term               |
-| Loan Fee (2%)   | ₹2,300,000      | 2% of loan                |
-| Term            | 60 months       | No principal              |
-| Amortization    | N/A             | No amortization (I/O only)|
+| Parameter       | Value           | Notes                      |
+| --------------- | --------------- | -------------------------- |
+| Purchase Price  | ₹115,000,000    | From Step 1                |
+| LTV             | 10%             | Gap financing (85% - 75%)  |
+| **Loan Amount** | **₹11,500,000** | 115M × 10%                 |
+| Interest Rate   | 8.75%           | Higher-risk                |
+| Interest Method | 30/360          | Standard convention        |
+| I/O Period      | 60 months       | Entire term                |
+| Loan Fee (2%)   | ₹2,300,000      | 2% of loan                 |
+| Term            | 60 months       | No principal               |
+| Amortization    | N/A             | No amortization (I/O only) |
 
 #### 2. Mezzanine Loan — Core Calculations
 
@@ -1359,19 +1374,19 @@ Net Exit Proceeds: ₹1,073,871,785
 
 ***Tier 1: Return of Capital + 8% Preferred Return***
 
-| Year                      | 2025             | 2026            | 2027        | 2028         | 2029        | 2030           |
-| ------------------------- | ---------------- | --------------- | ----------- | ------------ | ----------- | -------------- |
-| Year Ending               | 31/12/2025       | 31/12/2026      | 31/12/2027  | 31/12/2028   | 31/12/2029  | 31/12/2030     |
-| Beginning Balance         | ₹22,600,000      | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
-| Preferred Return (8%)     | ₹1,808,000       | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
-| Equity Contribution       | -₹22,600,000     | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
-| Distributions to Equity   | ₹24,408,000      | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
-| Ending Balance            | ₹0               | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
-| Equity IRR Check          | **8.0%**         | **8.0%**        | **8.0%**    | **8.0%**     | **8.0%**    | **8.0%**       |
-| Total Distributions       | ₹24,408,000      | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
-| LP Distribution (90%)     | **₹21,967,200**  | **₹0**          | **₹0**      | **₹0**       | **₹0**      | **₹0**         |
-| GP Distribution (10%)     | **₹2,440,800**   | **₹0**          | **₹0**      | **₹0**       | **₹0**      | **₹0**         |
-| Cash Flow Remaining       | ₹33,969,625      | ₹58,040,543     | ₹59,481,478 | ₹691,758,478 | ₹31,857,478 | ₹1,086,323,239 |
+| Year                    | 2025            | 2026        | 2027        | 2028         | 2029        | 2030           |
+| ----------------------- | --------------- | ----------- | ----------- | ------------ | ----------- | -------------- |
+| Year Ending             | 31/12/2025      | 31/12/2026  | 31/12/2027  | 31/12/2028   | 31/12/2029  | 31/12/2030     |
+| Beginning Balance       | ₹22,600,000     | ₹0          | ₹0          | ₹0           | ₹0          | ₹0             |
+| Preferred Return (8%)   | ₹1,808,000      | ₹0          | ₹0          | ₹0           | ₹0          | ₹0             |
+| Equity Contribution     | -₹22,600,000    | ₹0          | ₹0          | ₹0           | ₹0          | ₹0             |
+| Distributions to Equity | ₹24,408,000     | ₹0          | ₹0          | ₹0           | ₹0          | ₹0             |
+| Ending Balance          | ₹0              | ₹0          | ₹0          | ₹0           | ₹0          | ₹0             |
+| Equity IRR Check        | **8.0%**        | **8.0%**    | **8.0%**    | **8.0%**     | **8.0%**    | **8.0%**       |
+| Total Distributions     | ₹24,408,000     | ₹0          | ₹0          | ₹0           | ₹0          | ₹0             |
+| LP Distribution (90%)   | **₹21,967,200** | **₹0**      | **₹0**      | **₹0**       | **₹0**      | **₹0**         |
+| GP Distribution (10%)   | **₹2,440,800**  | **₹0**      | **₹0**      | **₹0**       | **₹0**      | **₹0**         |
+| Cash Flow Remaining     | ₹33,969,625     | ₹58,040,543 | ₹59,481,478 | ₹691,758,478 | ₹31,857,478 | ₹1,086,323,239 |
 
 **Tier 1 Summary:**
 
@@ -1386,19 +1401,19 @@ Net Exit Proceeds: ₹1,073,871,785
 
 ***Tier 2: Catch-up to 12% IRR (10% GP Promote)***
 
-| Year                      | 2025   | 2026             | 2027           | 2028           | 2029           | 2030            |
-| ------------------------- | ------ | ---------------- | -------------- | -------------- | -------------- | --------------- |
-| **Year Ending**           | -      | -                | 31/12/2027     | 31/12/2028     | 31/12/2029     | 31/12/2030      |
-| Beginning Balance         | ₹0     | ₹22,600,000      | ₹0             | ₹0             | ₹0             | ₹0              |
-| Preferred Return (12%)    | ₹0     | ₹2,712,000       | ₹0             | ₹0             | ₹0             | ₹0              |
-| Equity Contribution       | ₹0     | ₹0               | ₹0             | ₹0             | ₹0             | ₹0              |
-| Distributions to Equity   | ₹0     | ₹25,312,000      | ₹0             | ₹0             | ₹0             | ₹0              |
-| Ending Balance            | ₹0     | ₹0               | ₹0             | ₹0             | ₹0             | ₹0              |
-| Equity IRR Check          | -      | **12.0%**        | **12.0%**      | **12.0%**      | **12.0%**      | **12.0%**       |
-| Total Distributions       | ₹0     | ₹25,312,000      | ₹0             | ₹0             | ₹0             | ₹0              |
-| LP Distribution (81%)     | ₹0     | **₹20,502,720**  | **₹0**         | **₹0**         | **₹0**         | **₹0**          |
-| GP Distribution (19%)     | ₹0     | **₹4,809,280**   | **₹0**         | **₹0**         | **₹0**         | **₹0**          |
-| Cash Flow Remaining       | ₹0     | ₹32,728,543      | ₹58,040,543    | ₹691,758,478   | ₹31,857,478    | ₹1,086,323,239  |
+| Year                    | 2025 | 2026            | 2027        | 2028         | 2029        | 2030           |
+| ----------------------- | ---- | --------------- | ----------- | ------------ | ----------- | -------------- |
+| **Year Ending**         | -    | -               | 31/12/2027  | 31/12/2028   | 31/12/2029  | 31/12/2030     |
+| Beginning Balance       | ₹0   | ₹22,600,000     | ₹0          | ₹0           | ₹0          | ₹0             |
+| Preferred Return (12%)  | ₹0   | ₹2,712,000      | ₹0          | ₹0           | ₹0          | ₹0             |
+| Equity Contribution     | ₹0   | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
+| Distributions to Equity | ₹0   | ₹25,312,000     | ₹0          | ₹0           | ₹0          | ₹0             |
+| Ending Balance          | ₹0   | ₹0              | ₹0          | ₹0           | ₹0          | ₹0             |
+| Equity IRR Check        | -    | **12.0%**       | **12.0%**   | **12.0%**    | **12.0%**   | **12.0%**      |
+| Total Distributions     | ₹0   | ₹25,312,000     | ₹0          | ₹0           | ₹0          | ₹0             |
+| LP Distribution (81%)   | ₹0   | **₹20,502,720** | **₹0**      | **₹0**       | **₹0**      | **₹0**         |
+| GP Distribution (19%)   | ₹0   | **₹4,809,280**  | **₹0**      | **₹0**       | **₹0**      | **₹0**         |
+| Cash Flow Remaining     | ₹0   | ₹32,728,543     | ₹58,040,543 | ₹691,758,478 | ₹31,857,478 | ₹1,086,323,239 |
 
 **Tier 2 Summary:**
 
@@ -1411,19 +1426,19 @@ Net Exit Proceeds: ₹1,073,871,785
 
 ***Tier 3: Catch-up to 16% IRR (20% GP Promote)***
 
-| Year                    | 2025   | 2026   | 2027             | 2028         | 2029           | 2030        |
-| ----------------------- | ------ | ------ | ---------------- | ------------ | -------------- | ----------- |
-| Year Ending             | -      |-       | 31/12/2027       | 31/12/2028   | 31/12/2029  | 31/12/2030     |
-| Beginning Balance       | ₹0     | ₹0     | ₹22,600,000      | ₹0           | ₹0          | ₹0             |
-| Preferred Return (16%)  | ₹0     | ₹0     | ₹3,616,000       | ₹0           | ₹0          | ₹0             |
-| Equity Contribution     | ₹0     | ₹0     | ₹0               | ₹0           | ₹0          | ₹0             |
-| Distributions to Equity | ₹0     | ₹0     | ₹26,216,000      | ₹0           | ₹0          | ₹0             |
-| Ending Balance          | ₹0     | ₹0     | ₹0               | ₹0           | ₹0          | ₹0             |
-| Equity IRR Check        | -      | -      | **16.0%**        | **16.0%**    | **16.0%**   | **16.0%**      |
-| Total Distributions     | ₹0     | ₹0     | ₹26,216,000      | ₹0           | ₹0          | ₹0             |
-| LP Distribution (72%)   | ₹0     | ₹0     | **₹18,875,520**  | **₹0**       | **₹0**      | **₹0**         |
-| GP Distribution (28%)   | ₹0     | ₹0     | **₹7,340,480**   | **₹0**       | **₹0**      | **₹0**         |
-| Cash Flow Remaining     | ₹0     | ₹0     | ₹31,824,543      | ₹691,758,478 | ₹31,857,478 | ₹1,086,323,239 |
+| Year                    | 2025 | 2026 | 2027            | 2028         | 2029        | 2030           |
+| ----------------------- | ---- | ---- | --------------- | ------------ | ----------- | -------------- |
+| Year Ending             | -    | -    | 31/12/2027      | 31/12/2028   | 31/12/2029  | 31/12/2030     |
+| Beginning Balance       | ₹0   | ₹0   | ₹22,600,000     | ₹0           | ₹0          | ₹0             |
+| Preferred Return (16%)  | ₹0   | ₹0   | ₹3,616,000      | ₹0           | ₹0          | ₹0             |
+| Equity Contribution     | ₹0   | ₹0   | ₹0              | ₹0           | ₹0          | ₹0             |
+| Distributions to Equity | ₹0   | ₹0   | ₹26,216,000     | ₹0           | ₹0          | ₹0             |
+| Ending Balance          | ₹0   | ₹0   | ₹0              | ₹0           | ₹0          | ₹0             |
+| Equity IRR Check        | -    | -    | **16.0%**       | **16.0%**    | **16.0%**   | **16.0%**      |
+| Total Distributions     | ₹0   | ₹0   | ₹26,216,000     | ₹0           | ₹0          | ₹0             |
+| LP Distribution (72%)   | ₹0   | ₹0   | **₹18,875,520** | **₹0**       | **₹0**      | **₹0**         |
+| GP Distribution (28%)   | ₹0   | ₹0   | **₹7,340,480**  | **₹0**       | **₹0**      | **₹0**         |
+| Cash Flow Remaining     | ₹0   | ₹0   | ₹31,824,543     | ₹691,758,478 | ₹31,857,478 | ₹1,086,323,239 |
 
 **Tier 3 Summary:**
 
@@ -1436,19 +1451,19 @@ Net Exit Proceeds: ₹1,073,871,785
 
  ***Tier 4: Catch-up to 20% IRR (30% GP Promote)***
 
-| Year                      | 2025   | 2026   | 2027   | 2028             | 2029         | 2030           |
-| ------------------------- | ------ | ------ | ------ | ---------------  | ------------ | -------------- |
-| **Year Ending**           | -      | -      | -      | 31/12/2028       | 31/12/2029   | 31/12/2030     |
-| Beginning Balance         | ₹0     | ₹0     | ₹0     | ₹22,600,000      | ₹0           | ₹0             |
-| Preferred Return (20%)    | ₹0     | ₹0     | ₹0     | ₹4,520,000       | ₹0           | ₹0             |
-| Equity Contribution       | ₹0     | ₹0     | ₹0     | ₹0               | ₹0           | ₹0             |
-| Distributions to Equity   | ₹0     | ₹0     | ₹0     | ₹27,120,000      | ₹0           | ₹0             |
-| Ending Balance            | ₹0     | ₹0     | ₹0     | ₹0               | ₹0           | ₹0             |
-| Equity IRR Check          | -      | -      | -      | **20.0%**        | **20.0%**    | **20.0%**      |
-| Total Distributions       | ₹0     | ₹0     | ₹0     | ₹27,120,000      | ₹0           | ₹0             |
-| LP Distribution (63%)     | ₹0     | ₹0     | ₹0     | **₹17,085,600**  | **₹0**       | **₹0**         |
-| GP Distribution (37%)     | ₹0     | ₹0     | ₹0     | **₹10,034,400**  | **₹0**       | **₹0**         |
-| Cash Flow Remaining       | ₹0     | ₹0     | ₹0     | ₹664,638,478     | ₹31,857,478  | ₹1,086,323,239 |
+| Year                    | 2025 | 2026 | 2027 | 2028            | 2029        | 2030           |
+| ----------------------- | ---- | ---- | ---- | --------------- | ----------- | -------------- |
+| **Year Ending**         | -    | -    | -    | 31/12/2028      | 31/12/2029  | 31/12/2030     |
+| Beginning Balance       | ₹0   | ₹0   | ₹0   | ₹22,600,000     | ₹0          | ₹0             |
+| Preferred Return (20%)  | ₹0   | ₹0   | ₹0   | ₹4,520,000      | ₹0          | ₹0             |
+| Equity Contribution     | ₹0   | ₹0   | ₹0   | ₹0              | ₹0          | ₹0             |
+| Distributions to Equity | ₹0   | ₹0   | ₹0   | ₹27,120,000     | ₹0          | ₹0             |
+| Ending Balance          | ₹0   | ₹0   | ₹0   | ₹0              | ₹0          | ₹0             |
+| Equity IRR Check        | -    | -    | -    | **20.0%**       | **20.0%**   | **20.0%**      |
+| Total Distributions     | ₹0   | ₹0   | ₹0   | ₹27,120,000     | ₹0          | ₹0             |
+| LP Distribution (63%)   | ₹0   | ₹0   | ₹0   | **₹17,085,600** | **₹0**      | **₹0**         |
+| GP Distribution (37%)   | ₹0   | ₹0   | ₹0   | **₹10,034,400** | **₹0**      | **₹0**         |
+| Cash Flow Remaining     | ₹0   | ₹0   | ₹0   | ₹664,638,478    | ₹31,857,478 | ₹1,086,323,239 |
 
 **Tier 4 Summary:**
 
@@ -1462,7 +1477,7 @@ Net Exit Proceeds: ₹1,073,871,785
 ***Tier 5: 50% GP Promote on Remaining Distributions***
 
 | Year                      | 2025   | 2026   | 2027   | 2028             | 2029            | 2030             |
-| ------------------------- | ------ | ------ | ------ | ------------     | -----------     | ---------------- |
+| ------------------------- | ------ | ------ | ------ | ---------------- | --------------- | ---------------- |
 | **Year Ending**           | -      | -      | -      | 31/12/2028       | 31/12/30        | 31/12/2030       |
 | Total Distributions       | ₹0     | ₹0     | ₹0     | ₹664,638,478     | ₹31,857,478     | ₹1,086,323,239   |
 | **LP Distribution (40%)** | **₹0** | **₹0** | **₹0** | **₹299,087,315** | **₹14,335,865** | **₹488,845,457** |
@@ -1479,22 +1494,22 @@ Net Exit Proceeds: ₹1,073,871,785
 
 #### Total Distributions by Partner
 
-| Partner   | Tier 1      | Tier 2      | Tier 3      | Tier 4      | Tier 5         | **TOTAL**          | **Multiple**   |
-| --------- | ----------- | ----------- | ----------- | ----------- | -------------- | ------------------ | -------------- |
-| **LP**    | ₹21,967,200 | ₹20,502,720 | ₹18,875,520 | ₹17,085,600 | ₹802,268,637   | **₹880,699,677**   | **43.3x**      |
-| **GP**    | ₹2,440,800  | ₹4,809,280  | ₹7,340,480  | ₹10,034,400 | ₹980,550,558   | **₹1,005,175,518** | **444.8x**     |
-| **Total** | ₹24,408,000 | ₹25,312,000 | ₹26,216,000 | ₹27,120,000 | ₹1,782,819,195 | **₹1,885,875,195** | **83.4x**      |
+| Partner   | Tier 1      | Tier 2      | Tier 3      | Tier 4      | Tier 5         | **TOTAL**          | **Multiple** |
+| --------- | ----------- | ----------- | ----------- | ----------- | -------------- | ------------------ | ------------ |
+| **LP**    | ₹21,967,200 | ₹20,502,720 | ₹18,875,520 | ₹17,085,600 | ₹802,268,637   | **₹880,699,677**   | **43.3x**    |
+| **GP**    | ₹2,440,800  | ₹4,809,280  | ₹7,340,480  | ₹10,034,400 | ₹980,550,558   | **₹1,005,175,518** | **444.8x**   |
+| **Total** | ₹24,408,000 | ₹25,312,000 | ₹26,216,000 | ₹27,120,000 | ₹1,782,819,195 | **₹1,885,875,195** | **83.4x**    |
 
 #### Return Metrics
 
-| Metric               | LP           | GP              | Combined       |
-| -------------------- | ------------ | --------------- | -------------- |
-| Initial Investment   | ₹20,340,000  | ₹2,260,000      | ₹22,600,000    |
-| Total Distributions  | ₹880,699,677 | ₹1,005,175,518  | ₹1,885,875,195 |
-| Net Profit           | ₹860,359,677 | ₹1,002,915,518  | ₹1,863,275,195 |
-| Equity Multiple      | **43.3x**    | **444.8x**      | **83.4x**      |
-| IRR                  | **231.5%**   | **398.7%**      | **267.3%**     |
-| Average Cash-on-Cash | **186.2%**   | **356.4%**      | **213.8%**     |
+| Metric               | LP           | GP             | Combined       |
+| -------------------- | ------------ | -------------- | -------------- |
+| Initial Investment   | ₹20,340,000  | ₹2,260,000     | ₹22,600,000    |
+| Total Distributions  | ₹880,699,677 | ₹1,005,175,518 | ₹1,885,875,195 |
+| Net Profit           | ₹860,359,677 | ₹1,002,915,518 | ₹1,863,275,195 |
+| Equity Multiple      | **43.3x**    | **444.8x**     | **83.4x**      |
+| IRR                  | **231.5%**   | **398.7%**     | **267.3%**     |
+| Average Cash-on-Cash | **186.2%**   | **356.4%**     | **213.8%**     |
 
 ### 11. MONTHLY CASH FLOW DISTRIBUTION (Sample: Year 1)
 
@@ -1611,7 +1626,7 @@ This 5-tier waterfall structure provides:
 ***Base Case Cell: 3.0% Rent Growth, 2.5% Expense Growth***
 
 | Growth \ Cap Rate | 0.0%         | 1.0%         | 2.0%         | 3.0%             | 4.0%         | 5.0%         | 6.0%         |
-| ----------------- | ------------ | ------------ | ------------ | ------------     | ------------ | ------------ | ------------ |
+| ----------------- | ------------ | ------------ | ------------ | ---------------- | ------------ | ------------ | ------------ |
 | **0.0%**          | 245.3%/78.2x | 254.1%/81.0x | 263.2%/83.9x | 272.5%/86.9x     | 282.1%/90.0x | 292.0%/93.2x | 302.2%/96.5x |
 | **1.0%**          | 238.7%/76.1x | 247.3%/78.8x | 256.2%/81.6x | 265.4%/84.5x     | 274.9%/87.5x | 284.7%/90.6x | 294.8%/93.8x |
 | **1.5%**          | 235.5%/75.1x | 244.0%/77.7x | 252.8%/80.5x | 261.9%/83.3x     | 271.3%/86.3x | 281.0%/89.4x | 291.0%/92.6x |
@@ -1643,14 +1658,14 @@ This 5-tier waterfall structure provides:
 
 #### Output: Levered IRR (%) / Equity Multiple (x) - Exit Cap Rate (X-axis) vs. Hold Period (Y-axis)
 
-| Years   | 5.0%         | 5.5%         | 6.0%         | 6.5%         | 7.0%         | 7.5%         | 8.0%         |
-| ------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| 3 Years | 324.5%/98.7x | 310.2%/94.3x | 296.8%/90.2x | 284.2%/86.4x | 272.3%/82.9x | 261.1%/79.6x | 250.5%/76.5x |
-| 4 Years | 293.7%/91.2x | 281.4%/87.5x | 269.9%/84.1x | 259.2%/80.9x | 249.1%/77.9x | 239.6%/75.1x | 230.6%/72.5x |
+| Years   | 5.0%         | 5.5%         | 6.0%         | 6.5%             | 7.0%         | 7.5%         | 8.0%         |
+| ------- | ------------ | ------------ | ------------ | ---------------- | ------------ | ------------ | ------------ |
+| 3 Years | 324.5%/98.7x | 310.2%/94.3x | 296.8%/90.2x | 284.2%/86.4x     | 272.3%/82.9x | 261.1%/79.6x | 250.5%/76.5x |
+| 4 Years | 293.7%/91.2x | 281.4%/87.5x | 269.9%/84.1x | 259.2%/80.9x     | 249.1%/77.9x | 239.6%/75.1x | 230.6%/72.5x |
 | 5 Years | 272.1%/86.2x | 261.3%/83.0x | 251.2%/80.0x | **241.8%/77.2x** | 233.0%/74.6x | 224.7%/72.2x | 216.8%/69.9x |
-| 6 Years | 256.3%/82.8x | 246.5%/79.9x | 237.4%/77.2x | 228.9%/74.7x | 221.0%/72.3x | 213.5%/70.1x | 206.5%/68.0x |
-| 7 Years | 244.2%/80.3x | 235.2%/77.7x | 226.8%/75.3x | 219.0%/73.0x | 211.6%/70.9x | 204.7%/68.9x | 198.2%/67.0x |
-| 8 Years | 234.8%/78.4x | 226.4%/76.0x | 218.6%/73.8x | 211.3%/71.7x | 204.4%/69.7x | 197.9%/67.8x | 191.8%/66.1x |
+| 6 Years | 256.3%/82.8x | 246.5%/79.9x | 237.4%/77.2x | 228.9%/74.7x     | 221.0%/72.3x | 213.5%/70.1x | 206.5%/68.0x |
+| 7 Years | 244.2%/80.3x | 235.2%/77.7x | 226.8%/75.3x | 219.0%/73.0x     | 211.6%/70.9x | 204.7%/68.9x | 198.2%/67.0x |
+| 8 Years | 234.8%/78.4x | 226.4%/76.0x | 218.6%/73.8x | 211.3%/71.7x     | 204.4%/69.7x | 197.9%/67.8x | 191.8%/66.1x |
 
 **Key Insights:**
 
